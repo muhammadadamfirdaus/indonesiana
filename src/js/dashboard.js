@@ -193,7 +193,6 @@ if($('.create-post').length){
 
 
   // article control
-
   // save button
   var saveButton = $('a.save');
   var publishButton = $('a.publish');
