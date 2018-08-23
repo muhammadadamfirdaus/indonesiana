@@ -1,0 +1,25 @@
+{
+  "name": "indonesiana",
+  "version": "1.0.1",
+  "description": "Indonesiana",
+  "main": "main.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "Indonesiana"
+  ],
+  "author": "Muhammad Adam Firdaus",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "framework7": "^3.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1"
+  }
+}
