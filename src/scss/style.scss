@@ -350,7 +350,7 @@ footer > * {
   @media #{$desktopHD}{
     padding: 0 16%;
   }
-  @media #{$desktop}{
+  @media #{$desktopGeneral}{
     padding: 0 8%;
   }
 }
@@ -360,7 +360,7 @@ header {
   @media #{$desktopHD}{
     padding: 3em 0 1.5em;
   }
-  @media #{$desktop}{
+  @media #{$desktopGeneral}{
     padding: 2em 0 1em;
   }
   @media #{$mobileGeneral}{
@@ -539,7 +539,7 @@ main {
                   margin: 0.8em 0 0.4em;
                 }
               }
-              @media #{$desktop}{
+              @media #{$desktopGeneral}{
                 & > h1 {
                   font-size: 28px;
                   margin: 0.8em 0 0.4em;
@@ -666,7 +666,7 @@ main {
             letter-spacing: 0.5px;
             margin: 0.8em 0 0.4em;
           }
-          @media #{$desktop}{
+          @media #{$desktopGeneral}{
             font-size: 18px;
             letter-spacing: 0.08px;
             margin: 0.8em 0 0.6em;
@@ -682,7 +682,7 @@ main {
           @media #{$desktopHD}{
             height: 180px;
           }
-          @media #{$desktop}{
+          @media #{$desktopGeneral}{
             height: 140px;
           }
           & img {

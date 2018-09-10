@@ -327,19 +327,19 @@ $(function(){
         if (scroll > offset) {
           //  console.log('bottom');
           $(window).data('ajaxready', false);
-          var homeUser = get("../src/ajax/index-favorites-"+ counter +".json");
+          var homeUser = get("ajax/index-favorites-"+ counter +".json");
           homeUser.then(function(data){
             indexFavorites(data);
-            return get("../src/ajax/index-favorites-2.json");
+            return get("ajax/index-favorites-2.json");
           }).then(function(data){
             indexFavorites(data);
-            return get("../src/ajax/index-favorites-3.json");
+            return get("ajax/index-favorites-3.json");
           }).then(function(data){
             indexFavorites(data);
-            return get("../src/ajax/index-recentpost-1.json");
+            return get("ajax/index-recentpost-1.json");
           }).then(function(data){
             recentPosts(data);
-            return get("../src/ajax/index-recentpost-2.json");
+            return get("ajax/index-recentpost-2.json");
           }).then(function(data){
             recentPosts(data)
           });
@@ -437,7 +437,7 @@ $(function(){
     }
     function getDataProfileArticle(){
       var profileRequest = new XMLHttpRequest();
-      profileRequest.open('GET', '../src/ajax/profile-artikel-populer.json');
+      profileRequest.open('GET', '../ajax/profile-artikel-populer.json');
       profileRequest.onload = function(){
         var dataprofile = JSON.parse(profileRequest.responseText);
         console.log(dataprofile);

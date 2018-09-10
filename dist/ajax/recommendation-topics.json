@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "url": "category.html",
+    "image": "images/home-1.jpg",
+    "title": "Teknologi",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  },
+  {
+    "id": 2,
+    "url": "category.html",
+    "image": "images/home-tekno-2.jpg",
+    "title": "Review Gadget",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Followed"
+  },
+  {
+    "id": 3,
+    "url": "category.html",
+    "image": "images/home-tekno-3.jpg",
+    "title": "Preview Gadget",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  },
+  {
+    "id": 4,
+    "url": "category.html",
+    "image": "images/home-following-3.png",
+    "title": "Console Game",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  },
+  {
+    "id": 5,
+    "url": "category.html",
+    "image": "images/home-featured-4.png",
+    "title": "Artificial Intelligence",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  }
+]
