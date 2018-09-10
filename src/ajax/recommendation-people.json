@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "urlAuthor": "profile.html",
+    "author": "Burhan Sholihin",
+    "image": "images/rekomendasi-profile-1.jpeg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  },
+  {
+    "id": 2,
+    "urlAuthor": "profile.html",
+    "author": "Wahyu Dhyatmika",
+    "image": "images/rekomendasi-profile-2.jpeg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  },
+  {
+    "id": 3,
+    "urlAuthor": "profile.html",
+    "author": "Istiqomatul Hayati",
+    "image": "images/rekomendasi-profile-3.jpeg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.",
+    "follow": "Follow"
+  }
+]

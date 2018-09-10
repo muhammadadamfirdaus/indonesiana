@@ -41,33 +41,39 @@
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
-        <p class="comment">
-          Komentar
-        </p>
+        <ul class="wrapper">
+            <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
+        </ul>
       </div>
       <div class="col w-50">
-        <p class="name">
-          Muhammad Adam Firdaus
-        </p>
-        <div class="avatar">
-          <a href="">
-            <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
-          </a>
+        <div class="wrapper clearfix">
+          <p class="col name">
+            Muhammad Adam Firdaus
+          </p>
+          <div class="col user">
+            <a href="profile.html">
+              <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </nav>
   <div class="wrapper clearfix">
-    <nav class="sidebar">
+    <nav class="col sidebar">
       <div class="wrapper">
-        <li><a href="dashboard-create-post.html" class="create-post">Buat Tulisan</a></li>
-        <li><a href="dashboard-list-article.html" class="list-article">Tulisan Terakhir</a></li>
-        <li><a href="dashboard-notification.html" class="notification" data-notifications="23">Notifikasi</a></li>
-        <li><a href="" class="medal">Medali</a></li>
-        <li><a href="dashboard-settings.html" class="settings">Pengaturan</a></li>
+        <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
+        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
+        <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
+        <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
+        <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
+        <!-- <li><a href="" class="medal">Medali</a></li> -->
+        <li><a href="dashboard-logs.html" class="icon logs"></a><a href="dashboard-logs.html" class="dashboard-menu">Riwayat</a></li>
+        <li><a href="dashboard-settings.html" class="icon settings"></a><a href="dashboard-settings.html" class="dashboard-menu">Pengaturan</a></li>
+        <li><a href="#" class="icon toggle"></a></li>
       </div>
     </nav>
-    <main>
+    <main class="col">
       <div class="wrapper">
         <nav>
           <div class="wrapper clearfix">
@@ -234,37 +240,6 @@
         </ul>
       </div>
     </main>
-    <!-- <aside>
-      <div class="wrapper">
-        <div class="control">
-          <section>
-            <div class="wrapper">
-              <div class="row">
-                <h5>Penerbitan Artikel</h5>
-                <a class="button default save">
-                  Save
-                </a>
-                <a class="button default preview">
-                  Preview
-                </a>
-                <a class="button default green publish" href="detail-article-2.html" target="blank">
-                  Publish
-                </a>
-              </div>
-              <em>Terakhir disimpan pada 11 Agustus 2018, pukul 03:36</em>
-            </div>
-          </section>
-          <section>
-            <div class="wrapper">
-              <h5>Status Artikel</h5>
-              <div class="indicator default">
-                <span>Draft</span>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </aside> -->
   </div>
   <!-- <footer>
     footer

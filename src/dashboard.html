@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Prototype - Indonesiana</title>
+<title>Prototype - Dashboard Indonesiana</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="original-source" href="https://investigasi.tempo.co/papua" />
@@ -30,111 +30,313 @@
 <meta property="DC.date.issued" content="2017-02-01T18:00:00+07:00" />
 <link rel="shortcut icon" href="https://cdn.tmpo.co/favicon/tempo-white.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
-<link rel="stylesheet" type="text/css" href="css/swiper.css">
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="css/ie7-lower.css">
 <![endif]-->
 </head>
 <body>
-<div class="container dashboard default create-post">
+<div id="user" class="container dashboard default home dashboard-3">
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
-        <p class="comment">
-          Komentar
-        </p>
+        <ul class="wrapper">
+          <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
+        </ul>
       </div>
       <div class="col w-50">
-        <p class="name">
-          Muhammad Adam Firdaus
-        </p>
-        <div class="avatar">
-          <a href="">
-            <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
-          </a>
+        <div class="wrapper clearfix">
+          <p class="col name">
+            Muhammad Adam Firdaus
+          </p>
+          <div class="col user">
+            <a href="profile.html">
+              <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </nav>
   <div class="wrapper clearfix">
-    <nav class="sidebar">
+    <nav class="col sidebar">
       <div class="wrapper">
-        <li><a href="">Buat Tulisan</a></li>
-        <li><a href="">Tulisan Terakhir</a></li>
-        <li><a href="">Komentar</a></li>
-        <li><a href="">Medali</a></li>
-        <li><a href="">Pengaturan</a></li>
+        <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
+        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
+        <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
+        <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
+        <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
+        <!-- <li><a href="" class="medal">Medali</a></li> -->
+        <li><a href="dashboard-logs.html" class="icon logs"></a><a href="dashboard-logs.html" class="dashboard-menu">Riwayat</a></li>
+        <li><a href="dashboard-settings.html" class="icon settings"></a><a href="dashboard-settings.html" class="dashboard-menu">Pengaturan</a></li>
+        <li><a href="#" class="icon toggle"></a></li>
       </div>
     </nav>
-    <main>
+    <aside class="col">
       <div class="wrapper">
-        <!-- begin post -->
-        <form id="text" class="dropzone" action="/file-post" method="post">
-          <section>
-            <h5>Cover Artikel</h5>
-            <div id="cover" class="dz-clickable">
-              <h3>Drag &amp; drop gambar Anda di sini</h3>
-            </div>
-            <div id="preview-cover">
-              <div id="preview-image">
-              </div>
-            </div>
-            <em>Tambahkan gambar besar untuk artikel Anda</em>
-          </section>
-          <section>
-            <h5>Judul Artikel</h5>
-            <input type="text" id="title">
-            <em>Search Engine biasanya menampilkan judul artikel hanya 160 karakter</em>
-          </section>
-          <section>
-            <h5>Masukkan Keyword Tulisan</h5>
-            <input type="text" placeholder="tags" id="tags">
-            <em>Cantumkan dua hingga tiga keyword artikel untuk memudahkan orang lain menemukan artikel Anda</em>
-          </section>
-          <section>
-            <h5>Artikel</h5>
-            <div id="content"></div>
-          </section>
-        </form>
-        <!-- end post -->
-      </div>
-    </main>
-    <aside>
-      <div class="wrapper">
-        <div class="control">
-          <section>
-            <div class="wrapper">
-              <div class="row">
-                <h5>Penerbitan Artikel</h5>
-                <a class="button default save">
-                  Save
-                </a>
-                <a class="button default preview">
-                  Preview
-                </a>
-                <a class="button default green publish" href="detail-article-2.html" target="blank">
-                  Publish
-                </a>
-              </div>
-              <em>Terakhir disimpan pada 11 Agustus 2018, pukul 03:36</em>
-            </div>
-          </section>
-          <section>
-            <div class="wrapper">
-              <h5>Status Artikel</h5>
-              <div class="indicator default">
-                <span>Draft</span>
-              </div>
-            </div>
-          </section>
-        </div>
+        <section class="admin-notes">
+          <div class="wrapper">
+            <h2>
+              Catatan Admin
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, quia!
+            </p>
+            <a href="#" class="button default">
+              Selengkapnya
+            </a>
+          </div>
+        </section>
       </div>
     </aside>
+    <main class="col">
+      <div class="wrapper clearfix">
+        <section class="accordion bg-white headline">
+          <div class="header clearfix">
+            <h2>Apa kabar, <a href="dashboard-admin-list-article.html">Muhammad Adam Firdaus</a>!</h2>
+            <a class="icon toggle" href="#"></a>
+          </div>
+          <div class="content">
+            <div class="wrapper">
+              <div class="swiper-container announcement">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="wrapper">
+                      <!-- <a href="#">
+                        <img src="images/default.jpg" alt="Tips menulis di Indonesiana">
+                      </a> -->
+                      <h1>
+                        <a href="#">Tips Menulis di Indonesiana</a>
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="wrapper">
+                      <!-- <a href="#">
+                        <img src="images/default.jpg" alt="Tips menulis di Indonesiana">
+                      </a> -->
+                      <h1>
+                        <a href="#">Event Gathering 5 Januari 2019</a>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next swiper-button-black"></div>
+                <div class="swiper-button-prev swiper-button-black"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="accordion bg-white col w-50 last-article">
+          <div class="header clearfix">
+            <h2><a href="dashboard-admin-list-article.html">Artikel Anda</a></h2>
+            <a class="icon toggle" href="#"></a>
+          </div>
+          <div class="content">
+            <div class="wrapper">
+              <ul id="list" class="list">
+                <li data-status="1" data-title="Posisi Designer pada Perkembangan Web Apps Design Modern" data-time="Sat, 12 Aug 2018 20:58:39 GMT">
+                  <span class="date">Sabtu, 12 Agustus 2018, 20:58</span>
+                  <h5 class="author">Muhammad Adam Firdaus</h5>
+                  <div class="wrapper clearfix">
+                    <div class="col w-60">
+                      <h1 class="title">
+                        <a href="">
+                          Posisi Designer pada Perkembangan Web Apps Design Modern
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col w-40">
+                      <div class="indicator default green">
+                        <span>Tayang</span>
+                      </div>
+                      <div class="action">
+                        <a href="" class="button default red delete">Hapus</a>
+                        <a href="dashboard-create-post.html" class="button default black edit">Edit</a>
+                        <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li data-status="0" data-title="Setting Max Client Ideal pada Server" data-time="Mon, 13 Aug 2018 03:53:39 GMT">
+                  <span class="date">Senin, 13 Agustus 2018, 03:53</span>
+                  <h5 class="author">Muhammad Adam Firdaus</h5>
+                  <div class="wrapper clearfix">
+                    <div class="col w-60">
+                      <h1 class="title">
+                        <a href="">
+                          Setting Max Client Ideal pada Server
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col w-40">
+                      <div class="indicator default">
+                        <span>Draft</span>
+                      </div>
+                      <div class="action">
+                        <a href="" class="button default red delete">Hapus</a>
+                        <a href="" class="button default black edit">Edit</a>
+                        <a href="" class="button default blue view">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li data-status="1" data-title="Tips Trik Tinder agar &quote;Match&quote; Beruntun"  data-time="Sun, 12 Aug 2018 20:58:39 GMT">
+                  <span class="date">Minggu, 12 Agustus 2018, 20:58</span>
+                  <h5 class="author">Muhammad Adam Firdaus</h5>
+                  <div class="wrapper clearfix">
+                    <div class="col w-60">
+                      <h1 class="title">
+                        <a href="">
+                          Tips Trik Tinder agar "Match" Beruntun
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col w-40">
+                      <div class="indicator default green">
+                        <span>Tayang</span>
+                      </div>
+                      <div class="action">
+                        <a href="" class="button default red delete">Hapus</a>
+                        <a href="" class="button default black edit">Edit</a>
+                        <a href="" class="button default blue view">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li data-status="1" data-title="JavaScript dari Tahun ke Tahun"  data-time="Sat, 13 Aug 2018 22:58:39 GMT">
+                  <span class="date">Sabtu, 13 Agustus 2018, 22:58</span>
+                  <h5 class="author">Muhammad Adam Firdaus</h5>
+                  <div class="wrapper clearfix">
+                    <div class="col w-60">
+                      <h1 class="title">
+                        <a href="">
+                          JavaScript dari Tahun ke Tahun
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col w-40">
+                      <div class="indicator default green">
+                        <span>Tayang</span>
+                      </div>
+                      <div class="action">
+                        <a href="" class="button default red delete">Hapus</a>
+                        <a href="" class="button default black edit">Edit</a>
+                        <a href="" class="button default blue view">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li data-status="0" data-title="Tips agar Terhindar dari Spam Email" data-time="Sun, 12 Aug 2018 20:23:39 GMT">
+                  <span class="date">Sabtu, 12 Agustus 2018, 20:23</span>
+                  <h5 class="author">Muhammad Adam Firdaus</h5>
+                  <div class="wrapper clearfix">
+                    <div class="col w-60">
+                      <h1 class="title">
+                        <a href="">
+                          Tips agar Terhindar dari Spam Email
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col w-40">
+                      <div class="indicator default">
+                        <span>Draft</span>
+                      </div>
+                      <div class="action">
+                        <a href="" class="button default red delete">Hapus</a>
+                        <a href="" class="button default black edit">Edit</a>
+                        <a href="" class="button default blue view">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li data-status="0" data-title="Mengenal Lebih Dalam &quot;BEM&quot; pada CSS" data-time="Sat, 11 Aug 2018 23:00:39 GMT">
+                  <span class="date">Sabtu, 11 Agustus 2018, 23:00</span>
+                  <h5 class="author">Muhammad Adam Firdaus</h5>
+                  <div class="wrapper clearfix">
+                    <div class="col w-60">
+                      <h1 class="title">
+                        <a href="">
+                          Mengenal Lebih Dalam "BEM" pada CSS
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col w-40">
+                      <div class="indicator default">
+                        <span>Draft</span>
+                      </div>
+                      <div class="action">
+                        <a href="" class="button default red delete">Hapus</a>
+                        <a href="" class="button default black edit">Edit</a>
+                        <a href="" class="button default blue view">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="accordion bg-white col w-50 last-comment">
+          <div class="header clearfix">
+            <h2><a href="dashboard-admin-list-article.html">Komentar Artikel Anda</a></h2>
+            <a class="icon toggle" href="#"></a>
+          </div>
+          <div class="content">
+            <div class="wrapper">
+              <ul>
+                <li>
+                  <div class="wrapper clearfix">
+                    <span class="col date" data-time="20:58:39 GMT">7 menit yang lalu</span>
+                    <div class="col">
+                      <p>
+                        <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Mantaaap!&quot;</a>
+                      </p>
+                    </div>
+                    <div class="col">
+                      <div class="action">
+                        <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrapper clearfix">
+                    <span class="col date" data-time="20:58:39 GMT">1 jam yang lalu</span>
+                    <div class="col">
+                      <p>
+                        <a href="profile.html" class="subject" target="blank">Wahyu Dhyatmika</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Kereeeeeennn&quot;</a>
+                      </p>
+                    </div>
+                    <div class="col">
+                      <div class="action">
+                        <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrapper clearfix">
+                    <span class="col date" data-time="20:58:39 GMT">2 jam yang lalu</span>
+                    <div class="col">
+                      <p>
+                        <a href="profile.html" class="subject" target="blank">Nadiem Gojek</a> mengikuti Anda
+                      </p>
+                    </div>
+                    <div class="col">
+                      <div class="action">
+                        <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   </div>
-  <!-- <footer>
-    footer
-  </footer> -->
 </div>
 <script src="js/core.js"></script>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=aau06cbdczepmjfp3ufior3x9ip4c1reg3flh2m1gxgehbgc"></script>

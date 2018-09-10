@@ -37,7 +37,7 @@
 <![endif]-->
 </head>
 <body>
-<div id="user" class="container dashboard default notification">
+<div id="user" class="container dashboard default customize dashboard-3">
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
@@ -73,83 +73,133 @@
         <li><a href="#" class="icon toggle"></a></li>
       </div>
     </nav>
+    <aside class="col">
+      <div class="wrapper">
+      </div>
+    </aside>
     <main class="col">
       <div class="wrapper">
-        <h1>Notifikasi Anda</h1>
-        <ul>
-          <h5>Minggu, 12 Agustus 2018</h5>
-          <section>
-            <li>
+        <nav>
+          <div class="wrapper clearfix">
+            <div class="col w-50">
+              <li><a href="#" class="button default active tooltip recommendation" title="Tampilkan semua artikel.">Semua User</a></li>
+              <li><a href="#" class="button default people" title="Tampilkan artikel yang sedang tayang.">Banned</a></li>
+              <!-- <li><a href="#" class="button default tooltip topics" title="Tampilkan artikel yang masih dalam draft.">Topik</a></li> -->
+            </div>
+            <div class="col w-50">
               <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT">7 menit yang lalu</span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Mantaaap!&quot;</a>
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
+                <form id="filter-article" action="#">
+                  <input type="text" class="filter">
+                </form>
+                <h5>
+                  Urutkan Berdasarkan
+                </h5>
+                <!-- <a href="#" class="button ascending">A ke Z</a>
+                <a href="#" class="button descending">Z ke A</a> -->
+                <a href="#" class="button default tooltip newest" title="Urutkan artikel dari yang terbaru.">Terbaru</a>
+                <a href="#" class="button default tooltip oldest" title="Urutkan artikel dari yang terlama.">Terlama</a>
               </div>
-            </li>
-            <li>
+            </div>
+          </div>
+        </nav>
+        <section class="recommendation">
+          <div id="recommendation" class="recommendation-list people wrapper">
+            <!-- <h3>Orang yang juga menulis tentang <a class="tags" href="">Lombok</a></h3>
+            <div class="recommendation-list people">
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+            </div> -->
+
+            <!-- <li>
               <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT">1 jam yang lalu</span>
+                <a href="">
+                  <img src="images/home-1.jpg" alt="">
+                </a>
                 <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Wahyu Dhyatmika</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Kereeeeeennn&quot;</a>
-                  </p>
+                  <h2 class="title">
+                  <a href="">
+                    Teknologi
+                  </a>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
                 </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
+                <a href="" class="button default">
+                  Follow
+                </a>
               </div>
-            </li>
-            <li>
-              <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT">2 jam yang lalu</span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Nadiem Gojek</a> mengikuti Anda
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </section>
-          <h5>Sabtu, 11 Agustus 2018</h5>
-          <section>
-            <li>
-              <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT"></span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> menyukai artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a>
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </section>
-        </ul> 
+            </li> -->
+          </div>
+        </section>
       </div>
     </main>
   </div>
-  <!-- <footer>
-    footer
-  </footer> -->
 </div>
 <script src="js/core.js"></script>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=aau06cbdczepmjfp3ufior3x9ip4c1reg3flh2m1gxgehbgc"></script>

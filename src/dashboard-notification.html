@@ -41,101 +41,107 @@
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
-        <p class="comment">
-          Komentar
-        </p>
+        <ul class="wrapper">
+          <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
+        </ul>
       </div>
       <div class="col w-50">
-        <p class="name">
-          Muhammad Adam Firdaus
-        </p>
-        <div class="avatar">
-          <a href="">
-            <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
-          </a>
+        <div class="wrapper clearfix">
+          <p class="col name">
+            Muhammad Adam Firdaus
+          </p>
+          <div class="col user">
+            <a href="profile.html">
+              <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </nav>
   <div class="wrapper clearfix">
-    <nav class="sidebar">
+    <nav class="col sidebar">
       <div class="wrapper">
-        <li><a href="dashboard-create-post.html" class="create-post">Buat Tulisan</a></li>
-        <li><a href="dashboard-list-article.html" class="list-article">Tulisan Terakhir</a></li>
-        <li><a href="dashboard-notification.html" class="notification" data-notifications="23">Notifikasi</a></li>
-        <li><a href="" class="medal">Medali</a></li>
-        <li><a href="dashboard-settings.html" class="settings">Pengaturan</a></li>
+        <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
+        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
+        <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
+        <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
+        <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
+        <!-- <li><a href="" class="medal">Medali</a></li> -->
+        <li><a href="dashboard-logs.html" class="icon logs"></a><a href="dashboard-logs.html" class="dashboard-menu">Riwayat</a></li>
+        <li><a href="dashboard-settings.html" class="icon settings"></a><a href="dashboard-settings.html" class="dashboard-menu">Pengaturan</a></li>
+        <li><a href="#" class="icon toggle"></a></li>
       </div>
     </nav>
-    <main>
+    <main class="col">
       <div class="wrapper">
         <h1>Notifikasi Anda</h1>
         <ul>
           <h5>Minggu, 12 Agustus 2018</h5>
           <section>
-          <li>
-            <div class="wrapper clearfix">
-              <span class="col date" data-time="20:58:39 GMT">7 menit yang lalu</span>
-              <div class="col">
-                <p>
-                  <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Mantaaap!&quot;</a>
-                </p>
-              </div>
-              <div class="col">
-                <div class="action">
-                  <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+            <li>
+              <div class="wrapper clearfix">
+                <span class="col date" data-time="20:58:39 GMT">7 menit yang lalu</span>
+                <div class="col">
+                  <p>
+                    <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Mantaaap!&quot;</a>
+                  </p>
+                </div>
+                <div class="col">
+                  <div class="action">
+                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="wrapper clearfix">
-              <span class="col date" data-time="20:58:39 GMT">1 jam yang lalu</span>
-              <div class="col">
-                <p>
-                  <a href="profile.html" class="subject" target="blank">Wahyu Dhyatmika</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Kereeeeeennn&quot;</a>
-                </p>
-              </div>
-              <div class="col">
-                <div class="action">
-                  <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+            </li>
+            <li>
+              <div class="wrapper clearfix">
+                <span class="col date" data-time="20:58:39 GMT">1 jam yang lalu</span>
+                <div class="col">
+                  <p>
+                    <a href="profile.html" class="subject" target="blank">Wahyu Dhyatmika</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Kereeeeeennn&quot;</a>
+                  </p>
+                </div>
+                <div class="col">
+                  <div class="action">
+                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="wrapper clearfix">
-              <span class="col date" data-time="20:58:39 GMT">2 jam yang lalu</span>
-              <div class="col">
-                <p>
-                  <a href="profile.html" class="subject" target="blank">Nadiem Gojek</a> mengikuti Anda
-                </p>
-              </div>
-              <div class="col">
-                <div class="action">
-                  <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+            </li>
+            <li>
+              <div class="wrapper clearfix">
+                <span class="col date" data-time="20:58:39 GMT">2 jam yang lalu</span>
+                <div class="col">
+                  <p>
+                    <a href="profile.html" class="subject" target="blank">Nadiem Gojek</a> mengikuti Anda
+                  </p>
+                </div>
+                <div class="col">
+                  <div class="action">
+                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
           </section>
           <h5>Sabtu, 11 Agustus 2018</h5>
           <section>
-          <li>
-            <div class="wrapper clearfix">
-              <span class="col date" data-time="20:58:39 GMT"></span>
-              <div class="col">
-                <p>
-                  <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> menyukai artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a>
-                </p>
-              </div>
-              <div class="col">
-                <div class="action">
-                  <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+            <li>
+              <div class="wrapper clearfix">
+                <span class="col date" data-time="20:58:39 GMT"></span>
+                <div class="col">
+                  <p>
+                    <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> menyukai artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a>
+                  </p>
+                </div>
+                <div class="col">
+                  <div class="action">
+                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
           </section>
         </ul> 
       </div>
