@@ -7,8 +7,8 @@ http://www.muhammadadamfirdaus.com/
 ==============
 */
 
-let container = $('.container');
-let popup = $('.popup');
+var container = $('.container');
+var popup = $('.popup');
 // tooltip
 var tooltip = $('.tooltip');
 // grab the title
@@ -30,183 +30,136 @@ tooltip.on('mouseleave', function(){
   $('.tooltip-content').remove();
 });
 
-function get(url){
-  return new Promise(function(resolve, reject){
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onload = function(){
-      if(xhr.status == 200){
-        resolve(JSON.parse(xhr.response));
-      } else {
-        reject(xhr.statusText);
-      }
-    }
-    xhr.onerror = function(){
-      reject(xhr.statusText);
-    }
-    xhr.send();
-  });
-}
-
-// sidebar toggle
-let sidebarExpander = $('.sidebar').find('.toggle');
-sidebarExpander.on('click', function(e){
-  e.preventDefault();
-  e.stopImmediatePropagation();
-  let sidebar = $('nav.sidebar');
-  if( $(this).data('status') == 'clicked' ) {
-    $(this).data('status','not_clicked').closest('.dashboard').removeClass('sidebar-hide');
-  } else {
-    $(this).data('status','clicked').closest('.dashboard').addClass('sidebar-hide');
-  }
-});
-
-// accordion
-let accordion = $('.accordion');
-let accordionButton = accordion.find('.toggle');
-accordionButton.on('click', function(e){
-  e.preventDefault();
-  e.stopImmediatePropagation();
-  console.log('closing accordion');
-  if( $(this).data('status') == 'clicked' ) {
-    $(this).data('status','not_clicked').closest(accordion).removeClass('accordion-closed');
-  } else {
-    $(this).data('status','clicked').closest(accordion).addClass('accordion-closed');
-  }
-});
-
-// popup  
-
 // if create post page only
-if($('input#tags').length){
-  function autocomplete(inp, arr) {
-    /* the autocomplete function takes two arguments,
-    the text field element and an array of possible autocompleted values: */
-    var currentFocus;
-    /* execute a function when someone writes in the text field: */
-    inp.addEventListener("input", function(e) {
-      var a, b, i, val = this.value;
-      /*close any already open lists of autocompleted values*/
-      closeAllLists();
-      if (!val) { return false;}
-      currentFocus = -1;
-      /*create a DIV element that will contain the items (values):*/
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocomplete-list");
-      a.setAttribute("class", "autocomplete-items");
-      /*append the DIV element as a child of the autocomplete container:*/
-      this.parentNode.appendChild(a);
-      /*for each item in the array...*/
-      for (i = 0; i < arr.length; i++) {
-        /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-          /*create a DIV element for each matching element:*/
-          b = document.createElement("DIV");
-          /*make the matching letters bold:*/
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].substr(val.length);
-          /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          /*execute a function when someone clicks on the item value (DIV element):*/
-          b.addEventListener("click", function(e) {
-              /*insert the value for the autocomplete text field:*/
-              inp.value = this.getElementsByTagName("input")[0].value;
-              /*close the list of autocompleted values,
-              (or any other open lists of autocompleted values:*/
-              closeAllLists();
-          });
-          a.appendChild(b);
-        }
-      }
-  });
-  /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function(e) {
-      var x = document.getElementById(this.id + "autocomplete-list");
-      if (x) x = x.getElementsByTagName("div");
-      if (e.keyCode == 40) {
-        /*If the arrow DOWN key is pressed,
-        increase the currentFocus variable:*/
-        currentFocus++;
-        /*and and make the current item more visible:*/
-        addActive(x);
-      } else if (e.keyCode == 38) { //up
-        /*If the arrow UP key is pressed,
-        decrease the currentFocus variable:*/
-        currentFocus--;
-        /*and and make the current item more visible:*/
-        addActive(x);
-      } else if (e.keyCode == 13) {
-        /*If the ENTER key is pressed, prevent the form from being submitted,*/
-        e.preventDefault();
-        if (currentFocus > -1) {
-          /*and simulate a click on the "active" item:*/
-          if (x) x[currentFocus].click();
-        }
-      }
-  });
-  function addActive(x) {
-    /*a function to classify an item as "active":*/
-    if (!x) return false;
-    /*start by removing the "active" class on all items:*/
-    removeActive(x);
-    if (currentFocus >= x.length) currentFocus = 0;
-    if (currentFocus < 0) currentFocus = (x.length - 1);
-    /*add class "autocomplete-active":*/
-    x[currentFocus].classList.add("autocomplete-active");
-  }
-  function removeActive(x) {
-    /*a function to remove the "active" class from all autocomplete items:*/
-    for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove("autocomplete-active");
-    }
-  }
-  function closeAllLists(elmnt) {
-    /*close all autocomplete lists in the document,
-    except the one passed as an argument:*/
-    var x = document.getElementsByClassName("autocomplete-items");
-    for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
-        x[i].parentNode.removeChild(x[i]);
-      }
-    }
-  }
-  /* execute a function when someone clicks in the document: */
-  document.addEventListener("click", function (e) {
-      closeAllLists(e.target);
-      });
-  }
+if($('.create-post').length){
+//   function autocomplete(inp, arr) {
+//   /*the autocomplete function takes two arguments,
+//   the text field element and an array of possible autocompleted values:*/
+//   var currentFocus;
+//   /*execute a function when someone writes in the text field:*/
+//   inp.addEventListener("input", function(e) {
+//       var a, b, i, val = this.value;
+//       /*close any already open lists of autocompleted values*/
+//       closeAllLists();
+//       if (!val) { return false;}
+//       currentFocus = -1;
+//       /*create a DIV element that will contain the items (values):*/
+//       a = document.createElement("DIV");
+//       a.setAttribute("id", this.id + "autocomplete-list");
+//       a.setAttribute("class", "autocomplete-items");
+//       /*append the DIV element as a child of the autocomplete container:*/
+//       this.parentNode.appendChild(a);
+//       /*for each item in the array...*/
+//       for (i = 0; i < arr.length; i++) {
+//         /*check if the item starts with the same letters as the text field value:*/
+//         if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+//           /*create a DIV element for each matching element:*/
+//           b = document.createElement("DIV");
+//           /*make the matching letters bold:*/
+//           b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+//           b.innerHTML += arr[i].substr(val.length);
+//           /*insert a input field that will hold the current array item's value:*/
+//           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+//           /*execute a function when someone clicks on the item value (DIV element):*/
+//           b.addEventListener("click", function(e) {
+//               /*insert the value for the autocomplete text field:*/
+//               inp.value = this.getElementsByTagName("input")[0].value;
+//               /*close the list of autocompleted values,
+//               (or any other open lists of autocompleted values:*/
+//               closeAllLists();
+//           });
+//           a.appendChild(b);
+//         }
+//       }
+//   });
+//   /*execute a function presses a key on the keyboard:*/
+//   inp.addEventListener("keydown", function(e) {
+//       var x = document.getElementById(this.id + "autocomplete-list");
+//       if (x) x = x.getElementsByTagName("div");
+//       if (e.keyCode == 40) {
+//         /*If the arrow DOWN key is pressed,
+//         increase the currentFocus variable:*/
+//         currentFocus++;
+//         /*and and make the current item more visible:*/
+//         addActive(x);
+//       } else if (e.keyCode == 38) { //up
+//         /*If the arrow UP key is pressed,
+//         decrease the currentFocus variable:*/
+//         currentFocus--;
+//         /*and and make the current item more visible:*/
+//         addActive(x);
+//       } else if (e.keyCode == 13) {
+//         /*If the ENTER key is pressed, prevent the form from being submitted,*/
+//         e.preventDefault();
+//         if (currentFocus > -1) {
+//           /*and simulate a click on the "active" item:*/
+//           if (x) x[currentFocus].click();
+//         }
+//       }
+//   });
+//   function addActive(x) {
+//     /*a function to classify an item as "active":*/
+//     if (!x) return false;
+//     /*start by removing the "active" class on all items:*/
+//     removeActive(x);
+//     if (currentFocus >= x.length) currentFocus = 0;
+//     if (currentFocus < 0) currentFocus = (x.length - 1);
+//     /*add class "autocomplete-active":*/
+//     x[currentFocus].classList.add("autocomplete-active");
+//   }
+//   function removeActive(x) {
+//     /*a function to remove the "active" class from all autocomplete items:*/
+//     for (var i = 0; i < x.length; i++) {
+//       x[i].classList.remove("autocomplete-active");
+//     }
+//   }
+//   function closeAllLists(elmnt) {
+//     /*close all autocomplete lists in the document,
+//     except the one passed as an argument:*/
+//     var x = document.getElementsByClassName("autocomplete-items");
+//     for (var i = 0; i < x.length; i++) {
+//       if (elmnt != x[i] && elmnt != inp) {
+//         x[i].parentNode.removeChild(x[i]);
+//       }
+//     }
+//   }
+//   /*execute a function when someone clicks in the document:*/
+//   document.addEventListener("click", function (e) {
+//       closeAllLists(e.target);
+//       });
+// }
   
   var tags = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
   
   // $(window).on('load', function(){
-    autocomplete(document.getElementById("tags"), tags);
+  //   autocomplete(document.getElementById("tags"), tags);
   // });
 
-  var previewNode = document.querySelector('#preview-image');
-  previewNode.id = '';
-  var previewTemplate = previewNode.parentNode.innerHTML;
-  previewNode.parentNode.removeChild(previewNode);
+  // var previewNode = document.querySelector('#preview-image');
+  // previewNode.id = '';
+  // var previewTemplate = previewNode.parentNode.innerHTML;
+  // previewNode.parentNode.removeChild(previewNode);
 
-  var previewCover = document.getElementById('preview-cover');
+  // var previewCover = document.getElementById('preview-cover');
 
-  var myDropzone = new Dropzone("#text", {
-    clickable: '#cover',
-    paramName: "file", // The name that will be used to transfer the file
-    maxFilesize: 2, // MB
-    previewTemplate: previewTemplate,
-    previewContainer: previewCover,
-    thumbnailWidth: 80,
-    thumbnailHeight: 80,
-    dictDefaultMessage: '',
-    accept: function(file, done) {
-      if (file.name == "justinbieber.jpg") {
-        done("Naha, you don't.");
-      }
-      else { done(); }
-    },
-    url: "https://webtorial.tempo.co/adam/indonesiana/upload.php"
-  });
-  Dropzone.autoDiscover = false;
+  // var myDropzone = new Dropzone("#text", {
+  //   clickable: '#cover',
+  //   paramName: "file", // The name that will be used to transfer the file
+  //   maxFilesize: 2, // MB
+  //   previewTemplate: previewTemplate,
+  //   previewContainer: previewCover,
+  //   thumbnailWidth: 80,
+  //   thumbnailHeight: 80,
+  //   dictDefaultMessage: '',
+  //   accept: function(file, done) {
+  //     if (file.name == "justinbieber.jpg") {
+  //       done("Naha, you don't.");
+  //     }
+  //     else { done(); }
+  //   },
+  //   url: "https://webtorial.tempo.co/adam/indonesiana/upload.php"
+  // });
+  // Dropzone.autoDiscover = false;
 
   var tags = $('input#tags');
   var tagsValue = tags.val();
@@ -234,24 +187,9 @@ if($('input#tags').length){
    });
 
 
-  if($('.create-post').length){
-    // ask to the user whether list or plain article
-    let popup = $('.popup');
-    let saved = $('.saved');
-    // if(!saved){ 
-      popup.addClass('active').closest('.dashboard.create-post').addClass('black-transparent');
-    // }
-    $(document).on('click', function(e){
-      if(!$(e.target).closest(popup).length){
-        popup.removeClass('active').closest('.dashboard.create-post').removeClass('black-transparent');;
-      }
-    });
-    tinymce.init({
-      selector: "#content"
-    });
-  } else {
-    tinymce.remove();
-  }
+  tinymce.init({
+    selector: "#content"
+  });
 
 
   // article control
@@ -283,26 +221,8 @@ $('.tabs li').on('click', function(e){
   history.pushState(null, null, "#"+tab_id);
 });
 
-if($('.home').length){
-  let announcement = new Swiper('.swiper-container.announcement', {
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    speed: 1000,
-    spaceBetween: 30
-  });
-}
-
 // list article
-var listActionButton = $('.dashboard ul li');
+var listActionButton = $('.dashboard main ul li');
 listActionButton.on('mouseenter', function(){
   var hoverThis = $(this);
   listActionButton.not(hoverThis).removeClass('active');
@@ -565,90 +485,41 @@ $('a.oldest').on('click', function(){
 
 
 // customize
-var buttonRecommendation = $('a.button.recommendation');
 var buttonPeople = $('a.button.people');
-var recommendationPeople = get("ajax/recommendation-people.json");
-var recommendationTopics = get("ajax/recommendation-topics.json");
 
-if($('#recommendation').length){
-  $(window).on('load', function(){
-    var recommendationPeopleAppend = $('#recommendation-people');
-    var recommendationTopicsAppend = $('#recommendation-topics');
 
-    // check if recommendation people appended
-    var detectPeopleAppended = $(this).find(recommendationPeopleAppend);
-    if(detectPeopleAppended){
-      $('#recommendation').children(recommendationPeopleAppend).remove();
-      $('#recommendation').removeClass('people').addClass('topics');
-      recommendationTopics.then(function(data){
-        showRecommendationTopics(data);
-      });
-    }
-    
-    buttonRecommendation.on('click', function(e){
-      // check if recommendation people appended
-      var detectPeopleAppended = $(this).find(recommendationPeopleAppend);
-      if(detectPeopleAppended){
-        $('#recommendation').children(recommendationPeopleAppend).remove();
-        $('#recommendation').removeClass('people').addClass('topics');
-        recommendationTopics.then(function(data){
-          showRecommendationTopics(data);
-        });
-      }
-    });
-    
-    buttonPeople.on('click', function(e){
-      // check if recommendation topics appended
-      var detectPreviousRecommendationTab = $(this).find(recommendationTopicsAppend);
-      if(detectPreviousRecommendationTab){
-        $('#recommendation').children(recommendationTopicsAppend).remove();
-        $('#recommendation').removeClass('topics').addClass('people');
-        recommendationPeople.then(function(data){
-          showRecommendationPeople(data);
-        });
-      }
-    });
-  });
+buttonPeople.on('click', function(e){
+  console.log('click');
+  var recommendationPeople = new XMLHttpRequest();
+  recommendationPeople.open('GET', 'ajax/recommendation-topics.json?limit=2&start=2');
   
-  var recommendationContainer = document.getElementById('recommendation');
-  
-  function showRecommendationPeople(data){
-    var recommendationPeople = "";
-    for(i=0; i < data.length; i++){
-      recommendationPeople +=
-      '<li id="recommendation-people"><div class="wrapper clearfix"><a href="'+
-      data[i].image+
-      '"><img src="'+
-      data[i].image+
-      '"></a><div class="col"><h2 class="title"><a href="'+
-      data[i].urlAuthor+'">'+
-      data[i].author+'</a></h2><p>'+
-      data[i].description+'</p></div><a href="#" class="button default network '+
-      data[i].follow.toLowerCase()+'" data-follow="'+
-      data[i].follow.toLowerCase()+'">'+
-      data[i].follow+'</a></div></li>'
-    }
-    recommendationContainer.insertAdjacentHTML('beforeend', recommendationPeople);
+  recommendationPeople.onload = function(){
+    var dataRecommendationPeople = JSON.parse(recommendationPeople.responseText);
+    console.log(dataRecommendationPeople);
+    showRecommendationTopics(dataRecommendationPeople);
   }
-  
-  function showRecommendationTopics(data){
-    var recommendationTopics = "";
-    for(i=0; i < data.length; i++){
-      recommendationTopics +=
-      '<li id="recommendation-topics"><div class="wrapper clearfix"><a href="'+
-      data[i].url+
-      '"><img src="'+
-      data[i].image+
-      '"></a><div class="col"><h2 class="title"><a href="'+
-      data[i].url+'">'+
-      data[i].title+'</a></h2><p>'+
-      data[i].description+'</p></div><a href="#" class="button default network '+
-      data[i].follow.toLowerCase()+'" data-follow="'+
-      data[i].follow.toLowerCase()+'">'+
-      data[i].follow+'</a></div></li>'
-    }
-    recommendationContainer.insertAdjacentHTML('beforeend', recommendationTopics);
+  recommendationPeople.send();
+});
+
+var recommendationListTopics = document.getElementById('recommendation-topics');
+
+function showRecommendationTopics(data){
+  var recommendationTopics = "";
+  for(i=0; i < data.length; i++){
+    recommendationTopics +=
+    '<li class="clearfix"><a href="'+
+    data[i].url+
+    '"><img src="'+
+    data[i].image+
+    '"></a><h2 class="title"><a href="'+
+    data[i].url+'">'+
+    data[i].title+'</a></h2><a href="#" class="button default network '+
+    data[i].follow.toLowerCase()+'" data-follow="'+
+    data[i].follow.toLowerCase()+'">'+
+    data[i].follow+'</a><p>'+
+    data[i].description+'</p></li>'
   }
+  recommendationListTopics.insertAdjacentHTML('beforeend', recommendationTopics);
 }
 
 $(document).on('click', '.button.network', function(e){

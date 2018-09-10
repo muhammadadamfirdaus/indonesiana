@@ -98,15 +98,17 @@
       </div>
       <div class="col w-45">
         <div class="wrapper">
-          <section class="toolbar navigation">
+          <section class="tabs toolbar navigation">
             <div class="wrapper">
-              <li><a href="#tab1" class="tab-link tab-link-active">Artikel Terbaru</a></li>
-              <li><a href="#tab2" class="tab-link">Populer</a></li>
+              <li><a href="#tab1" class="tab-link tab-link-active last">Artikel Terbaru</a></li>
+              <li><a href="#tab2" class="tab-link populer">Populer</a></li>
             </div>
           </section>
           <section class="tabs-swipeable-wrap swiper-container content">
             <div class="tabs swiper-wrapper">
-              <div id="tab1" class="tab swiper-slide tab-active">
+              <div id="profile-list-article" class="tab swiper-slide">
+              </div>
+              <!-- <div id="tab1" class="tab swiper-slide tab-active">
                 <div class="card">
                   <div class="wrapper">
                     <span class="date">
@@ -189,7 +191,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </section>
         </div>
@@ -200,57 +202,64 @@
           <div class="recommendation follow">
             <div class="wrapper">
               <h2>Layak untuk Anda Ikuti</h2>
-              <li class="clearfix">
-                <a href="">
-                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
-                </a>
-                <h3 class="name">
-                  <a href="">
-                    Burhan Sholihin
-                  </a>
-                </h3>
-                <a href="" class="button default">
-                  Follow
-                </a>
-              </li>
-              <li class="clearfix">
-                <a href="">
-                  <img src="images/rekomendasi-profile-2.jpeg" alt="">
-                </a>
-                <h3 class="name">
-                  <a href="">
-                    Wahyu Dhyatmika
-                  </a>
-                </h3>
-                <a href="" class="button default">
-                  Follow
-                </a>
-              </li>
-              <li class="clearfix">
-                <a href="">
-                  <img src="images/rekomendasi-profile-3.jpeg" alt="">
-                </a>
-                <h3 class="name">
-                  <a href="">
-                    Istiqomatul Hayati
-                  </a>
-                </h3>
-                <a href="" class="button default">
-                  Follow
-                </a>
-              </li>
+              <div class="recommendation-list people">
+                <div class="wrapper">
+                  <li>
+                    <div class="wrapper clearfix">
+                      <a href="">
+                        <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                      </a>
+                      <h3 class="name">
+                        <a href="">
+                          Burhan Sholihin
+                        </a>
+                      </h3>
+                      <a href="" class="button default">
+                        Follow
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wrapper clearfix">
+                      <a href="">
+                        <img src="images/rekomendasi-profile-2.jpeg" alt="">
+                      </a>
+                      <h3 class="name">
+                        <a href="">
+                          Wahyu Dhyatmika
+                        </a>
+                      </h3>
+                      <a href="" class="button default">
+                        Follow
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wrapper clearfix">
+                      <a href="">
+                        <img src="images/rekomendasi-profile-3.jpeg" alt="">
+                      </a>
+                      <h3 class="name">
+                        <a href="">
+                          Istiqomatul Hayati
+                        </a>
+                      </h3>
+                      <a href="" class="button default">
+                        Follow
+                      </a>
+                    </div>
+                  </li>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer>
-    footer
-  </footer>
 </div>
 <script src="js/core.js"></script>
-<script src="js/framework7.js"></script>
+<!-- <script src="js/framework7.js"></script> -->
 <script src="js/main-f7.js"></script>
 </body>
 </html>

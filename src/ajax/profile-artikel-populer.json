@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "date": "Senin, 16 Agustus 2018",
+    "image": "images/profile-list-populer-1.jpg",
+    "title": "Tips Trik Tinder agar Match Beruntun",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  },
+  {
+    "id": 2,
+    "date": "Minggu, 15 Agustus 2018",
+    "image": "images/profile-list-1.jpg",
+    "title": "Posisi Design pada Perkembangan Web Apps Modern",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  },
+  {
+    "id": 3,
+    "date": "Sabtu, 14 Agustus 2018",
+    "image": "images/profile-list-populer-1.jpg",
+    "title": "Seputar BEM pada CSS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  },
+  {
+    "id": 4,
+    "date": "Senin, 16 Agustus 2018",
+    "image": "images/profile-list-2.jpg",
+    "title": "Javascript dari Tahun ke Tahun",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  }
+]
