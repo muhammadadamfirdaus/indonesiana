@@ -3,7 +3,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const minifycss = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 
 // compile sass
@@ -55,7 +55,7 @@ gulp.task('copyImages', function(){
 
 // js
 gulp.task('minifyJS', function(){
-  gulp.src('src/js/*')
+  gulp.src(['src/js/main.js', 'src/js/core.js', 'src/js/dropzone.js', 'src/js/dashboard.js'])
   .pipe(uglify())
   .pipe(gulp.dest('dist/js'));
 });

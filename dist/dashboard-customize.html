@@ -37,45 +37,108 @@
 <![endif]-->
 </head>
 <body>
-<div id="user" class="container dashboard default customize">
+<div id="user" class="container dashboard default customize dashboard-3">
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
-        <p class="comment">
-          Komentar
-        </p>
+        <ul class="wrapper">
+          <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
+        </ul>
       </div>
       <div class="col w-50">
-        <p class="name">
-          Muhammad Adam Firdaus
-        </p>
-        <div class="avatar">
-          <a href="">
-            <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
-          </a>
+        <div class="wrapper clearfix">
+          <p class="col name">
+            Muhammad Adam Firdaus
+          </p>
+          <div class="col user">
+            <a href="profile.html">
+              <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </nav>
   <div class="wrapper clearfix">
-    <nav class="sidebar">
+    <nav class="col sidebar">
       <div class="wrapper">
-        <li><a href="dashboard-create-post.html" class="create-post">Buat Tulisan</a></li>
-        <li><a href="dashboard-list-article.html" class="list-article">Tulisan Terakhir</a></li>
-        <li><a href="dashboard-customize.html" class="customize">Ubah Favorit</a></li>
-        <li><a href="dashboard-notification.html" class="notification" data-notifications="23">Notifikasi</a></li>
-        <li><a href="" class="medal">Medali</a></li>
-        <li><a href="dashboard-settings.html" class="settings">Pengaturan</a></li>
+        <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
+        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
+        <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
+        <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
+        <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
+        <!-- <li><a href="" class="medal">Medali</a></li> -->
+        <li><a href="dashboard-logs.html" class="icon logs"></a><a href="dashboard-logs.html" class="dashboard-menu">Riwayat</a></li>
+        <li><a href="dashboard-settings.html" class="icon settings"></a><a href="dashboard-settings.html" class="dashboard-menu">Pengaturan</a></li>
+        <li><a href="#" class="icon toggle"></a></li>
       </div>
     </nav>
-    <main>
-      <div class="wrapper clearfix">
+    <aside class="col">
+      <div class="wrapper">
+        <div class="recommendation follow">
+          <div class="wrapper">
+            <h2>Layak untuk Anda Ikuti</h2>
+            <div class="recommendation-list people">
+              <div class="wrapper">
+                <li>
+                  <div class="wrapper clearfix">
+                    <a href="">
+                      <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                    </a>
+                    <h3 class="name">
+                      <a href="">
+                        Burhan Sholihin
+                      </a>
+                    </h3>
+                    <a href="" class="button default">
+                      Follow
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrapper clearfix">
+                    <a href="">
+                      <img src="images/rekomendasi-profile-2.jpeg" alt="">
+                    </a>
+                    <h3 class="name">
+                      <a href="">
+                        Wahyu Dhyatmika
+                      </a>
+                    </h3>
+                    <a href="" class="button default">
+                      Follow
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="wrapper clearfix">
+                    <a href="">
+                      <img src="images/rekomendasi-profile-3.jpeg" alt="">
+                    </a>
+                    <h3 class="name">
+                      <a href="">
+                        Istiqomatul Hayati
+                      </a>
+                    </h3>
+                    <a href="" class="button default">
+                      Follow
+                    </a>
+                  </div>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="col">
+      <div class="wrapper">
         <nav>
           <div class="wrapper clearfix">
             <div class="col w-50">
               <li><a href="#" class="button default active tooltip recommendation" title="Tampilkan semua artikel.">Rekomendasi</a></li>
               <li><a href="#" class="button default people" title="Tampilkan artikel yang sedang tayang.">Tokoh</a></li>
-              <li><a href="#" class="button default tooltip topics" title="Tampilkan artikel yang masih dalam draft.">Topik</a></li>
+              <!-- <li><a href="#" class="button default tooltip topics" title="Tampilkan artikel yang masih dalam draft.">Topik</a></li> -->
             </div>
             <div class="col w-50">
               <div class="wrapper clearfix">
@@ -93,191 +156,104 @@
             </div>
           </div>
         </nav>
-        <div class="col w-70">
-          <div class="wrapper">
-            <section class="recommendation">
-              <div class="wrapper">
-                <!-- <h3>Orang yang juga menulis tentang <a class="tags" href="">Lombok</a></h3>
-                <div class="recommendation-list people">
-                  <li class="clearfix">
-                    <a href="">
-                      <img src="images/rekomendasi-profile-1.jpeg" alt="">
-                    </a>
-                    <h3 class="name">
-                      <a href="">
-                        Burhan Sholihin
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li>
-                  <li class="clearfix">
-                    <a href="">
-                      <img src="images/rekomendasi-profile-1.jpeg" alt="">
-                    </a>
-                    <h3 class="name">
-                      <a href="">
-                        Burhan Sholihin
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li>
-                  <li class="clearfix">
-                    <a href="">
-                      <img src="images/rekomendasi-profile-1.jpeg" alt="">
-                    </a>
-                    <h3 class="name">
-                      <a href="">
-                        Burhan Sholihin
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li>
-                  <li class="clearfix">
-                    <a href="">
-                      <img src="images/rekomendasi-profile-1.jpeg" alt="">
-                    </a>
-                    <h3 class="name">
-                      <a href="">
-                        Burhan Sholihin
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li>
-                </div> -->
-                <div id="recommendation-topics" class="recommendation-list topics">
-                  <!-- <li class="clearfix">
-                    <a href="">
-                      <img src="images/home-1.jpg" alt="">
-                    </a>
-                    <h2 class="title">
-                      <a href="">
-                        Teknologi
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li>
-                  <li class="clearfix">
-                    <a href="">
-                      <img src="images/home-1.jpg" alt="">
-                    </a>
-                    <h2 class="title">
-                      <a href="">
-                        Teknologi
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li>
-                  <li class="clearfix">
-                    <a href="">
-                      <img src="images/home-1.jpg" alt="">
-                    </a>
-                    <h2 class="title">
-                      <a href="">
-                        Teknologi
-                      </a>
-                    </h3>
-                    <a href="" class="button default">
-                      Follow
-                    </a>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
-                    </p>
-                  </li> -->
+        <section class="recommendation">
+          <div id="recommendation" class="recommendation-list topics wrapper">
+            <!-- <h3>Orang yang juga menulis tentang <a class="tags" href="">Lombok</a></h3>
+            <div class="recommendation-list people">
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+              <li class="clearfix">
+                <a href="">
+                  <img src="images/rekomendasi-profile-1.jpeg" alt="">
+                </a>
+                <h3 class="name">
+                  <a href="">
+                    Burhan Sholihin
+                  </a>
+                </h3>
+                <a href="" class="button default">
+                  Follow
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
+              </li>
+            </div> -->
+
+            <!-- <li>
+              <div class="wrapper clearfix">
+                <a href="">
+                  <img src="images/home-1.jpg" alt="">
+                </a>
+                <div class="col">
+                  <h2 class="title">
+                  <a href="">
+                    Teknologi
+                  </a>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores.
+                </p>
                 </div>
+                <a href="" class="button default">
+                  Follow
+                </a>
               </div>
-            </section>
+            </li> -->
           </div>
-        </div>
-        <div class="col w-30">
-          <div class="wrapper">
-            <section class="toolbar navigation"></section>
-            <div class="recommendation follow">
-              <div class="wrapper">
-                <h2>Layak untuk Anda Ikuti</h2>
-                <div class="recommendation-list people">
-                  <li class="clearfix">
-                      <a href="">
-                        <img src="images/rekomendasi-profile-1.jpeg" alt="">
-                      </a>
-                      <h3 class="name">
-                        <a href="">
-                          Burhan Sholihin
-                        </a>
-                      </h3>
-                      <a href="" class="button default">
-                        Follow
-                      </a>
-                    </li>
-                    <li class="clearfix">
-                      <a href="">
-                        <img src="images/rekomendasi-profile-2.jpeg" alt="">
-                      </a>
-                      <h3 class="name">
-                        <a href="">
-                          Wahyu Dhyatmika
-                        </a>
-                      </h3>
-                      <a href="" class="button default">
-                        Follow
-                      </a>
-                    </li>
-                    <li class="clearfix">
-                      <a href="">
-                        <img src="images/rekomendasi-profile-3.jpeg" alt="">
-                      </a>
-                      <h3 class="name">
-                        <a href="">
-                          Istiqomatul Hayati
-                        </a>
-                      </h3>
-                      <a href="" class="button default">
-                        Follow
-                      </a>
-                    </li>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </main>
   </div>
-  <!-- <footer>
-    footer
-  </footer> -->
 </div>
 <script src="js/core.js"></script>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=aau06cbdczepmjfp3ufior3x9ip4c1reg3flh2m1gxgehbgc"></script>
