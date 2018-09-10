@@ -60,5 +60,11 @@ gulp.task('minifyJS', function(){
   .pipe(gulp.dest('dist/js'));
 });
 
+// html
+gulp.task('copyAJAX', function(){
+  gulp.src('src/ajax/*')
+  .pipe(gulp.dest('dist/ajax/'));
+});
+
 // export
-gulp.task('export', ['copyHTML', 'copyCSS', 'copyImages', 'minifyJS']);
+gulp.task('export', ['copyHTML', 'copyCSS', 'copyImages', 'minifyJS', 'copyAJAX']);

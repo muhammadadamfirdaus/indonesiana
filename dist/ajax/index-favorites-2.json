@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Lifestyle",
+    "urlCategory": "category.html",
+    "date": "Senin, 16 Agustus 2018",
+    "author": "Muchlis R Ludin",
+    "urlAuthor": "profile.html",
+    "urlArticle": "detail-article.html",
+    "image": "images/home-gaya-1.jpg",
+    "imageCaption": "lorem ipsum dolor sit amet",
+    "title": "Berpengaruhkah Warna untuk Ruang Kerja?",
+    "description": "Suatu saat nanti entah itu besok atau lusa, atau beberapa tahun ke depan, kita akan menyaksikan sebuah revolusi baru dalam cara mengganti organ manusia yang telah rusak."
+  },
+  {
+    "category": "Lifestyle",
+    "urlCategory": "category.html",
+    "date": "Minggu, 15 Agustus 2018",
+    "author": "Amirudin Mahmud",
+    "urlAuthor": "profile.html",
+    "urlArticle": "detail-article.html",
+    "image": "images/home-terpopuler-4.jpg",
+    "imageCaption": "",
+    "title": "Jagalah Pagimu Selalu Menyenangkan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  },
+  {
+    "category": "Lifestyle",
+    "urlCategory": "category.html",
+    "date": "Sabtu, 14 Agustus 2018",
+    "author": "Muchlis R Ludin",
+    "urlAuthor": "profile.html",
+    "urlArticle": "detail-article.html",
+    "image": "images/home-gaya-3.jpg",
+    "imageCaption": "lorem ipsum dolor sit amet",
+    "title": "Cireng, Camilan Murah yang Mengenyangkan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  },
+  {
+    "category": "Lifestyle",
+    "urlCategory": "category.html",
+    "date": "Senin, 16 Agustus 2018",
+    "author": "Muchlis R Ludin",
+    "urlAuthor": "profile.html",
+    "urlArticle": "detail-article.html",
+    "image": "images/home-gaya-4.jpg",
+    "imageCaption": "lorem ipsum dolor sit amet",
+    "title": "Jangan Malas Mengajak Anak Anda ke Dapur",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consectetur porta facilisis. Aliquam efficitur ultricies eleifend. Duis quis est pulvinar, fringilla arcu eu, fringilla ex. Maecenas ac neque congue, tincidunt elit porttitor, accumsan ante. In sed convallis magna. Proin eu nunc eu neque laoreet congue. Aenean ac magna non tellus lacinia lobortis eu in diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis diam id pharetra mollis. Etiam tristique nisl sed quam luctus, vitae convallis arcu volutpat. Suspendisse non velit nec tellus ultrices efficitur."
+  }
+]
