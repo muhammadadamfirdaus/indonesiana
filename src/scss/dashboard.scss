@@ -63,7 +63,7 @@ html, body {
 }
 
 body {
-  font-family: "Amiri";
+  font-family: "Lato";
   font-size: 16px;
   font-weight: 400;
 }
@@ -82,7 +82,7 @@ q:before, q:after {
   content: none;
 }
 
-h1, h2, h3, h4, h5, h6, .date {
+h1, h2, h3, h4, h5, h6, .date, p {
   font-family: "Lato";
 }
 
@@ -460,6 +460,7 @@ body {
   float: left;
   width: 15%;
   top: 48px;
+  z-index: 1;
 }
 
 .toolbar,
@@ -472,7 +473,7 @@ body {
   width: 85%;
   transition: all 0.3s ease;
   & > .wrapper {
-    padding: 3em 2em 0 2em;
+    padding: 48px 2em 0 2em;
   }
   & .col.w-30 {
     float: right;
@@ -501,10 +502,17 @@ body {
   }
 }
 
+
 .popup {
   &.sign {
-    width: 50%;
-    height: 60%;
+    @media #{$desktopHD}{
+      width: 25%;
+      // height: 60%
+    }
+    @media #{$desktopGeneral}{
+      width: 50%;
+      // height: 60%;
+    }
   }
   &.create-post-type {
     width: 50%;
@@ -610,6 +618,8 @@ body {
     }
   }
 }
+
+
 .black-transparent {
   position: relative;
   &:before {
@@ -735,7 +745,7 @@ nav.sidebar {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    padding: 0 10% 0 1em;
+    padding: 0 1em 0 1em;
     & li {
       display: flex;
       align-items: center;
@@ -760,6 +770,24 @@ nav.sidebar {
       }
       &:last-child {
         border-bottom: 0;
+      }
+      &.sub {
+        & ul {
+          display: none;
+        }
+        &.active {
+          & ul {
+            display: block;
+          }
+        }
+      }
+      ul {
+        position: absolute;
+        top: 0.5em;
+        right: -11em;
+        width: 160px;
+        z-index: 999;
+        background: #222;
       }
     }
     & li {
@@ -835,9 +863,6 @@ main {
   & > .wrapper {
     padding: 3em 0 0 2em;
     height: 100%;
-    & > * {
-
-    }
   }
 }
 
@@ -1168,11 +1193,6 @@ section.recommendation {
           display: block;
           float: left;
         }
-        & > a:first-child,
-        & .name,
-        & .title {
-          // float: left;
-        }
         & .name,
         & .title {
           font-size: 120%;  
@@ -1345,7 +1365,7 @@ section.recommendation {
           margin: 20px 20px 0 0;
         }
         & > * {
-          display: inline-block;
+          display: block;
           float: left;
         }
         & > .date,
@@ -1600,14 +1620,14 @@ input#tags {
   }
 }
 
-
 .dashboard {
   main {
     & > .wrapper {
       & > *:nth-child(1) {
-        margin: 3em 0 1em;
+        margin: 1em 0;
       }
       & > nav {
+        margin: 1em 0;
         & > .wrapper {
           display: flex;
           justify-content: center;
@@ -1735,14 +1755,16 @@ input#tags {
   }
 }
 
+.title {
+  font-size: 150%;
+}
+
 .notification {
   main {
     font: 21px 'Lato', Arial;
     & > .wrapper {
       & > *:nth-child(1) {
         margin: 1em 0 1em;
-        font-size: 28px;
-        font-weight: 300;
       }
       & > ul {
         & h5 {
@@ -1795,7 +1817,6 @@ input#tags {
 .settings {
   & main {
     font: 400 21px 'Lato', Arial;
-    margin: 2em 0 0 0;
     & h5 {
       margin-bottom: 0.5em;
       text-align: center;
@@ -1911,27 +1932,6 @@ input#tags {
         }
       }
     }
-  }
-}
-
-
-.popup {
-  // box-shadow: 0px 2px 50px -5px #777;
-  // background: #fff;
-  position:fixed;
-  left: 50%;
-  top: 50%;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  transform: scale(0.01) translate3d(-50%,-50%,0);
-  transition: all 0.2s cubic-bezier(0.560, 0.185, 0.315, 1.150);
-  z-index: 12;
-  &.active {
-    opacity: 1;
-    transform: scale(1) translate3d(-50%,-50%,0);
-    transition: all 0.2s cubic-bezier(0.560, 0.185, 0.315, 1.150);
-    transform-origin: center center;
   }
 }
 
@@ -2056,6 +2056,33 @@ input#tags {
         }
       }
     }
+  }
+}
+
+.pagination {
+  margin: 1em 0;
+  & li {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 4px;
+    & a {
+      display: block;
+      color: #000;
+      padding: 0.4em 0.8em;
+      text-decoration: none;
+      &:hover {
+        background: #000;
+        color: #fff;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
+
+.list-article main {
+  .pagination {
+    text-align: right;
   }
 }
 
@@ -2460,7 +2487,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
-  -ms-touch-action: none;
+  touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
 .swiper-container-horizontal > .swiper-scrollbar {
@@ -2670,5 +2697,5 @@ button.swiper-pagination-bullet {
 }
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
-  -ms-perspective: 1200px;
+  perspective: 1200px;
 }

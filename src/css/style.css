@@ -596,7 +596,7 @@ main > .wrapper .featured .wrapper h3 {
         text-align: center;
         margin: 20px 15px 0 5px; }
       .type-2 > .wrapper > .col:first-child > .wrapper .card .wrapper > * {
-        display: inline-block;
+        display: block;
         float: left; }
       .type-2 > .wrapper > .col:first-child > .wrapper .card .wrapper > .date,
       .type-2 > .wrapper > .col:first-child > .wrapper .card .wrapper > h3,
@@ -696,8 +696,29 @@ section {
 #detail .image {
   overflow: hidden;
   margin-bottom: 0; }
+  @media screen and (min-width: 600px) and (max-width: 800px) {
+    #detail .image {
+      height: 338px; } }
+  @media screen and (min-width: 376px) and (max-width: 599px) {
+    #detail .image {
+      height: 260px; } }
+  @media screen and (max-width: 375px) {
+    #detail .image {
+      height: 200px; } }
   #detail .image img {
     width: 100%; }
+    @media screen and (max-width: 800px) {
+      #detail .image img {
+        width: auto;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        right: -9999px;
+        margin: auto;
+        width: auto; } }
 
 #detail main.profile {
   margin-top: 0;
@@ -952,7 +973,7 @@ main.category .wrapper .feed.type-2 .w-50:nth-child(1) {
         text-align: center;
         margin: 20px 20px 0 0; }
       main.category .wrapper .feed.type-2 .w-50:nth-child(1) .card .wrapper > * {
-        display: inline-block;
+        display: block;
         float: left; }
       main.category .wrapper .feed.type-2 .w-50:nth-child(1) .card .wrapper > .date,
       main.category .wrapper .feed.type-2 .w-50:nth-child(1) .card .wrapper > h3,
@@ -1067,7 +1088,7 @@ article .text {
         padding: 1.5em 3em; } }
     @media screen and (min-width: 376px) and (max-width: 599px) {
       article .text > .wrapper {
-        padding: 1em 2em; } }
+        padding: 0 2em; } }
     article .text > .wrapper > h1:nth-of-type(1) {
       font-weight: 700;
       margin-bottom: 0.5em; }
@@ -1090,7 +1111,7 @@ article .text {
       @media screen and (max-width: 800px) {
         article .text > .wrapper > h2 {
           font-size: 150%;
-          margin-bottom: 0.5em; } }
+          margin: 1.5em 0 0.5em 0; } }
       @media screen and (max-width: 375px) {
         article .text > .wrapper > h2 {
           font-size: 120%; } }
@@ -1100,7 +1121,7 @@ article .text {
     article .text > .wrapper img {
       width: 100%; }
     article .text > .wrapper p {
-      color: #555; }
+      color: #000; }
       @media screen and (min-width: 800px) {
         article .text > .wrapper p {
           font-size: 120%;
@@ -1139,7 +1160,8 @@ article > * > .wrapper {
 article .image {
   display: block;
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   article .image img {
     width: 100%; }
   @media screen and (max-width: 375px) {
@@ -1180,9 +1202,17 @@ article .profile {
     display: inline-block; }
   article .profile > * > div:nth-child(1) {
     width: 20%; }
+    @media screen and (max-width: 800px) {
+      article .profile > * > div:nth-child(1) {
+        width: 100%; }
+        article .profile > * > div:nth-child(1) a {
+          margin: 0 auto; } }
   article .profile > * > div:nth-child(2) {
     width: 80%;
     margin-bottom: 1em; }
+    @media screen and (max-width: 800px) {
+      article .profile > * > div:nth-child(2) {
+        width: 100%; } }
     article .profile > * > div:nth-child(2) h2 {
       font-size: 100%;
       margin-bottom: 0.5em; }
@@ -1216,9 +1246,9 @@ article .profile {
   article .share {
     left: 20%; } }
 
-@media screen and (min-width: 801px) and (max-width: 1280px) {
+@media screen and (min-width: 800px) {
   article .share {
-    left: 10%; } }
+    left: 20%; } }
 
 article figcaption {
   margin: 1em 0; }
@@ -1440,7 +1470,8 @@ article #comment .reaction > .wrapper > .col:nth-child(2) {
     .share {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      width: auto; } }
   @media screen and (max-width: 800px) {
     .share > * {
       margin-right: 0.2em; } }
@@ -1458,7 +1489,7 @@ article #comment .reaction > .wrapper > .col:nth-child(2) {
           background-position: -77px -15px; }
         .share > * > *.bookmark {
           background-position: -115px -15px; } }
-    @media screen and (min-width: 801px) and (max-width: 1280px) {
+    @media screen and (min-width: 800px) {
       .share > * > * {
         background-size: 280px; }
         .share > * > *.comment {
@@ -1841,9 +1872,38 @@ article #comment .reaction > .wrapper > .col:nth-child(2) {
     -webkit-transform-origin: center center;
             transform-origin: center center; }
 
-.popup.sign {
-  width: 50%;
-  height: 60%; }
+@media screen and (min-width: 1440px) {
+  .popup.sign {
+    width: 30%;
+    height: 60%; } }
+
+@media screen and (min-width: 801px) and (max-width: 1280px) {
+  .popup.sign {
+    width: 50%;
+    height: 60%; } }
+
+.popup.sign .content > .wrapper ul li {
+  width: 200px;
+  margin: 0 auto; }
+  .popup.sign .content > .wrapper ul li img {
+    width: 100%; }
+
+.popup.sign .content > .wrapper > section {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .popup.sign .content > .wrapper > section .wrapper {
+    padding: 0 20%; }
+    .popup.sign .content > .wrapper > section .wrapper > * {
+      color: #005b97; }
+    .popup.sign .content > .wrapper > section .wrapper a {
+      color: #fff; }
+
+.popup.sign .content > .wrapper > img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1; }
 
 .popup > .wrapper {
   -webkit-box-sizing: border-box;

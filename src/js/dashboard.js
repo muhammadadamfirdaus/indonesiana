@@ -61,6 +61,15 @@ sidebarExpander.on('click', function(e){
   }
 });
 
+// sidebar submenu
+let sidebarMenuList = $('.sidebar .wrapper > li');
+sidebarMenuList.on('mouseenter', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  sidebarMenuList.removeClass('active');
+  $(this).addClass('active');
+});
+
 // accordion
 let accordion = $('.accordion');
 let accordionButton = accordion.find('.toggle');

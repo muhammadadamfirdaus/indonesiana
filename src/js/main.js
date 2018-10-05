@@ -89,7 +89,7 @@ $(function(){
         $(this).find('.sub').stop().slideUp(200);
       });
       console.log('desktop');
-      $('nav.menu').removeClass('swiper-container swiper-container-horizontal swiper-container-ios swiper-container-android').children().removeClass('swiper-wrapper').children().removeClass('swiper-slide swiper-slide-active');
+      $('nav.menu').removeClass('swiper-container swiper-container-horizontal swiper-container-ios swiper-container-android').children().removeClass('swiper-wrapper').children().removeClass('swiper-slide swiper-slide-active').removeAttr("style");
       // $('.profile .swiper-container.navigation').removeClass('swiper-container swiper-container-horizontal swiper-container-ios swiper-container-android').children().removeClass('swiper-wrapper').children().removeClass('swiper-slide swiper-slide-active');
       // $('.swiper-menu.swiper-button-next, .swiper-menu.swiper-button-prev').hide();
  
