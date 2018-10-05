@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const minifycss = require('gulp-clean-css');
@@ -47,13 +48,21 @@ gulp.task('copyCSS', function(){
   .pipe(gulp.dest('dist/css/'));
 });
 
+// export & minify css
+gulp.task('minifyCSS', function(){
+  gulp.src('src/css/*')
+  .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(gulp.dest('dist/css/'));
+});
+
 // images
 gulp.task('copyImages', function(){
   gulp.src('src/images/*')
   .pipe(gulp.dest('dist/images/'));
 });
 
-// js
+
+// exoprt & minify js
 gulp.task('minifyJS', function(){
   gulp.src(['src/js/main.js', 'src/js/core.js', 'src/js/dropzone.js', 'src/js/dashboard.js'])
   .pipe(uglify())
@@ -67,4 +76,4 @@ gulp.task('copyAJAX', function(){
 });
 
 // export
-gulp.task('export', ['copyHTML', 'copyCSS', 'copyImages', 'minifyJS', 'copyAJAX']);
+gulp.task('export', ['copyHTML', 'copyCSS', 'minifyCSS', 'copyImages', 'minifyJS', 'copyAJAX']);

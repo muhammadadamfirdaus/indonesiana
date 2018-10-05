@@ -37,12 +37,12 @@
 <![endif]-->
 </head>
 <body>
-<div id="user" class="container dashboard default notification">
+<div id="user" class="container dashboard default dashboard-3">
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
         <ul class="wrapper">
-          <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
+            <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
         </ul>
       </div>
       <div class="col w-50">
@@ -62,8 +62,38 @@
   <div class="wrapper clearfix">
     <nav class="col sidebar">
       <div class="wrapper">
-        <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
-        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
+        <li class="sub">
+          <a href="dashboard-create-post.html" class="icon create-post"></a>
+          <a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a>
+          <ul>
+            <li>
+              <a href="">
+                Sub Menu
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Sub Menu
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sub">
+          <a href="dashboard-list-article.html" class="icon list-article"></a>
+          <a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a>
+          <ul>
+            <li>
+              <a href="">
+                Sub Menu
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Sub Menu
+              </a>
+            </li>
+          </ul>
+        </li>
         <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
         <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
         <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
@@ -73,79 +103,76 @@
         <li><a href="#" class="icon toggle"></a></li>
       </div>
     </nav>
+    <aside class="col">
+      <div class="wrapper">
+        <div class="control">
+          <section>
+            <div class="wrapper">
+              <div class="row">
+                <h5>Option</h5>
+                <a class="button default save" href="#" id="save">Update</a>
+                <a class="button default green publish" href="http://indonesiana.tempointeraktif.co/admin/user" > cancel </a>
+              </div>
+              <em>Terakhir disimpan pada 11 Agustus 2018, pukul 03:36</em>
+            </div>
+          </section>
+        </div>
+      </div>
+    </aside>
     <main class="col">
       <div class="wrapper">
         <h2 class="title">
-          Notifikasi Anda
+          Buat User Baru
         </h2>
-        <ul>
-          <h5>Minggu, 12 Agustus 2018</h5>
+        <nav>
+          <div class="wrapper clearfix">
+            <div class="col w-50">
+              <li><a href="#" class="button default active tooltip newest" title="Tampilkan semua artikel.">Semua Artikel</a></li>
+              <li><a href="#" class="button default tooltip published" title="Tampilkan artikel yang sedang tayang.">Tayang</a></li>
+              <li><a href="#" class="button default tooltip draft" title="Tampilkan artikel yang masih dalam draft.">Draft</a></li>
+            </div>
+            <div class="col w-50">
+              <div class="wrapper clearfix">
+                <form id="filter-article" action="#">
+                  <input type="text" class="filter">
+                </form>
+                <h5>
+                  Urutkan Berdasarkan
+                </h5>
+                <!-- <a href="#" class="button ascending">A ke Z</a>
+                <a href="#" class="button descending">Z ke A</a> -->
+                <a href="#" class="button default tooltip newest" title="Urutkan artikel dari yang terbaru.">Terbaru</a>
+                <a href="#" class="button default tooltip oldest" title="Urutkan artikel dari yang terlama.">Terlama</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <form id="text" action="http://indonesiana.tempointeraktif.co/admin/user/update" method="post">
           <section>
-            <li>
-              <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT">7 menit yang lalu</span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Mantaaap!&quot;</a>
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT">1 jam yang lalu</span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Wahyu Dhyatmika</a> mengomentari artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a> <a href="" target="blank" class="object">&quot;Kereeeeeennn&quot;</a>
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT">2 jam yang lalu</span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Nadiem Gojek</a> mengikuti Anda
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <h5>Nama</h5>
+            <input type="text" id="title" name="nama" value="test id group" required="required">
+            <input type="hidden" id="title" name="id" value="8">
           </section>
-          <h5>Sabtu, 11 Agustus 2018</h5>
           <section>
-            <li>
-              <div class="wrapper clearfix">
-                <span class="col date" data-time="20:58:39 GMT"></span>
-                <div class="col">
-                  <p>
-                    <a href="profile.html" class="subject" target="blank">Burhan Sholihin</a> menyukai artikel Anda <a href="detail-article.html" target="blank" class="object">Posisi Designer pada Per...</a>
-                  </p>
-                </div>
-                <div class="col">
-                  <div class="action">
-                    <a href="detail-article.html" class="button default blue view" target="blank">Lihat</a>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <h5>Username</h5>
+            <input type="text" id="login" name="login" value="testt" required="required">
           </section>
-        </ul> 
+          <section>
+            <h5>Password</h5>
+            <input type="password" id="showpass" name="password" value="testt" required="required">
+            <input type="checkbox" onclick="show()">Show Password
+          </section>
+          <!-- <section>
+              <h5>Master Group</h5>
+              <select style="width:100%;" id="domain" name="id_edisi" class="required select form-control col-md-7 col-xs-12" required="required">
+                <option value="">-- Master Group --</option>
+                                            </select>
+          </section> -->
+          <section>
+            <h5>Email</h5>
+            <input type="email" id="title" name="email1" value="testt@tempo.co.id" required="required">
+          </section>
+        </form>
       </div>
     </main>
   </div>
