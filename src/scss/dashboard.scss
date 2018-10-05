@@ -371,7 +371,7 @@ $mobile5inch: 'screen and (max-width: 375px)';
 .toolbar {
   width: 100%;
   height: 48px;
-  & > * {
+  & > *:nth-child(1) {
     height: 100%;
     display: flex;
     align-items: center;
@@ -430,6 +430,34 @@ $mobile5inch: 'screen and (max-width: 375px)';
     & a {
       width: 32px;
       height: 32px;
+    }
+  }
+
+  & .profile-expand {
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    display: none;
+    position: fixed;
+    top: 48px;
+    right: 4%;
+    width: 200px;
+    height: 200px;
+    & > .wrapper {
+      padding: 0 2em;
+      & li {
+        list-style: none;
+        margin: 1em 0;
+      }
+    }
+    & a {
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      width: auto;
+      height: auto;
+    }
+    &.active {
+      display: block;
     }
   }
 }
@@ -834,7 +862,7 @@ nav.sidebar {
   }
 }
 
-.toolbar > * {
+.toolbar > *:nth-child(1) {
   @media #{$desktopHD}{
     padding: 0 4%;
   }

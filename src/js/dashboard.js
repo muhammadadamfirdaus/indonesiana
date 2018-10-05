@@ -30,6 +30,18 @@ tooltip.on('mouseleave', function(){
   $('.tooltip-content').remove();
 });
 
+// toolbar
+let toolbarProfileExpand = $('.toolbar .profile-expand');
+let toolbarUser = $('.toolbar .user, .toolbar .name');
+toolbarUser.on('mouseenter', function(e){
+  toolbarProfileExpand.addClass('active');
+  toolbarProfileExpand.on('mouseleave', function(e){
+    if($(e.target).closest(toolbarProfileExpand).length){
+      toolbarProfileExpand.removeClass('active');
+    }
+  });
+});
+
 function get(url){
   return new Promise(function(resolve, reject){
     var xhr = new XMLHttpRequest();
@@ -491,7 +503,6 @@ if($('.settings').length){
   }
   if($('.settings .notification').length){
     var indicatorButton = $('.indicator');
-    
     
     indicatorButton.on('click', function(e){
       e.preventDefault();
