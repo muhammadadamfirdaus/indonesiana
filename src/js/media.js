@@ -2,38 +2,47 @@ const uploadButton = document.querySelector('.button.upload');
 const mediaUpload = document.querySelector('.modal.media');
 const createPost = document.querySelector('.create-post');
 const editCoverButton = document.querySelector('.cover');
-// check if upload button exists
-// if(uploadButton){
-//   console.log('media');
-//   // upload button on click
-//   window.addEventListener('click', function(e){
-//     // check if user click upload button
-//     if(e.target.closest('.button.upload')){
-//       console.log('di dalam');
-//       if(mediaUpload.classList.contains('active')){
-//         mediaUpload.classList.remove('active');
-//       } else {
-//         mediaUpload.classList.add('active');
-//       }
-//     } else if(e.target.closest('.modal.media')){
-//       console.log('di dalam');
-//       // close when user hit button close
-//       if(e.target.closest('.button.close')){
-//         mediaUpload.classList.remove('active');
-//       } else {
-//         // but do nothing if click inside
-//         return;
-//       }
-//     } else {
-//       // destroy everything when user out of the box...
-//       console.log('di luar');
-//       mediaUpload.classList.remove('active');
-//     }
-//   });
-// }
 
 if(uploadButton){
   modal(uploadButton);
 } else if (createPost){
   modal(editCoverButton);
+}
+
+// select media
+const thumbnail = document.querySelectorAll('.modal.media li');
+// const imageList = document.querySelector('.thumbnail img');
+// select all
+// for(let i = 0; i < thumbnail.length; i++){
+//   thumbnail[i].addEventListener('click', function(e){
+//     console.log('selected');
+//     if(thumbnail[i].classList.contains('selected')){
+//       thumbnailSelected.classList.remove('selected');
+//     } else {
+//       this.classList.add('selected');
+//     }
+//   });
+// }
+
+const imagePreview = document.querySelector('.preview img');
+const metaURL = document.querySelector('.meta-url');
+
+// select one
+for(let i = 0; i < thumbnail.length; i++){
+  thumbnail[i].addEventListener('click', function(e){
+    e.preventDefault();
+    console.log('selected');
+    // console.log(this.getAttribute('data-title'));
+
+    // change preview image by current selected image
+    imagePreview.src = thumbnail[i].getElementsByTagName('img')[0].src;
+    // change meta-url by current selected image
+    metaURL.value = thumbnail[i].getElementsByTagName('img')[0].src;
+
+    // remove .selected if is not selected
+    for(let i = 0; i < thumbnail.length; i++){
+      thumbnail[i].classList.remove('selected');
+      this.classList.add('selected');
+    }
+  });
 }

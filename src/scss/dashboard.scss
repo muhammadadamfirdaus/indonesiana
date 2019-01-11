@@ -1956,73 +1956,78 @@ input#tags {
 
 .view-grid,
 .view-list {
-  & main {
-    & > .wrapper {
-      & .list {
-        & li {
-          border-bottom: 1px solid #eee;
-          font-size: 0;
-          & > span {
-            display: inline-block;
-            margin: 20px 0 0 20px;
-          }
-          & .author {
-            font-size: 14px;
-            margin: 0 0 1.6em 0;
-          }
-          & > .wrapper {
-            display: flex;
-            align-items: center;
-            & > div {
-              & .title {
-                line-height: 24px;
-                & > a {
-                  color: #000;
-                  font: 700 21px 'Lato', Arial;
-                  text-decoration: none;
-                }
-              }
-            }
-            & > div:nth-of-type(1) {  
-              justify-content: left;
-              padding: 0 2em 1em 0;
-            }
-            & > div:nth-of-type(2) {
-              font-size: 12px;
-              & .indicator{
-                position: relative;
-                &:before {
-                  content: '';
-                  width: 16px;
-                  height: 16px;
-                  margin-left: -22px;
-                }
-                &.default {
-                  padding: 0.5em 1.5em 0.5em 2.5em;
-                }
-                & > * {
-                  line-height: 16px;
-                }
-              }
+  & .list {
+    & li {
+      border-bottom: 1px solid #eee;
+      font-size: 0;
+      & > span {
+        display: inline-block;
+        margin: 20px 0 0 20px;
+      }
+      & .author {
+        font-size: 14px;
+        margin: 0 0 1.6em 0;
+      }
+      & > .wrapper {
+        display: flex;
+        align-items: center;
+        & > div {
+          & .title {
+            line-height: 24px;
+            & > a {
+              color: #000;
+              font: 700 21px 'Lato', Arial;
+              text-decoration: none;
             }
           }
-      
-          & .action {
-            float: right;
-            & a.button {
-              opacity: 0;
-              visibility: hidden;
-              transition: all 0.3s ease;
+        }
+        & > div:nth-of-type(1) {  
+          justify-content: left;
+          padding: 0 2em 1em 0;
+        }
+        & > div:nth-of-type(2) {
+          font-size: 12px;
+          & .indicator{
+            position: relative;
+            &:before {
+              content: '';
+              width: 16px;
+              height: 16px;
+              margin-left: -22px;
+            }
+            &.default {
+              padding: 0.5em 1.5em 0.5em 2.5em;
+            }
+            & > * {
+              line-height: 16px;
             }
           }
-          &.active {
-            & .action {
-              & a.button {
-                opacity: 1;
-                visibility: visible;
-                transition: all 0.3s ease;
-              }
-            }
+        }
+      }
+  
+      & .action {
+        float: right;
+        & a.button {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+        }
+      }
+      &.active {
+        & .action {
+          & a.button {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+
+      &.selected {
+        & .wrapper {
+          & .thumbnail {
+            border: 4px solid #0998d1;
+            box-sizing: border-box;
           }
         }
       }
@@ -2103,12 +2108,6 @@ input#tags {
         }
       }
     }
-  }
-}
-
-.thumbnail {
-  &.selected {
-    border: 4px solid #0998d1;
   }
 }
 
@@ -2371,7 +2370,7 @@ input#tags {
             height: 300px;
             overflow: hidden;
             & img {
-              height: 100%;
+              width: 100%;
             }
           }
           & .meta-image {
