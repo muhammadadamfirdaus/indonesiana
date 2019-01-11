@@ -885,8 +885,8 @@ section {
   margin: 2em 0 1em;
 }
 
-// popup
-.popup {
+// modal
+.modal {
   &.sign {
     width: 40%;
     @media #{$desktopHD}{
@@ -2353,7 +2353,7 @@ article {
   }
 }
 
-.popup {
+.modal {
   box-shadow: 0px 2px 50px -5px #777;
   background: #fff;
   position:fixed;
@@ -2375,7 +2375,7 @@ article {
   }
 }
 
-.popup {
+.modal {
   &.sign {
     @media #{$desktopHD}{
       width: 30%;
@@ -2419,7 +2419,6 @@ article {
       }
     }
   }
-
 
   & > .wrapper {
     box-sizing: border-box;
