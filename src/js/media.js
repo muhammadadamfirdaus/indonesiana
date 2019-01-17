@@ -1,31 +1,24 @@
-const uploadButton = document.querySelector('.button.upload');
+
 const createPost = document.querySelector('.create-post');
-const editCoverButton = document.querySelector('.cover');
-const thumbnail = document.querySelectorAll('.list li');
 const mediaGallery = document.querySelector('.gallery');
-const mediaUpload = document.querySelector('.button-modal.upload');
 
 if(mediaGallery){
-  // modal(mediaGallery)
-  modal(mediaUpload)
+  var buttonUpload = '.upload';
+  var modalUpload = '.upload';
+  modal(buttonUpload, modalUpload);
+
+  var listThumbnail = '.thumbnail';
+  var modalGallery = '.gallery';
+  modal(listThumbnail, modalGallery);
+
 } else if (createPost){
-  modal(editCoverButton);
+  var buttonUpload = '.upload';
+  var modalUpload = '.create-post';
+  modal(buttonUpload, modalUpload);
 }
 
 // select media
-// const imageList = document.querySelector('.thumbnail img');
-// select all
-// for(let i = 0; i < thumbnail.length; i++){
-//   thumbnail[i].addEventListener('click', function(e){
-//     console.log('selected');
-//     if(thumbnail[i].classList.contains('selected')){
-//       thumbnailSelected.classList.remove('selected');
-//     } else {
-//       this.classList.add('selected');
-//     }
-//   });
-// }
-
+const thumbnail = document.querySelectorAll('.list li');
 // select one
 for(let i = 0; i < thumbnail.length; i++){
   thumbnail[i].addEventListener('click', function(e){
@@ -46,7 +39,6 @@ for(let i = 0; i < thumbnail.length; i++){
     for(let i = 0; i < thumbnail.length; i++){
       thumbnail[i].classList.remove('selected');
       this.classList.add('selected');
-      modal(thumbnail);
     }
   });
 }
