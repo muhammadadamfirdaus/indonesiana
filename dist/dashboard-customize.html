@@ -37,7 +37,7 @@
 <![endif]-->
 </head>
 <body>
-<div id="user" class="container dashboard default customize dashboard-3">
+<div id="user" class="container dashboard dashboard-2 default customize">
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
@@ -47,15 +47,24 @@
       </div>
       <div class="col w-50">
         <div class="wrapper clearfix">
-          <p class="col name">
-            Muhammad Adam Firdaus
-          </p>
-          <div class="col user">
-            <a href="profile.html">
-              <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
-            </a>
+          <div class="profile">
+            <p class="col name">
+              Muhammad Adam Firdaus
+            </p>
+            <div class="col user">
+              <a href="profile.html">
+                <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
+              </a>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="profile-expand">
+      <div class="wrapper">
+        <li><a href="dashboard-settings.html">Edit Profile</a></li>
+        <li><a href="dashboard-settings.html">Pengaturan</a></li>
+        <li></li>
       </div>
     </div>
   </nav>
@@ -63,14 +72,44 @@
     <nav class="col sidebar">
       <div class="wrapper">
         <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
-        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
-        <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
+        <li class="sub icon toggle">
+          <a href="dashboard-list-article.html" class="icon list-article"></a>
+          <a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a>
+          <ul>
+            <li>
+              <a href="dashboard-list-article.html" class="icon all-post"></a>
+              <a href="dashboard-list-article.html" class="dashboard-menu">Semua Artikel</a>
+            </li>
+            <li>
+              <a href="dashboard-tags.html" class="icon post-tags"></a>
+              <a href="dashboard-tags.html" class="dashboard-menu">Tag</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="dashboard-media.html" class="icon media"></a><a href="dashboard-media.html" class="dashboard-menu">Media</a></li>
+        <li class="sub icon toggle">
+          <a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a>
+          <ul>
+            <li>
+              <a href="dashboard-list-user.html" class="icon list-user"></a>
+              <a href="dashboard-list-user.html" class="dashboard-menu">Semua User</a>
+            </li>
+            <li>
+              <a href="dashboard-list-moderator.html" class="icon list-user"></a>
+              <a href="dashboard-list-moderator.html" class="dashboard-menu">Moderator</a>
+            </li>
+            <li>
+              <a href="dashboard-list-admin.html" class="icon list-user"></a>
+              <a href="dashboard-list-admin.html" class="dashboard-menu">Administrator</a>
+            </li>
+          </ul>
+        </li>
         <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
         <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
         <!-- <li><a href="" class="medal">Medali</a></li> -->
         <li><a href="dashboard-logs.html" class="icon logs"></a><a href="dashboard-logs.html" class="dashboard-menu">Riwayat</a></li>
         <li><a href="dashboard-settings.html" class="icon settings"></a><a href="dashboard-settings.html" class="dashboard-menu">Pengaturan</a></li>
-        <li><a href="#" class="icon toggle"></a></li>
+        <li><a href="#" class="switch icon toggle"></a></li>
       </div>
     </nav>
     <aside class="col">
@@ -133,29 +172,34 @@
     </aside>
     <main class="col">
       <div class="wrapper">
-        <nav>
-          <div class="wrapper clearfix">
-            <div class="col w-50">
-              <li><a href="#" class="button default active tooltip recommendation" title="Tampilkan semua artikel.">Rekomendasi</a></li>
-              <li><a href="#" class="button default people" title="Tampilkan artikel yang sedang tayang.">Tokoh</a></li>
-              <!-- <li><a href="#" class="button default tooltip topics" title="Tampilkan artikel yang masih dalam draft.">Topik</a></li> -->
-            </div>
-            <div class="col w-50">
-              <div class="wrapper clearfix">
-                <form id="filter-article" action="#">
-                  <input type="text" class="filter">
-                </form>
-                <h5>
-                  Urutkan Berdasarkan
-                </h5>
-                <!-- <a href="#" class="button ascending">A ke Z</a>
-                <a href="#" class="button descending">Z ke A</a> -->
-                <a href="#" class="button default tooltip newest" title="Urutkan artikel dari yang terbaru.">Terbaru</a>
-                <a href="#" class="button default tooltip oldest" title="Urutkan artikel dari yang terlama.">Terlama</a>
+        <h2 class="title">
+          Ubah Favorit Anda
+        </h2>
+        <form action="">
+          <nav class="filter">
+            <div class="wrapper clearfix">
+              <div class="col w-50">
+                <li><a href="#" class="button default active tooltip recommendation" title="Tampilkan semua artikel.">Rekomendasi</a></li>
+                <li><a href="#" class="button default people" title="Tampilkan artikel yang sedang tayang.">Tokoh</a></li>
+                <!-- <li><a href="#" class="button default tooltip topics" title="Tampilkan artikel yang masih dalam draft.">Topik</a></li> -->
+              </div>
+              <div class="col w-50">
+                <div class="wrapper clearfix">
+                  <form id="filter-article" action="#">
+                    <input type="text" class="filter">
+                  </form>
+                  <h5>
+                    Urutkan Berdasarkan
+                  </h5>
+                  <!-- <a href="#" class="button ascending">A ke Z</a>
+                  <a href="#" class="button descending">Z ke A</a> -->
+                  <a href="#" class="button default tooltip newest" title="Urutkan artikel dari yang terbaru.">Terbaru</a>
+                  <a href="#" class="button default tooltip oldest" title="Urutkan artikel dari yang terlama.">Terlama</a>
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </form>
         <section class="recommendation">
           <div id="recommendation" class="recommendation-list topics wrapper">
             <!-- <h3>Orang yang juga menulis tentang <a class="tags" href="">Lombok</a></h3>

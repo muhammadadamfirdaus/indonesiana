@@ -31,31 +31,39 @@
 <link rel="shortcut icon" href="https://cdn.tmpo.co/favicon/tempo-white.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
-<link rel="stylesheet" type="text/css" href="css/swiper.css">
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="css/ie7-lower.css">
 <![endif]-->
 </head>
 <body>
-<div id="user" class="container dashboard default list-article">
+<div id="user" class="container dashboard default view-list">
   <nav class="toolbar user active">
     <div class="wrapper clearfix">
       <div class="col w-50">
         <ul class="wrapper">
-            <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
+          <li><a href="dashboard.html" class="icon home">Dashboard</a></li>
         </ul>
       </div>
       <div class="col w-50">
         <div class="wrapper clearfix">
-          <p class="col name">
-            Muhammad Adam Firdaus
-          </p>
-          <div class="col user">
-            <a href="profile.html">
-              <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
-            </a>
+          <div class="profile">
+            <p class="col name">
+              Muhammad Adam Firdaus
+            </p>
+            <div class="col user">
+              <a href="profile.html">
+                <img src="images/profile.jpg" alt="Muhammad Adam Firdaus">
+              </a>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="profile-expand">
+      <div class="wrapper">
+        <li><a href="dashboard-settings.html">Edit Profile</a></li>
+        <li><a href="dashboard-settings.html">Pengaturan</a></li>
+        <li></li>
       </div>
     </div>
   </nav>
@@ -63,19 +71,52 @@
     <nav class="col sidebar">
       <div class="wrapper">
         <li><a href="dashboard-create-post.html" class="icon create-post"></a><a href="dashboard-create-post.html" class="dashboard-menu">Buat Tulisan</a></li>
-        <li><a href="dashboard-list-article.html" class="icon list-article"></a><a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a></li>
-        <li><a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a></li>
+        <li class="sub icon toggle">
+          <a href="dashboard-list-article.html" class="icon list-article"></a>
+          <a href="dashboard-list-article.html" class="dashboard-menu">Tulisan Anda</a>
+          <ul>
+            <li>
+              <a href="dashboard-list-article.html" class="icon all-post"></a>
+              <a href="dashboard-list-article.html" class="dashboard-menu">Semua Artikel</a>
+            </li>
+            <li>
+              <a href="dashboard-tags.html" class="icon post-tags"></a>
+              <a href="dashboard-tags.html" class="dashboard-menu">Tag</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="dashboard-media.html" class="icon media"></a><a href="dashboard-media.html" class="dashboard-menu">Media</a></li>
+        <li class="sub icon toggle">
+          <a href="dashboard-list-user.html" class="icon list-user"></a><a href="dashboard-list-user.html" class="dashboard-menu">User</a>
+          <ul>
+            <li>
+              <a href="dashboard-list-user.html" class="icon list-user"></a>
+              <a href="dashboard-list-user.html" class="dashboard-menu">Semua User</a>
+            </li>
+            <li>
+              <a href="dashboard-list-moderator.html" class="icon list-user"></a>
+              <a href="dashboard-list-moderator.html" class="dashboard-menu">Moderator</a>
+            </li>
+            <li>
+              <a href="dashboard-list-admin.html" class="icon list-user"></a>
+              <a href="dashboard-list-admin.html" class="dashboard-menu">Administrator</a>
+            </li>
+          </ul>
+        </li>
         <li><a href="dashboard-customize.html" class="icon customize"></a><a href="dashboard-customize.html" class="dashboard-menu">Ubah Favorit</a></li>
         <li><a href="dashboard-notification.html" class="icon notification" data-notifications="23"></a><a href="dashboard-notification.html" class="dashboard-menu">Notifikasi</a></li>
         <!-- <li><a href="" class="medal">Medali</a></li> -->
         <li><a href="dashboard-logs.html" class="icon logs"></a><a href="dashboard-logs.html" class="dashboard-menu">Riwayat</a></li>
         <li><a href="dashboard-settings.html" class="icon settings"></a><a href="dashboard-settings.html" class="dashboard-menu">Pengaturan</a></li>
-        <li><a href="#" class="icon toggle"></a></li>
+        <li><a href="#" class="switch icon toggle"></a></li>
       </div>
     </nav>
     <main class="col">
       <div class="wrapper">
-        <nav>
+        <h2 class="title">
+          Daftar Artikel
+        </h2>
+        <nav class="filter">
           <div class="wrapper clearfix">
             <div class="col w-50">
               <li><a href="#" class="button default active tooltip newest" title="Tampilkan semua artikel.">Semua Artikel</a></li>
@@ -100,17 +141,17 @@
         </nav>
         <ul id="list" class="list">
           <li data-status="1" data-title="Posisi Designer pada Perkembangan Web Apps Design Modern" data-time="Sat, 12 Aug 2018 20:58:39 GMT">
-            <span class="date">Sabtu, 12 Agustus 2018, 20:58</span>
-            <h5 class="author">Muhammad Adam Firdaus</h5>
             <div class="wrapper clearfix">
-              <div class="col w-60">
+              <div class="col">
+                <span class="date">Sabtu, 12 Agustus 2018, 20:58</span>
+                <h5 class="author">Muhammad Adam Firdaus</h5>
                 <h1 class="title">
                   <a href="">
                     Posisi Designer pada Perkembangan Web Apps Design Modern
                   </a>
                 </h1>
               </div>
-              <div class="col w-40">
+              <div class="col">
                 <div class="indicator default green">
                   <span>Tayang</span>
                 </div>
@@ -123,17 +164,17 @@
             </div>
           </li>
           <li data-status="0" data-title="Setting Max Client Ideal pada Server" data-time="Mon, 13 Aug 2018 03:53:39 GMT">
-            <span class="date">Senin, 13 Agustus 2018, 03:53</span>
-            <h5 class="author">Muhammad Adam Firdaus</h5>
             <div class="wrapper clearfix">
-              <div class="col w-60">
+              <div class="col">
+                <span class="date">Senin, 13 Agustus 2018, 03:53</span>
+                <h5 class="author">Muhammad Adam Firdaus</h5>
                 <h1 class="title">
                   <a href="">
                     Setting Max Client Ideal pada Server
                   </a>
                 </h1>
               </div>
-              <div class="col w-40">
+              <div class="col">
                 <div class="indicator default">
                   <span>Draft</span>
                 </div>
@@ -146,17 +187,17 @@
             </div>
           </li>
           <li data-status="1" data-title="Tips Trik Tinder agar &quote;Match&quote; Beruntun"  data-time="Sun, 12 Aug 2018 20:58:39 GMT">
-            <span class="date">Minggu, 12 Agustus 2018, 20:58</span>
-            <h5 class="author">Muhammad Adam Firdaus</h5>
             <div class="wrapper clearfix">
-              <div class="col w-60">
+              <div class="col">
+                <span class="date">Minggu, 12 Agustus 2018, 20:58</span>
+                <h5 class="author">Muhammad Adam Firdaus</h5>
                 <h1 class="title">
                   <a href="">
                     Tips Trik Tinder agar "Match" Beruntun
                   </a>
                 </h1>
               </div>
-              <div class="col w-40">
+              <div class="col">
                 <div class="indicator default green">
                   <span>Tayang</span>
                 </div>
@@ -169,17 +210,17 @@
             </div>
           </li>
           <li data-status="1" data-title="JavaScript dari Tahun ke Tahun"  data-time="Sat, 13 Aug 2018 22:58:39 GMT">
-            <span class="date">Sabtu, 13 Agustus 2018, 22:58</span>
-            <h5 class="author">Muhammad Adam Firdaus</h5>
             <div class="wrapper clearfix">
-              <div class="col w-60">
+              <div class="col">
+                <span class="date">Sabtu, 13 Agustus 2018, 22:58</span>
+                <h5 class="author">Muhammad Adam Firdaus</h5>
                 <h1 class="title">
                   <a href="">
                     JavaScript dari Tahun ke Tahun
                   </a>
                 </h1>
               </div>
-              <div class="col w-40">
+              <div class="col">
                 <div class="indicator default green">
                   <span>Tayang</span>
                 </div>
@@ -192,17 +233,17 @@
             </div>
           </li>
           <li data-status="0" data-title="Tips agar Terhindar dari Spam Email" data-time="Sun, 12 Aug 2018 20:23:39 GMT">
-            <span class="date">Sabtu, 12 Agustus 2018, 20:23</span>
-            <h5 class="author">Muhammad Adam Firdaus</h5>
             <div class="wrapper clearfix">
-              <div class="col w-60">
+              <div class="col">
+                <span class="date">Sabtu, 12 Agustus 2018, 20:23</span>
+                <h5 class="author">Muhammad Adam Firdaus</h5>
                 <h1 class="title">
                   <a href="">
                     Tips agar Terhindar dari Spam Email
                   </a>
                 </h1>
               </div>
-              <div class="col w-40">
+              <div class="col">
                 <div class="indicator default">
                   <span>Draft</span>
                 </div>
@@ -215,17 +256,17 @@
             </div>
           </li>
           <li data-status="0" data-title="Mengenal Lebih Dalam &quot;BEM&quot; pada CSS" data-time="Sat, 11 Aug 2018 23:00:39 GMT">
-            <span class="date">Sabtu, 11 Agustus 2018, 23:00</span>
-            <h5 class="author">Muhammad Adam Firdaus</h5>
             <div class="wrapper clearfix">
-              <div class="col w-60">
+              <div class="col">
+                <span class="date">Sabtu, 11 Agustus 2018, 23:00</span>
+                <h5 class="author">Muhammad Adam Firdaus</h5>
                 <h1 class="title">
                   <a href="">
                     Mengenal Lebih Dalam "BEM" pada CSS
                   </a>
                 </h1>
               </div>
-              <div class="col w-40">
+              <div class="col">
                 <div class="indicator default">
                   <span>Draft</span>
                 </div>
@@ -238,6 +279,13 @@
             </div>
           </li>
         </ul>
+        <div class="pagination">
+          <li><a href=""><</a></li>
+          <li><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">></a></li>
+        </div>
       </div>
     </main>
   </div>
