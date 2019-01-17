@@ -415,6 +415,10 @@ $mobile5inch: 'screen and (max-width: 375px)';
       }
     }
   }
+  & .profile {
+    display: flex;
+    align-items: center;
+  }
   & .name {
     line-height: 48px;
     overflow-y: hidden;
@@ -1951,6 +1955,15 @@ input#tags {
       }
     }
   }
+
+  
+  &.view-list {
+    & .list li {
+      & > .wrapper {
+        padding: 0 10px;
+      }
+    }
+  }
 }
 
 
@@ -2080,7 +2093,7 @@ input#tags {
     & li {
       padding: 10px 0;
       & .wrapper {
-        padding: 0 10px;
+        padding: 0 20px;
         & .thumbnail {
           background: #eee;
           display: flex;

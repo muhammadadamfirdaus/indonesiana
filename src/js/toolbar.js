@@ -1,27 +1,26 @@
-
 // toolbar
-// let toolbarProfileExpand = $('.toolbar .profile-expand');
-// let toolbarUser = $('.toolbar .user, .toolbar .name');
-// toolbarUser.on('mouseenter', function(e){
-//   e.preventDefault();
-//   e.stopImmediatePropagation();
-//   toolbarProfileExpand.addClass('active');
-//   toolbarProfileExpand.on('mouseleave', function(e){
-//     if($(e.target).closest(toolbarProfileExpand).length){
-//       toolbarProfileExpand.removeClass('active');
-//     }
-//   });
-// });
-const toolbarProfileExpand = document.querySelector('.toolbar .profile-expand');
-const toolbarUser = document.querySelector('.toolbar .user, .toolbar .name');
+const toolbarProfileExpand = document.querySelector('.profile-expand');
+const toolbarProfile = document.querySelector('.toolbar .profile');
 
-toolbarUser.addEventListener('mouseenter', function(e){
-  e.preventDefault();
+// show profile detail whenever user mouseover their name and photo
+toolbarProfile.addEventListener('mouseenter', function(e){
   e.stopImmediatePropagation();
   toolbarProfileExpand.classList.add('active');
-  toolbarProfileExpand.addEventListener('mouseleave', function(e){
-    if(e.target.closest('.profile-expand')){
-      toolbarProfileExpand.classList.remove('active');
-    }
-  });
+});
+
+// hide profile detail whenever user mouseleave profile detail area
+toolbarProfileExpand.addEventListener('mouseleave', function(e){
+  e.stopImmediatePropagation();
+  toolbarProfileExpand.classList.remove('active');
+  console.log('profile expand outside area');
+});
+
+// hide profile detail wherever user click outside area
+window.addEventListener('click', function(e){
+  e.stopImmediatePropagation();
+  if(e.target.closest('.profile-expand')){
+    return
+  } else {
+    toolbarProfileExpand.classList.remove('active');
+  }
 });

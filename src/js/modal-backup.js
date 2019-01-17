@@ -34,13 +34,3 @@ function modal(element){
     });
   }
 }
-
-
-// if(e.target == element){
-//   console.log('hi');
-//   for(let i = 0; i < modal.length; i++){
-//     if(modal[i].classList == element){
-//       this.classList.add('active');
-//     }
-//   }
-// }
