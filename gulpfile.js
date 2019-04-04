@@ -1,14 +1,14 @@
-const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const minifycss = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const clean = require('gulp-rimraf');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const minifycss = require('gulp-clean-css');
 const uglify = require('gulp-uglify-es').default;
 const uglifycss = require('gulp-uglifycss');
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const clean = require('gulp-rimraf');
 
 // remove unused css
 gulp.task('clean', [], function() {
@@ -60,6 +60,7 @@ gulp.task('minify-dashboard', function(){
     'src/js/$.js',
     'src/js/accordion.js',
     'src/js/action.js',
+    'src/js/ajax-customize.js',
     'src/js/closestParent.js',
     'src/js/media.js',
     'src/js/media-create-post.js',
@@ -87,6 +88,7 @@ gulp.task('minify-front', function(){
   return gulp.src([
     'src/js/$.js',
     'src/js/accordion.js',
+    'src/js/ajax-home-recommendation.js',
     'src/js/sidebarMenu.js',
     'src/js/tab.js',
     'src/js/tooltip.js',
