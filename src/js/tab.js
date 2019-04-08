@@ -1,6 +1,6 @@
 // tab
 $('.tabs li').on('click', function(e){
-  e.preventDefault();
+  // e.preventDefault();
   e.stopPropagation();
   var tab_id = $(this).attr('data-tab');
 

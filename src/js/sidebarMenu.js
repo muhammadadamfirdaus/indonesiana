@@ -15,7 +15,7 @@ sidebarExpander.off('click').on('click', function(e){
 let sidebarMenuList = $('.sidebar .wrapper > li');
 let subMenu = $('.sub ul');
 sidebarMenuList.on('mouseenter', function(e){
-  e.preventDefault();
+  // e.preventDefault();
   e.stopImmediatePropagation();
   sidebarMenuList.removeClass('active');
   $(this).addClass('active');

@@ -47,11 +47,11 @@
       <div class="col w-50">
         <nav>
           <li><a class="search" href="#"></a></li>
-          <li><a class="button default" href="#">Mulai Menulis</a></li>
+          <li><a class="button default button-modal" href="#">Mulai Menulis</a></li>
         </nav>
         <div class="modal sign">
           <div class="wrapper">
-            <div class="content active">
+            <div id="login" class="content active">
               <div class="wrapper">
                 <h3>Masuk untuk mulai menulis</h3>
                 <p></p>
@@ -59,29 +59,66 @@
                   <!-- <li><a href="index-logged.html">Email</a></li> -->
                   <li><a href="index-logged.html"><img src="images/login-fb.png" alt=""></a></li>
                   <li><a href="index-logged.html"><img src="images/login-twitter.png" alt=""></a></li>
+                  <li class="email-login"><a href="#" class="icon icon-32 email"></a><a href="#" class="email">Login with Email</a></li>
                 </ul>
                 <section>
                   <div class="wrapper">
                     <hr>
-                    <h4>Belum memiliki akun? <a class="register" href="">Daftar di sini</a></h4>
+                    <h4>Belum memiliki akun? <a class="register" href="#">Daftar di sini</a></h4>
                   </div>
                 </section>
                 <img src="images/illustration-login.png" alt="">
               </div>
             </div>
-            <div class="content">
+            <div class="content login-page">
               <div class="wrapper">
+                <div class="navigation">
+                  <a href="#" class="icon icon-32 back back-button"></a><a href="#" class="back">Kembali</a>
+                </div>
+                <h3>Login menggunakan e-mail Anda</h3>
+                <ul>
+                  <form class="login" action="">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit">Login</button>
+                  </form>
+                </ul>
+              </div>
+            </div>
+            <div class="content register-page">
+              <div class="wrapper">
+                <!-- <div class="navigation">
+                  <a href="#" class="icon icon-32 back back-button"></a><a href="#" class="back">Kembali</a>
+                </div> -->
                 <h3>Daftar untuk mulai menulis</h3>
                 <p></p>
                 <ul>
                   <!-- <li><a href="index-logged.html">Email</a></li> -->
                   <li><a href="index-logged.html"><img src="images/login-fb.png" alt=""></a></li>
                   <li><a href="index-logged.html"><img src="images/login-twitter.png" alt=""></a></li>
+                  <li class="email-register"><a href="#" class="icon icon-32 email"></a><a href="#" class="email">Register with Email</a></li>
                 </ul>
                 <section>
                   <div class="wrapper">
                     <hr>
-                    <h4>Sudah mendaftar? <a class="login" href="">Masuk di sini</a></h4>
+                    <h4>Sudah mendaftar? <a class="login" href="#">Masuk di sini</a></h4>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="content registration-email">
+              <div class="wrapper">
+                <h3>Daftar menggunakan e-mail Anda</h3>
+                <form class="login" action="">
+                  <li><span>Nama Lengkap</span><input type="text"></li>
+                  <li><span>Email</span><input type="email"></li>
+                  <li><span>Password</span><input type="password"></li>
+                  <button type="submit">Daftar</button>
+                </form>
+                <section>
+                  <div class="wrapper">
+                    <hr>
+                    <h4>Sudah mendaftar? <a class="login" href="#">Masuk di sini</a></h4>
                   </div>
                 </section>
               </div>

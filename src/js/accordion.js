@@ -2,7 +2,7 @@
 let accordion = $('.accordion');
 let accordionButton = accordion.find('.toggle');
 accordionButton.on('click', function(e){
-  e.preventDefault();
+  // e.preventDefault();
   e.stopImmediatePropagation();
   console.log('closing accordion');
   if( $(this).data('status') == 'clicked' ) {

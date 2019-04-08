@@ -486,7 +486,7 @@ header {
     & .swiper-menu.swiper-button-prev,
     & .swiper-menu.swiper-button-next,
     & .swiper-profile.swiper-button-prev,
-    & .swiper-profile.swiper-button-next, {
+    & .swiper-profile.swiper-button-next {
       width: 35px;
       height: 25px;
       margin-top: 0;
@@ -1818,6 +1818,31 @@ article {
   }
 }
 
+.icon {
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  &.icon-32 {
+    background-size: 278px;
+    @media #{$desktopGeneral}{
+      width: 32px;
+      height: 32px;
+    }
+    @media #{$mobileGeneral}{
+      width: 32px;
+      height: 32px;
+    }
+
+    &.back {
+      background-position: -155px -120px;
+    }
+
+    &.email {
+      background-position: -236px -16px;
+    }
+  }
+}
+
 .share {
   width: 32px;
   @media #{$desktop}{
@@ -2386,11 +2411,15 @@ article {
       height: 60%;
     }
     & .content {
+      visibility: hidden;
+      &.active {
+        visibility: visible;
+      }
       & > .wrapper {
         & ul {
           & li {
             width: 200px;
-            margin: 0 auto;
+            margin: 0.5em auto;
             & img {
               width: 100%;
             }
@@ -2406,7 +2435,7 @@ article {
               color: #005b97;
             }
             & a {
-              color: #fff;
+              color: #000;
             }
           }
         }
@@ -2415,6 +2444,117 @@ article {
           position: absolute;
           bottom: 0;
           z-index: -1;
+        }
+
+        & .navigation {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 0.2em 0.1em;
+          & .back-button {
+            transform: rotate(180deg);
+          }
+          & a {
+            color: #000;
+            display: inline-block;
+            font-family: "Lato", Arial;
+            font-size: 14px;
+            text-decoration: none;
+            &:last-child {
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+
+      & li {
+        display: flex;
+        align-items: center;
+        &.email-login,
+        &.email-register {
+          border: 1px solid #000;
+          border-radius: 4px;
+          padding: 4px 0;
+          & * {
+            text-decoration: none;
+            &:nth-of-type(1) {
+              margin-left: 7px;
+            }
+            &:nth-of-type(2) {
+              margin-left: 32px;
+              color: #000;
+              font-family: 'arial';
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      &.login-page {
+        & ul {
+          padding: 0 12em;
+          form {
+            &.login {
+              display: flex;
+              flex-direction: column;
+              & * {
+                margin-bottom: 1em;
+                border: none;
+                border: 1px solid #000;
+                border-radius: 4px;
+                padding: 1em 0.5em;
+                &[type='submit']{
+                  background: #0998d1;
+                  border: none;
+                  color: #fff;
+                }
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.registration-email {
+        & > .wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          & form {
+            font-family: "Lato", Arial;
+            margin-top: 1em;
+            & li {
+              margin-bottom: 22px;
+            }
+            & * {
+              flex: 1 0 0;
+              justify-content: flex-start;
+              text-align: left;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              & span {
+                margin-right: 2em;
+              }
+              & input {
+                border: 1px solid #000;
+                border-radius: 4px;
+                padding: 0.4em 0 0.4em 1em;
+              }
+              &[type='submit']{
+                background: #0998d1;
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                cursor: pointer;
+                display: inline-block;
+                padding: 1em 2em;
+              }
+            }
+          }
         }
       }
     }
@@ -2441,7 +2581,7 @@ article {
         visibility: visible;
       }
       &:nth-of-type(2) {
-        background: #e3f9fd;
+        background: #fff;
         & a.login {
           color: #000;
           line-height: 14px;
@@ -2472,7 +2612,7 @@ article {
       text-align: center;
     }
     & h3 {
-      padding: 1.5em 0;
+      padding: 1em 0 0.75em;
     }
     & ul {
       & li {
@@ -2480,7 +2620,7 @@ article {
         display: block;
         & a {
           display: inline-block;
-          margin: 0 auto;
+          // margin: 0 auto;
         }
       }
     }

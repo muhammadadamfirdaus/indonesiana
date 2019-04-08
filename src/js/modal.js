@@ -5,7 +5,7 @@ function modal(button, uniqueClass){
   if(modal){
     // console.log('modal');
     // button modal on click
-    window.addEventListener('click', function(e){
+    document.addEventListener('click', function(e){
       // don't forget to remind user using '.button-modal'
       if(e.target.closest('.button-modal' + button)){
         // check if user click button modal

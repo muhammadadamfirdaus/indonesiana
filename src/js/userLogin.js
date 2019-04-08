@@ -1,41 +1,92 @@
 // login navbar
-var toolbarTop = $('.toolbar.user.active');
-var signBox = $('.sign');
+let toolbarTop = document.querySelector('.toolbar.user.active');
 
-// check if user hasn't logged
-if(!toolbarTop.length){
-  console.log('login');
-  var loginButtonTop = $('header nav .button.default');
-  loginButtonTop.on('click', function(e){
-    console.log('modal');
+if(!toolbarTop){
+  let loginButtonTop = '.button.default';
+  let signBox = '.sign';
+
+  modal(loginButtonTop, signBox);
+
+  let backButton = document.querySelector('.back');
+  let signContent = document.querySelectorAll('.sign .content');
+  let signDefault = document.querySelector('#login');
+  let signEmailButton = document.querySelector('.email-login');
+  let signEmail = document.querySelector('.login-page');
+  let signInButton = document.querySelector('a.login');
+  let registerButton = document.querySelector('.register');
+  let registerEmail = document.querySelector('.registration-email');
+  let registerEmailButton = document.querySelector('.email-register');
+  let registerPage = document.querySelector('.register-page');
+  
+  // first create post button
+  signEmailButton.addEventListener('click', function(e){
+    e.preventDefault();
     e.stopImmediatePropagation();
-    signBox.addClass('active');
-    // click outside signbox
-    $(document).on('click', function(e){
-      if($(e.target).closest(signBox).length){
-        console.log('di dalam');
+    // then popup default login page
+    for(let i = 0; i < signContent.length; i++){
+      // remove for all content if contains any active classes
+      if(signContent[i].classList.contains('active')){
+        signContent[i].classList.remove('active');
+        signEmail.classList.add('active');
       } else {
-        signBox.removeClass('active');
+        signEmail.classList.add('active');
+      }
+    }
+
+    // back button
+    backButton.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      signEmail.classList.remove('active');
+      signDefault.classList.add('active');
+    });
+  });
+
+  // register button bottom to show register page
+  registerButton.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    for(let i = 0; i < signContent.length; i++){
+      if(signContent[i].classList.contains('active')){
+        signContent[i].classList.remove('active');
+        registerPage.classList.add('active');
+      }
+    }
+
+    // back button for sign in
+    signInButton.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      for(let i = 0; i < signContent.length; i++){
+        if(signContent[i].classList.contains('active')){
+          signContent[i].classList.remove('active');
+          signDefault.classList.add('active');
+        }
       }
     });
-    var registerButton = $('.modal a.register');
-    registerButton.on('click', function(e){
-      e.preventDefault();
-      $('.content').removeClass('active').next().addClass('active');
-    });
-
-    var loginButton = $('.modal a.login');
-    loginButton.on('click', function(e){
-      e.preventDefault();
-      $('.content').removeClass('active').prev().addClass('active');
-      console.log('login');
-    });
-    // $('.sign a').on('click', function(e){
-    //   // e.stopImmediatePropagation();
-    //   console.log('click');
-    //   // return false;
-    // });
   });
-} else {
-  console.log('logged');
+
+  // registration email button
+  registerEmailButton.addEventListener('click', function(e){
+    e.stopImmediatePropagation();
+    registerEmail.classList.add('active');
+    for(let i = 0; i < signContent.length; i++){
+      if(signContent[i].classList.contains('active')){
+        signContent[i].classList.remove('active');
+        registerEmail.classList.add('active');
+      }
+    }
+
+    // back button for sign in
+    signInButton.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      for(let i = 0; i < signContent.length; i++){
+        if(signContent[i].classList.contains('active')){
+          signContent[i].classList.remove('active');
+          signDefault.classList.add('active');
+        }
+      }
+    });
+  });
 }

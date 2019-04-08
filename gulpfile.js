@@ -88,6 +88,7 @@ gulp.task('minify-front', function(){
   return gulp.src([
     'src/js/$.js',
     'src/js/accordion.js',
+    'src/js/modal.js',
     'src/js/ajax-home-recommendation.js',
     'src/js/sidebarMenu.js',
     'src/js/tab.js',
