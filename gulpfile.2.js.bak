@@ -54,7 +54,7 @@ gulp.task('sass-front', ['clean'], function(){
 });
 
 // concat & minify dashboard js
-gulp.task('concat-dashboard', function(){
+gulp.task('minify-dashboard', function(){
   console.log('javascript has successfully concat and minified');
   return gulp.src([
     'src/js/$.js',
@@ -77,12 +77,13 @@ gulp.task('concat-dashboard', function(){
     'src/js/tooltip.js'
   ])
   .pipe(concat('dashboard.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('src/js'))
   .pipe(gulp.dest('dist/js'));
 });
 
 // concat & minify main js
-gulp.task('concat-front', function(){
+gulp.task('minify-front', function(){
   console.log('javascript has successfully concat and minified');
   return gulp.src([
     'src/js/$.js',
@@ -99,19 +100,20 @@ gulp.task('concat-front', function(){
     'src/js/userLogin.js'
   ])
   .pipe(concat('main.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('src/js'))
   .pipe(gulp.dest('dist/js'));
 });
 
 // watch & serve
-gulp.task('serve', ['sass-dashboard', 'sass-front', 'concat-dashboard', 'concat-front'], function(){
+gulp.task('serve', ['sass-dashboard', 'sass-front', 'minify-dashboard', 'minify-front'], function(){
   browserSync.init({
     server: './src'
   });
 
   gulp.watch(['src/scss/*.scss'], ['sass-dashboard', 'sass-front']);
   gulp.watch(['src/*html']).on('change', browserSync.reload);
-  gulp.watch(['src/js/*js'], ['concat-dashboard', 'concat-front']).on('change', browserSync.reload);
+  gulp.watch(['src/js/*js'], ['minify-dashboard', 'minify-front']).on('change', browserSync.reload);
 });
 
 // default

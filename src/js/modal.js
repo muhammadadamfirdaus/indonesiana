@@ -14,7 +14,7 @@ function modal(button, uniqueClass, callback){
           modal.classList.remove('active');
         } else {
           modal.classList.add('active');
-          callback('active');
+          callback("active");
         }
       } else if(e.target.closest('.modal')){
         // and also check to closest modal media
