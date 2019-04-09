@@ -1,4 +1,4 @@
-function modal(button, uniqueClass){
+function modal(button, uniqueClass, callback){
   // first, declare modal container
   const modal = document.querySelector('.modal' + uniqueClass);
   // check if modal exists
@@ -14,6 +14,7 @@ function modal(button, uniqueClass){
           modal.classList.remove('active');
         } else {
           modal.classList.add('active');
+          callback('active');
         }
       } else if(e.target.closest('.modal')){
         // and also check to closest modal media
@@ -29,6 +30,7 @@ function modal(button, uniqueClass){
         // destroy everything when user out of the box...
         // console.log('di luar');
         modal.classList.remove('active');
+        callback('deactive');
       }
     });
   }

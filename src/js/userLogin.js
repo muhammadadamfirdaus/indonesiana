@@ -4,20 +4,29 @@ let toolbarTop = document.querySelector('.toolbar.user.active');
 if(!toolbarTop){
   let loginButtonTop = '.button.default';
   let signBox = '.sign';
-
-  modal(loginButtonTop, signBox);
-
+  
   let backButton = document.querySelector('.back');
   let signContent = document.querySelectorAll('.sign .content');
   let signDefault = document.querySelector('#login');
   let signEmailButton = document.querySelector('.email-login');
   let signEmail = document.querySelector('.login-page');
-  let signInButton = document.querySelector('a.login');
+  let signInButton = document.querySelectorAll('a.login');
   let registerButton = document.querySelector('.register');
   let registerEmail = document.querySelector('.registration-email');
   let registerEmailButton = document.querySelector('.email-register');
   let registerPage = document.querySelector('.register-page');
-  
+
+  modal(loginButtonTop, signBox, function(e){
+    if(e == 'active'){
+      signDefault.classList.add('active');
+    } else if(e == 'deactive') {
+      for(let i = 0; i < signContent.length; i++){
+        // remove for all content if contains any active classes
+        signContent[i].classList.remove('active');
+      }
+    }
+  });
+
   // first create post button
   signEmailButton.addEventListener('click', function(e){
     e.preventDefault();
@@ -52,19 +61,22 @@ if(!toolbarTop){
         registerPage.classList.add('active');
       }
     }
+  });
 
-    // back button for sign in
-    signInButton.addEventListener('click', function(e){
+  // back button for sign in
+  for(let i = 0; i < signInButton.length; i++){
+    signInButton[i].addEventListener('click', function(e){
       e.preventDefault();
       e.stopImmediatePropagation();
-      for(let i = 0; i < signContent.length; i++){
-        if(signContent[i].classList.contains('active')){
-          signContent[i].classList.remove('active');
+      
+      for(let j = 0; j < signContent.length; j++){
+        if(signContent[j].classList.contains('active')){
+          signContent[j].classList.remove('active');
           signDefault.classList.add('active');
         }
       }
     });
-  });
+  }
 
   // registration email button
   registerEmailButton.addEventListener('click', function(e){
@@ -76,17 +88,5 @@ if(!toolbarTop){
         registerEmail.classList.add('active');
       }
     }
-
-    // back button for sign in
-    signInButton.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      for(let i = 0; i < signContent.length; i++){
-        if(signContent[i].classList.contains('active')){
-          signContent[i].classList.remove('active');
-          signDefault.classList.add('active');
-        }
-      }
-    });
   });
 }
