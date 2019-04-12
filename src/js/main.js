@@ -49,7 +49,9 @@ function modal(button, uniqueClass, callback){
           modal.classList.remove('active');
         } else {
           modal.classList.add('active');
-          callback("active");
+          if(callback){
+            callback("active");
+          }
         }
       } else if(e.target.closest('.modal')){
         // and also check to closest modal media
@@ -65,7 +67,9 @@ function modal(button, uniqueClass, callback){
         // destroy everything when user out of the box...
         // console.log('di luar');
         modal.classList.remove('active');
-        callback('deactive');
+        if(callback){
+          callback("deactive");
+        }
       }
     });
   }
@@ -432,7 +436,17 @@ if(!toolbarTop){
   let registerEmailButton = document.querySelector('.email-register');
   let registerPage = document.querySelector('.register-page');
 
+  // var promise1 = new Promise(function() {
+  //   modal(loginButtonTop, signBox);
+  // });
+  
+  // promise1.then(function(value) {
+  //   console.log(value);
+  //   // expected output: "foo"
+  // });
+
   modal(loginButtonTop, signBox, function(e){
+    console.log(e);
     if(e == 'active'){
       signDefault.classList.add('active');
     } else if(e == 'deactive') {

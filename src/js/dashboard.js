@@ -158,6 +158,7 @@ var closestParent = function (elem, selector) {
 const createPost = document.querySelector('.create-post');
 const mediaGallery = document.querySelector('.gallery');
 
+var callback;
 if(mediaGallery){
   var buttonUpload = '.upload';
   var modalUpload = '.upload';
@@ -249,7 +250,9 @@ function modal(button, uniqueClass, callback){
           modal.classList.remove('active');
         } else {
           modal.classList.add('active');
-          callback("active");
+          if(callback){
+            callback("active");
+          }
         }
       } else if(e.target.closest('.modal')){
         // and also check to closest modal media
@@ -265,7 +268,9 @@ function modal(button, uniqueClass, callback){
         // destroy everything when user out of the box...
         // console.log('di luar');
         modal.classList.remove('active');
-        callback('deactive');
+        if(callback){
+          callback("deactive");
+        }
       }
     });
   }
@@ -428,6 +433,16 @@ function changePlaceholder(inputDefaultPlaceholder, placeholder){
   })
 }
 
+var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
+
+var menuSidebar = document.querySelector('.dashboard');
+if(isiPad){
+  console.log(isiPad);
+  if(!menuSidebar.classList.contains('sidebar-hide')){
+    menuSidebar.classList.add('sidebar-hide','ipad-tablet');
+  }
+}
 // settings
 // profile settings
 if($('.settings').length){

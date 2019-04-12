@@ -16,7 +16,17 @@ if(!toolbarTop){
   let registerEmailButton = document.querySelector('.email-register');
   let registerPage = document.querySelector('.register-page');
 
+  // var promise1 = new Promise(function() {
+  //   modal(loginButtonTop, signBox);
+  // });
+  
+  // promise1.then(function(value) {
+  //   console.log(value);
+  //   // expected output: "foo"
+  // });
+
   modal(loginButtonTop, signBox, function(e){
+    console.log(e);
     if(e == 'active'){
       signDefault.classList.add('active');
     } else if(e == 'deactive') {

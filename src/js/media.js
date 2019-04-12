@@ -2,6 +2,7 @@
 const createPost = document.querySelector('.create-post');
 const mediaGallery = document.querySelector('.gallery');
 
+var callback;
 if(mediaGallery){
   var buttonUpload = '.upload';
   var modalUpload = '.upload';

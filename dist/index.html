@@ -47,41 +47,77 @@
       <div class="col w-50">
         <nav>
           <li><a class="search" href="#"></a></li>
-          <li><a class="button default" href="#">Mulai Menulis</a></li>
+          <li><a class="button default button-modal" href="#">Mulai Menulis</a></li>
         </nav>
         <div class="modal sign">
           <div class="wrapper">
-            <div class="content active">
+            <div id="login" class="content">
               <div class="wrapper">
-                <h3>Masuk untuk mulai menulis</h3>
-                <p></p>
+                <h4 class="title">Masuk untuk mulai menulis</h4>
                 <ul>
-                  <!-- <li><a href="index-logged.html">Email</a></li> -->
-                  <li><a href="index-logged.html"><img src="images/login-fb.png" alt=""></a></li>
-                  <li><a href="index-logged.html"><img src="images/login-twitter.png" alt=""></a></li>
+                  <li><a class="icon icon-32 login-facebook" href="index-logged.html"></a><a href="#">Login dengan Facebook</a></li>
+                  <li><a class="icon icon-32 login-google" href="index-logged.html"></a><a href="#">Login dengan Google</a></li>
+                  <li class="email-login"><a href="#" class="icon icon-32 email"></a><a href="#" class="email">Login dengan Email</a></li>
                 </ul>
                 <section>
                   <div class="wrapper">
                     <hr>
-                    <h4>Belum memiliki akun? <a class="register" href="">Daftar di sini</a></h4>
+                    <p>Belum memiliki akun? <a class="register" href="#">Daftar di sini</a></p>
                   </div>
                 </section>
                 <img src="images/illustration-login.png" alt="">
               </div>
             </div>
-            <div class="content">
+            <div class="content login-page">
               <div class="wrapper">
-                <h3>Daftar untuk mulai menulis</h3>
-                <p></p>
+                <div class="navigation">
+                  <ul>
+                    <li><a href="#" class="icon icon-16 back back-button"></a><a href="#" class="back">Kembali</a></li>
+                    <li><a href="#" class="close button">X</a></li>
+                  </ul>
+                </div>
+                <h4 class="title">Login menggunakan e-mail Anda</h4>
                 <ul>
-                  <!-- <li><a href="index-logged.html">Email</a></li> -->
-                  <li><a href="index-logged.html"><img src="images/login-fb.png" alt=""></a></li>
-                  <li><a href="index-logged.html"><img src="images/login-twitter.png" alt=""></a></li>
+                  <form class="login" action="">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit">Login</button>
+                  </form>
+                </ul>
+              </div>
+            </div>
+            <div class="content register-page">
+              <div class="wrapper">
+                <!-- <div class="navigation">
+                  <a href="#" class="icon icon-16 back back-button"></a><a href="#" class="back">Kembali</a>
+                </div> -->
+                <h4 class="title">Daftar untuk mulai menulis</h4>
+                <ul>
+                  <li><a class="icon icon-32 login-facebook" href="index-logged.html"></a><a href="#">Daftar dengan Facebook</a></li>
+                  <li><a class="icon icon-32 login-google" href="index-logged.html"></a><a href="#">Daftar dengan Google</a></li>
+                  <li class="email-register"><a href="#" class="icon icon-32 email"></a><a href="#" class="email">Daftar dengan Email</a></li>
                 </ul>
                 <section>
                   <div class="wrapper">
                     <hr>
-                    <h4>Sudah mendaftar? <a class="login" href="">Masuk di sini</a></h4>
+                    <p>Sudah mendaftar? <a class="login" href="#">Masuk di sini</a></p>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="content registration-email">
+              <div class="wrapper">
+                <h4 class="title">Daftar menggunakan e-mail Anda</h4>
+                <form class="login" action="">
+                  <li><span>Nama Lengkap</span><input type="text"></li>
+                  <li><span>Email</span><input type="email"></li>
+                  <li><span>Password</span><input type="password"></li>
+                  <button type="submit">Daftar</button>
+                </form>
+                <section>
+                  <div class="wrapper">
+                    <hr>
+                    <p>Sudah mendaftar? <a class="login" href="#">Masuk di sini</a></p>
                   </div>
                 </section>
               </div>
@@ -516,9 +552,28 @@
       <div id="new-request"></div>
     </div>
   </main>
-  <!-- <footer>
-    footer
-  </footer> -->
+  <footer>
+    <div class="wrapper">
+      <a class="logo" href="index.html">
+        <img src="images/logo-indonesiana.png" alt="Logo Indonesiana">
+      </a>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Lifestyle</a></li>
+        <li><a href="category.html">Travel</a></li>
+        <li><a href="category.html">Hiburan</a></li>
+        <li><a href="category.html">Olahraga</a></li>
+      </ul>
+      <ul class="social">
+        <li><a class="icon icon-32 facebook" href="#"></a></li>
+        <li><a class="icon icon-32 instagram" href="#"></a></li>
+        <li><a class="icon icon-32 twitter" href="#"></a></li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <p>Copyright &copy; 2019</p>
+    </div>
+  </footer>
 </div>
 <script src="js/core.js"></script>
 <script src="js/main.js"></script>

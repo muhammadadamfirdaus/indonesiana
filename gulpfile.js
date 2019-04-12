@@ -31,7 +31,6 @@ gulp.task('sass-dashboard', ['clean'], function(){
     .pipe(concat('dashboard.css'))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(sourcemaps.write('.'))
-    .pipe(uglifycss())
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream());
 });
@@ -48,7 +47,6 @@ gulp.task('sass-front', ['clean'], function(){
     .pipe(concat('style.css'))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(sourcemaps.write('.'))
-    .pipe(uglifycss())
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream());
 });
@@ -69,6 +67,7 @@ gulp.task('concat-dashboard', function(){
     'src/js/navigation-filter.js',
     'src/js/navigation-view.js',
     'src/js/placeHolder.js',
+    'src/js/responsive.js',
     'src/js/settings.js',
     'src/js/sidebarMenu.js',
     'src/js/swiper-init.js',
@@ -135,6 +134,7 @@ gulp.task('copyCSS', function(){
 gulp.task('minifyCSS', function(){
   gulp.src('src/css/*')
   .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(uglifycss())
   .pipe(gulp.dest('dist/css/'));
 });
 

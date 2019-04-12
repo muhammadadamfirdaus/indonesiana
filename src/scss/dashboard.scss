@@ -753,7 +753,7 @@ body {
   }
   &.home {
     &:before {
-      background-position: -130px -70px;
+      background-position: -122px -65px;
     }
   }
   &.logout {
@@ -763,12 +763,12 @@ body {
   }
   &.create-post {
     &:before {
-      background-position: -32px -100px;
+      background-position: -28px -95px;
     }
   }
   &.list-article {
     &:before {
-      background-position: -32px -192px;
+      background-position: -32px -183px;
     }
   }
   &.all-post {
@@ -788,22 +788,22 @@ body {
   }
   &.media {
     &:before {
-      background-position: -92px -222px;
+      background-position: -86px -212px;
     }
   }
   &.list-user {
     &:before {
-      background-position: -88px -250px;
+      background-position: -84px -240px;
     }
   }
   &.customize {
     &:before {
-      background-position: -67px -69px;
+      background-position: -64px -66px;
     }
   }
   &.notification {
     &:before {
-      background-position: -28px -222px;
+      background-position: -28px -212px;
     }
     &:after {
       content: attr(data-notifications);
@@ -841,12 +841,12 @@ body {
   }
   &.logs {
     &:before {
-      background-position: -32px -280px;
+      background-position: -32px -270px;
     }
   }
   &.settings {
     &:before {
-      background-position: -30px -162px;
+      background-position: -30px -152px;
     }
   }
   &.toggle {
@@ -865,28 +865,28 @@ body {
         width: 10px;
         height: 10px;
         background-size: 110px;
-        background-position: -50px -52px;
+        background-position: -48px -48px;
       }
     }
   }
   &.view-grid {
     &.active {
       &:before {
-        background-position: -128px -160px;
+        background-position: -121px -153px;
       }
     }
     &:before {
-      background-position: -152px -160px;
+      background-position: -145px -153px;
     }
   }
   &.view-list {
     &.active {
       &:before {
-        background-position: -128px -129px;
+        background-position: -121px -123px;
       }
     }
     &:before {
-      background-position: -152px -129px;
+      background-position: -145px -123px;
     }
   }
   &.upload {
@@ -3213,4 +3213,56 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   perspective: 1200px;
+}
+
+
+.ipad-tablet {
+  &.dashboard {
+    &.sidebar-hide {
+      & > .wrapper {
+        nav {
+          &.sidebar {
+            width: 80px;
+          }
+        }
+
+        aside,
+        & main {
+          width: 90%;
+        }
+      }
+    }
+    & > .wrapper {
+      nav {
+        &.sidebar {
+          width: 25%;
+        }
+      }
+
+      aside,
+      main {
+        width: 75%;
+      }
+
+      aside {
+        position: fixed;
+        top: 48px;
+        right: 0;
+        margin: 2em 0;
+        & > .wrapper {
+          padding: 0 2em;
+          & > * {
+            display: flex;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &.create-post {
+      main {
+        margin-top: 16em;
+      }
+    }
+  }
 }
