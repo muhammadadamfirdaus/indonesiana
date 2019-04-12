@@ -439,11 +439,23 @@ header {
     & nav.menu {
       border-bottom: 0;
       padding: 1em 0;
+      @media #{$mobileGeneral}{
+        padding: 0 0 1em 0;
+        overflow: hidden;
+        & > .wrapper {
+          display: flex;
+          overflow: scroll;
+          -webkit-overflow-scrolling: touch;
+          position: relative;
+        }
+      }
       & li {
         display: inline-block;
         margin: 0 2em;
         @media #{$mobileGeneral} {
           text-align: center;
+          flex: 1 0 28%;
+          margin: 0;
         }
         & a {
           color: #777777;

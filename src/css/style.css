@@ -369,12 +369,27 @@ header > .wrapper {
   header > .wrapper nav.menu {
     border-bottom: 0;
     padding: 1em 0; }
+    @media screen and (max-width: 800px) {
+      header > .wrapper nav.menu {
+        padding: 0 0 1em 0;
+        overflow: hidden; }
+        header > .wrapper nav.menu > .wrapper {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          overflow: scroll;
+          -webkit-overflow-scrolling: touch;
+          position: relative; } }
     header > .wrapper nav.menu li {
       display: inline-block;
       margin: 0 2em; }
       @media screen and (max-width: 800px) {
         header > .wrapper nav.menu li {
-          text-align: center; } }
+          text-align: center;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 0 28%;
+                  flex: 1 0 28%;
+          margin: 0; } }
       header > .wrapper nav.menu li a {
         color: #777777;
         display: inline-block;
