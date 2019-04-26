@@ -961,7 +961,7 @@ section {
             padding-right: 2em;
           }
           @media #{$mobileGeneral}{
-            padding: 0 4em;
+            padding: 0 0;
           }
           & .user {
             height: 4em;
@@ -1097,7 +1097,7 @@ section {
                         height: 280px;
                       }
                       @media #{$mobileGeneral}{
-                        height: 300px;
+                        height: auto;
                       }
                       & img {
                         @include centerImage(false);
@@ -1183,6 +1183,9 @@ section {
       & > *:nth-child(3) {
         & > .wrapper {
           padding-left: 2em;
+          @media #{$mobileGeneral}{
+            padding: 0;
+          }
         }
       }
     }
@@ -1479,126 +1482,8 @@ article {
     }
   }
 
-  .image {
-    display: block;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    & img {
-      width: 100%;
-    }
-    @media #{$mobile5inch}{
-      height: 200px;
-    }
-  }
-
-  .profile {
-    margin: 2em 0 1em;
-    & > .wrapper {
-      @media #{$desktopGeneral}{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }  
-      @media #{$mobileGeneral}{
-        display: block;
-      }  
-    }
-
-    .user {
-
-      & a {
-        width: 64px;
-        height: 64px;
-      }
-    }
-    
-    & .status {
-      margin-bottom: 1em;
-      & h2 {
-        font-size: 160%;
-        margin-bottom: 0.75em;
-      }
-      & h5 {
-        font-size: 100%;
-        font-weight: 300;
-        margin-bottom: 0.25em;
-      }
-
-      & span {
-        font-size: 70%;
-      }
-    }
-  
-    & > * > div {
-      display: inline-block;
-    }
-    & > * > div:nth-child(1) {
-      width: 20%;
-      @media #{$mobileGeneral}{
-        width: 100%;
-        & a {
-          margin: 0 auto;
-        }
-      }
-    }
-    & > * > div:nth-child(2) {
-      width: 80%;
-      margin-bottom: 1em;
-      @media #{$mobileGeneral}{
-        width: 100%;
-      }
-      & h2 {
-        font-size: 100%;
-        margin-bottom: 0.5em;
-        @media #{$mobileGeneral}{
-          font-size: 160%;
-          margin-bottom: 0.75em;
-        }
-        & a {
-          color: #000;
-          text-decoration: none;
-        } 
-      }
-      & h5 {
-        font-size: 80%;
-        @media #{$mobileGeneral}{
-          font-size: 100%;
-          font-weight: 300;
-          margin-bottom: 0.25em;
-        }
-      }
-
-      & span {
-        font-size: 60%;
-        @media #{$mobileGeneral}{
-          font-size: 70%;
-        }
-      }
-    }
-    & > * > div:nth-child(3) {
-      text-align: right;
-      & > .button:nth-child(1) {
-        display: none;
-      }
-    }
-
-    & span {
-      color: #777
-    }
-  }
-
-  .share {
-    @media #{$desktopHD}{
-      left: 20%;
-    }
-    @media #{$desktopGeneral}{
-      left: 20%;
-    }
-  }
-
   figcaption {
-    margin: 1em 0;
+    margin: 0.5em 0;
     span {
       color: #777;
       display: inline-block;
@@ -1608,7 +1493,7 @@ article {
       letter-spacing: 0.4px;
       line-height: 24px;
       @media #{$mobileGeneral}{
-        line-height: 18px;
+        line-height: 13px;
       }
     }
   }
@@ -2269,15 +2154,140 @@ footer {
       }
     }
   }
+
+  .image {
+    display: block;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    @media #{$desktopGeneral}{ 
+      & img {
+        width: 100%;
+      }
+    }
+    @media #{$mobile5inch}{
+      height: 200px;
+    }
+  }
+
+  .profile {
+    margin: 2em 0 1em;
+    & > .wrapper {
+      @media #{$desktopGeneral}{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }  
+      @media #{$mobileGeneral}{
+        display: block;
+      }  
+    }
+
+    .user {
+
+      & a {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    
+    & .status {
+      margin-bottom: 1em;
+      & h2 {
+        font-size: 160%;
+        margin-bottom: 0.75em;
+      }
+      & h5 {
+        font-size: 100%;
+        font-weight: 300;
+        margin-bottom: 0.25em;
+      }
+
+      & span {
+        font-size: 70%;
+      }
+    }
+  
+    & > * > div {
+      display: inline-block;
+    }
+    & > * > div:nth-child(1) {
+      width: 20%;
+      @media #{$mobileGeneral}{
+        width: 100%;
+        & a {
+          margin: 0 auto;
+        }
+      }
+    }
+    & > * > div:nth-child(2) {
+      width: 80%;
+      margin-bottom: 1em;
+      @media #{$mobileGeneral}{
+        width: 100%;
+      }
+      & h2 {
+        font-size: 100%;
+        margin-bottom: 0.5em;
+        @media #{$mobileGeneral}{
+          font-size: 160%;
+          margin-bottom: 0.75em;
+        }
+        & a {
+          color: #000;
+          text-decoration: none;
+        } 
+      }
+      & h5 {
+        font-size: 80%;
+        @media #{$mobileGeneral}{
+          font-size: 100%;
+          font-weight: 300;
+          margin-bottom: 0.25em;
+        }
+      }
+
+      & span {
+        font-size: 60%;
+        @media #{$mobileGeneral}{
+          font-size: 70%;
+        }
+      }
+    }
+    & > * > div:nth-child(3) {
+      text-align: right;
+      @media #{$mobileGeneral}{
+        width: 100%;
+      }
+      & > .button:nth-child(1) {
+        display: none;
+      }
+    }
+
+    & span {
+      color: #777
+    }
+  }
+
+  .share {
+    @media #{$desktopHD}{
+      left: 20%;
+    }
+    @media #{$desktopGeneral}{
+      left: 20%;
+    }
+  }
 }
 
 
 .recommendation {
-  & .wrapper {
+  & > .wrapper {
     margin: 1em 0 0;
     // padding: 0 1em 2em;
     background: #fff;
-
+    @media #{$mobileGeneral}{
+      padding: 0 1em;
+    }
     & a {
       text-decoration: none;
     }
@@ -2286,6 +2296,9 @@ footer {
       padding: 2em 0 0.5em;
       margin-bottom: 2em;
       border-bottom: 0.5px solid #ccc;
+      @media #{$mobileGeneral}{
+        text-align: left;
+      }
     }
   
     & h3 {
@@ -2300,6 +2313,7 @@ footer {
       list-style: none;
       margin: 0.4em 0 0.4em;
       & > .wrapper {
+        padding: 1em 0;
         & > a:first-child,
         // & .name,
         // & > .button,
@@ -2317,6 +2331,9 @@ footer {
           margin-left: 15px;
           // display: inline-block;
           // width: 70%;
+          @media #{$mobileGeneral}{
+            font-size: 80%;
+          }
           overflow: hidden;
           & a {
             display: block;

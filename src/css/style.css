@@ -759,7 +759,7 @@ section {
           padding-right: 2em; } }
       @media screen and (max-width: 800px) {
         #detail main.profile > .wrapper > *:nth-child(1) > .wrapper {
-          padding: 0 4em; } }
+          padding: 0 0; } }
       #detail main.profile > .wrapper > *:nth-child(1) > .wrapper .user {
         height: 4em;
         display: -webkit-box;
@@ -881,7 +881,7 @@ section {
               height: 280px; } }
           @media screen and (max-width: 800px) {
             #detail main.profile > .wrapper > *:nth-child(2) > .wrapper .swiper-container.content .swiper-wrapper .swiper-slide .card .wrapper > a {
-              height: 300px; } }
+              height: auto; } }
           #detail main.profile > .wrapper > *:nth-child(2) > .wrapper .swiper-container.content .swiper-wrapper .swiper-slide .card .wrapper > a img {
             width: 100%; }
         #detail main.profile > .wrapper > *:nth-child(2) > .wrapper .swiper-container.content .swiper-wrapper .swiper-slide .card .wrapper p {
@@ -934,6 +934,9 @@ section {
         padding-left: 2em; }
     #detail main.profile > .wrapper > *:nth-child(3) > .wrapper {
       padding-left: 2em; }
+      @media screen and (max-width: 800px) {
+        #detail main.profile > .wrapper > *:nth-child(3) > .wrapper {
+          padding: 0; } }
 
 #detail .toolbar.navigation {
   background: #eee;
@@ -1166,101 +1169,8 @@ article > * > .wrapper {
     article > * > .wrapper {
       padding: 0 1.5em; } }
 
-article .image {
-  display: block;
-  height: auto;
-  overflow: hidden;
-  position: relative; }
-  article .image img {
-    width: 100%; }
-  @media screen and (max-width: 375px) {
-    article .image {
-      height: 200px; } }
-
-article .profile {
-  margin: 2em 0 1em; }
-  @media screen and (min-width: 800px) {
-    article .profile > .wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
-  @media screen and (max-width: 800px) {
-    article .profile > .wrapper {
-      display: block; } }
-  article .profile .user a {
-    width: 64px;
-    height: 64px; }
-  article .profile .status {
-    margin-bottom: 1em; }
-    article .profile .status h2 {
-      font-size: 160%;
-      margin-bottom: 0.75em; }
-    article .profile .status h5 {
-      font-size: 100%;
-      font-weight: 300;
-      margin-bottom: 0.25em; }
-    article .profile .status span {
-      font-size: 70%; }
-  article .profile > * > div {
-    display: inline-block; }
-  article .profile > * > div:nth-child(1) {
-    width: 20%; }
-    @media screen and (max-width: 800px) {
-      article .profile > * > div:nth-child(1) {
-        width: 100%; }
-        article .profile > * > div:nth-child(1) a {
-          margin: 0 auto; } }
-  article .profile > * > div:nth-child(2) {
-    width: 80%;
-    margin-bottom: 1em; }
-    @media screen and (max-width: 800px) {
-      article .profile > * > div:nth-child(2) {
-        width: 100%; } }
-    article .profile > * > div:nth-child(2) h2 {
-      font-size: 100%;
-      margin-bottom: 0.5em; }
-      @media screen and (max-width: 800px) {
-        article .profile > * > div:nth-child(2) h2 {
-          font-size: 160%;
-          margin-bottom: 0.75em; } }
-      article .profile > * > div:nth-child(2) h2 a {
-        color: #000;
-        text-decoration: none; }
-    article .profile > * > div:nth-child(2) h5 {
-      font-size: 80%; }
-      @media screen and (max-width: 800px) {
-        article .profile > * > div:nth-child(2) h5 {
-          font-size: 100%;
-          font-weight: 300;
-          margin-bottom: 0.25em; } }
-    article .profile > * > div:nth-child(2) span {
-      font-size: 60%; }
-      @media screen and (max-width: 800px) {
-        article .profile > * > div:nth-child(2) span {
-          font-size: 70%; } }
-  article .profile > * > div:nth-child(3) {
-    text-align: right; }
-    article .profile > * > div:nth-child(3) > .button:nth-child(1) {
-      display: none; }
-  article .profile span {
-    color: #777; }
-
-@media screen and (min-width: 1440px) {
-  article .share {
-    left: 20%; } }
-
-@media screen and (min-width: 800px) {
-  article .share {
-    left: 20%; } }
-
 article figcaption {
-  margin: 1em 0; }
+  margin: 0.5em 0; }
   article figcaption span {
     color: #777;
     display: inline-block;
@@ -1271,7 +1181,7 @@ article figcaption {
     line-height: 24px; }
     @media screen and (max-width: 800px) {
       article figcaption span {
-        line-height: 18px; } }
+        line-height: 13px; } }
 
 article hr {
   border: 0.5px solid rgba(0, 0, 0, 0.1); }
@@ -1821,17 +1731,120 @@ footer {
 #detail .status .location a {
   color: #000000; }
 
-.recommendation .wrapper {
+#detail .image {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  position: relative; }
+  @media screen and (min-width: 800px) {
+    #detail .image img {
+      width: 100%; } }
+  @media screen and (max-width: 375px) {
+    #detail .image {
+      height: 200px; } }
+
+#detail .profile {
+  margin: 2em 0 1em; }
+  @media screen and (min-width: 800px) {
+    #detail .profile > .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  @media screen and (max-width: 800px) {
+    #detail .profile > .wrapper {
+      display: block; } }
+  #detail .profile .user a {
+    width: 64px;
+    height: 64px; }
+  #detail .profile .status {
+    margin-bottom: 1em; }
+    #detail .profile .status h2 {
+      font-size: 160%;
+      margin-bottom: 0.75em; }
+    #detail .profile .status h5 {
+      font-size: 100%;
+      font-weight: 300;
+      margin-bottom: 0.25em; }
+    #detail .profile .status span {
+      font-size: 70%; }
+  #detail .profile > * > div {
+    display: inline-block; }
+  #detail .profile > * > div:nth-child(1) {
+    width: 20%; }
+    @media screen and (max-width: 800px) {
+      #detail .profile > * > div:nth-child(1) {
+        width: 100%; }
+        #detail .profile > * > div:nth-child(1) a {
+          margin: 0 auto; } }
+  #detail .profile > * > div:nth-child(2) {
+    width: 80%;
+    margin-bottom: 1em; }
+    @media screen and (max-width: 800px) {
+      #detail .profile > * > div:nth-child(2) {
+        width: 100%; } }
+    #detail .profile > * > div:nth-child(2) h2 {
+      font-size: 100%;
+      margin-bottom: 0.5em; }
+      @media screen and (max-width: 800px) {
+        #detail .profile > * > div:nth-child(2) h2 {
+          font-size: 160%;
+          margin-bottom: 0.75em; } }
+      #detail .profile > * > div:nth-child(2) h2 a {
+        color: #000;
+        text-decoration: none; }
+    #detail .profile > * > div:nth-child(2) h5 {
+      font-size: 80%; }
+      @media screen and (max-width: 800px) {
+        #detail .profile > * > div:nth-child(2) h5 {
+          font-size: 100%;
+          font-weight: 300;
+          margin-bottom: 0.25em; } }
+    #detail .profile > * > div:nth-child(2) span {
+      font-size: 60%; }
+      @media screen and (max-width: 800px) {
+        #detail .profile > * > div:nth-child(2) span {
+          font-size: 70%; } }
+  #detail .profile > * > div:nth-child(3) {
+    text-align: right; }
+    @media screen and (max-width: 800px) {
+      #detail .profile > * > div:nth-child(3) {
+        width: 100%; } }
+    #detail .profile > * > div:nth-child(3) > .button:nth-child(1) {
+      display: none; }
+  #detail .profile span {
+    color: #777; }
+
+@media screen and (min-width: 1440px) {
+  #detail .share {
+    left: 20%; } }
+
+@media screen and (min-width: 800px) {
+  #detail .share {
+    left: 20%; } }
+
+.recommendation > .wrapper {
   margin: 1em 0 0;
   background: #fff; }
-  .recommendation .wrapper a {
+  @media screen and (max-width: 800px) {
+    .recommendation > .wrapper {
+      padding: 0 1em; } }
+  .recommendation > .wrapper a {
     text-decoration: none; }
-  .recommendation .wrapper > h2 {
+  .recommendation > .wrapper > h2 {
     font-size: 16px;
     padding: 2em 0 0.5em;
     margin-bottom: 2em;
     border-bottom: 0.5px solid #ccc; }
-  .recommendation .wrapper h3 {
+    @media screen and (max-width: 800px) {
+      .recommendation > .wrapper > h2 {
+        text-align: left; } }
+  .recommendation > .wrapper h3 {
     display: inline-block;
     font-size: 120%; }
 
@@ -1839,41 +1852,47 @@ footer {
   display: block;
   list-style: none;
   margin: 0.4em 0 0.4em; }
-  .recommendation .recommendation-list li > .wrapper > a:first-child,
-  .recommendation .recommendation-list li > .wrapper > p {
-    font-family: 'Lato', Arial; }
-  .recommendation .recommendation-list li > .wrapper > a:first-child {
-    display: block;
-    float: left; }
-  .recommendation .recommendation-list li > .wrapper .name,
-  .recommendation .recommendation-list li > .wrapper .title {
-    font-size: 120%;
-    margin-left: 15px;
-    overflow: hidden; }
-    .recommendation .recommendation-list li > .wrapper .name a,
-    .recommendation .recommendation-list li > .wrapper .title a {
+  .recommendation .recommendation-list li > .wrapper {
+    padding: 1em 0; }
+    .recommendation .recommendation-list li > .wrapper > a:first-child,
+    .recommendation .recommendation-list li > .wrapper > p {
+      font-family: 'Lato', Arial; }
+    .recommendation .recommendation-list li > .wrapper > a:first-child {
       display: block;
-      color: #000;
-      margin-bottom: 0.5em; }
-  .recommendation .recommendation-list li > .wrapper > .button {
-    font-size: 12px;
-    line-height: 1.2em;
-    margin-left: 15px; }
-  .recommendation .recommendation-list li > .wrapper p {
-    color: #666;
-    font-weight: 300; }
-    @media screen and (min-width: 1440px) {
-      .recommendation .recommendation-list li > .wrapper p {
-        margin: 0.2em 0 0 1em; } }
-    @media screen and (min-width: 801px) and (max-width: 1280px) {
-      .recommendation .recommendation-list li > .wrapper p {
-        margin: 0.2em 0 0 1em; } }
-    .recommendation .recommendation-list li > .wrapper p a {
-      display: block;
-      font-size: 14px;
-      line-height: 18px;
-      color: #000;
-      margin: 1em 0; }
+      float: left; }
+    .recommendation .recommendation-list li > .wrapper .name,
+    .recommendation .recommendation-list li > .wrapper .title {
+      font-size: 120%;
+      margin-left: 15px;
+      overflow: hidden; }
+      @media screen and (max-width: 800px) {
+        .recommendation .recommendation-list li > .wrapper .name,
+        .recommendation .recommendation-list li > .wrapper .title {
+          font-size: 80%; } }
+      .recommendation .recommendation-list li > .wrapper .name a,
+      .recommendation .recommendation-list li > .wrapper .title a {
+        display: block;
+        color: #000;
+        margin-bottom: 0.5em; }
+    .recommendation .recommendation-list li > .wrapper > .button {
+      font-size: 12px;
+      line-height: 1.2em;
+      margin-left: 15px; }
+    .recommendation .recommendation-list li > .wrapper p {
+      color: #666;
+      font-weight: 300; }
+      @media screen and (min-width: 1440px) {
+        .recommendation .recommendation-list li > .wrapper p {
+          margin: 0.2em 0 0 1em; } }
+      @media screen and (min-width: 801px) and (max-width: 1280px) {
+        .recommendation .recommendation-list li > .wrapper p {
+          margin: 0.2em 0 0 1em; } }
+      .recommendation .recommendation-list li > .wrapper p a {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000;
+        margin: 1em 0; }
 
 .recommendation .recommendation-list.people li > .wrapper > a:first-child {
   width: 64px;
