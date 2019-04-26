@@ -234,6 +234,17 @@ for(let i = 0; i < thumbnail.length; i++){
 // if(createPost){
 //   modal(editCoverButton);
 // }
+
+const imageReady = document.querySelector('.image');
+const previewImage = document.querySelector('#preview-image');
+const coverButton = document.querySelector('.cover.upload');
+
+if(imageReady){
+  console.log(imageReady, previewImage);
+  previewImage.prepend(coverButton)
+}
+
+
 function modal(button, uniqueClass, callback){
   // first, declare modal container
   const modal = document.querySelector('.modal' + uniqueClass);

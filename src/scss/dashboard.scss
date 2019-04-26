@@ -632,6 +632,10 @@ body {
         width: 60%;
         height: 500px;
       }
+      @media #{$mobileGeneral}{
+        width: 100%;
+        height: 80%;
+      }
     }
   }
 
@@ -1798,13 +1802,34 @@ textarea {
   }
 }
 
-#cover {
+.cover.upload {
   color: #ccc;
   cursor: pointer;
   background: #ffffff;
   border: 2px dashed#0998d1;
   padding: 2em;
   text-align: center;
+}
+
+#preview-cover {
+  margin: 1em 0;
+  & #preview-image {
+    position: relative;
+    & .cover.upload {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.25);
+      box-sizing: border-box;
+      color: #979797;
+      &:hover {
+        background: rgba(255, 255, 255, 0.75);
+      }
+    }
+    & img {
+      width: 100%;
+    }
+  }
 }
 
 .dashboard section,
@@ -2507,20 +2532,27 @@ input#tags {
         }
       }
     }
+
     &.gallery {
       & > .wrapper {
         & > * {
           & > .wrapper {
             display: flex;
             height: 100%;
+            @media #{$mobileGeneral}{
+              flex-direction: column;
+              overflow: scroll;
+            }
             & > *:nth-child(1) {
-              overflow: hidden;
               // @media #{$desktopHD}{
               //   height: 500px;
               // }
               // @media #{$desktopGeneral}{
               //   height: 500px;
               // }
+              @media #{$mobileGeneral}{
+                width: 100%;
+              }
               & > .wrapper {
                 background: #f7f7f7;
                 display: flex;
@@ -2529,17 +2561,31 @@ input#tags {
                 position: relative;
                 width: 100%;
                 height: 100%;
+                overflow: hidden;
+                @media #{$mobileGeneral}{
+                  height: 200px;
+                }
                 & img {
                   width: 100%;
                   // @include centerImage(true)
+                  @media #{$mobileGeneral}{
+                    height: 200px;
+                    width: auto;
+                  }
                 }
               }
             }
             & > *:nth-child(2) {
+              @media #{$mobileGeneral}{
+                width: 100%;
+              }
               & .meta-image {
                 height: 100%;
                 & > .wrapper {
                   padding: 64px 2em 0;
+                  @media #{$mobileGeneral}{
+                    padding: 1em 2em 0;
+                  }
                   & label {
                     cursor: pointer;
                     display: flex;
