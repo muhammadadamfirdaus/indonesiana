@@ -499,6 +499,11 @@ body {
     width: 80%;
     height: 90%; } }
 
+@media screen and (max-width: 800px) {
+  .modal.media.create-post {
+    width: 100%;
+    height: 80%; } }
+
 @media screen and (min-width: 1440px) {
   .modal.media.gallery {
     width: 50%;
@@ -569,6 +574,7 @@ body {
           transition: transform 0.2s ease;
           transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
   .modal > .wrapper > * {
+    padding: 0;
     text-align: center; }
   .modal > .wrapper h3 {
     padding: 1.5em 0; }
@@ -1410,7 +1416,7 @@ input#tags {
   padding: 0px;
   list-style: none; }
   .tabs li {
-    background: #ccc;
+    background: #fff;
     color: #222;
     display: inline-block;
     font-size: 16px;
@@ -1418,8 +1424,8 @@ input#tags {
     margin: 0;
     cursor: pointer; }
   .tabs li.current {
-    background: #fff;
-    color: #222; }
+    background: #d7d7d7;
+    color: #fff; }
 
 .tab-content {
   display: none;
@@ -1870,7 +1876,7 @@ input#tags {
   .modal.media > .wrapper > * > .wrapper {
     height: 100%;
     overflow: hidden; }
-    .modal.media > .wrapper > * > .wrapper > *:nth-child(1) {
+    .modal.media > .wrapper > * > .wrapper > * > *:nth-child(1) {
       margin-top: 52px; }
 
 .modal.media.create-post > .wrapper {
@@ -1878,15 +1884,36 @@ input#tags {
   display: -ms-flexbox;
   display: flex;
   height: 100%; }
-  .modal.media.create-post > .wrapper > *:nth-child(1) > .wrapper {
-    background: #eee;
+  @media screen and (max-width: 800px) {
+    .modal.media.create-post > .wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .modal.media.create-post > .wrapper > * > * {
+    overflow: scroll; }
+    @media screen and (max-width: 800px) {
+      .modal.media.create-post > .wrapper > * > * {
+        width: 100%; }
+        .modal.media.create-post > .wrapper > * > * > .wrapper {
+          overflow: scroll; } }
+  @media screen and (max-width: 800px) {
+    .modal.media.create-post > .wrapper > * > *:nth-child(1) {
+      height: 40%; } }
+  .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: relative;
     width: 100%;
     height: 100%; }
-  .modal.media.create-post > .wrapper > *:nth-child(2) .preview {
+    @media screen and (min-width: 800px) {
+      .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper {
+        background: #eee; } }
+  @media screen and (max-width: 800px) {
+    .modal.media.create-post > .wrapper > * > *:nth-child(2) {
+      height: 60%; } }
+  .modal.media.create-post > .wrapper > * > *:nth-child(2) .preview {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1899,13 +1926,17 @@ input#tags {
     background: #f7f7f7;
     height: 300px;
     overflow: hidden; }
-    .modal.media.create-post > .wrapper > *:nth-child(2) .preview img {
+    @media screen and (max-width: 800px) {
+      .modal.media.create-post > .wrapper > * > *:nth-child(2) .preview {
+        margin-top: 0;
+        height: auto; } }
+    .modal.media.create-post > .wrapper > * > *:nth-child(2) .preview img {
       width: 100%; }
-  .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image {
+  .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image {
     height: 100%; }
-    .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image > .wrapper {
+    .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper {
       padding: 0 2em; }
-      .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image > .wrapper label {
+      .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper label {
         cursor: pointer;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1917,7 +1948,7 @@ input#tags {
             -ms-flex-align: center;
                 align-items: center;
         margin: 1em 0; }
-      .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image > .wrapper > * > *:nth-child(1) {
+      .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper > * > *:nth-child(1) {
         width: 30%;
         margin-right: 2em;
         font-size: 80%;
@@ -1925,22 +1956,50 @@ input#tags {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         text-align: right; }
-      .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image > .wrapper > * > *:nth-child(2) {
+      .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper > * > *:nth-child(2) {
         width: 70%; }
-      .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image > .wrapper input,
-      .modal.media.create-post > .wrapper > *:nth-child(2) .meta-image > .wrapper textarea {
+      .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper input,
+      .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper textarea {
         border: 1px solid #d8d8d8;
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end; }
+  @media screen and (max-width: 800px) {
+    .modal.media.create-post > .wrapper > * {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .modal.media.create-post > .wrapper > .upload-area {
+    width: 100%;
+    height: 100%; }
+    .modal.media.create-post > .wrapper > .upload-area > * {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%;
+      height: 100%; }
 
 .modal.media.create-post.view-grid .list {
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  overflow: scroll; }
+  overflow: scroll;
+  padding-top: 3em; }
+  @media screen and (max-width: 800px) {
+    .modal.media.create-post.view-grid .list {
+      width: 100%; } }
   .modal.media.create-post.view-grid .list li {
     width: 25%;
     border: 0; }
+    @media screen and (max-width: 800px) {
+      .modal.media.create-post.view-grid .list li {
+        width: 40%; } }
 
 .modal.media.gallery > .wrapper > * > .wrapper {
   display: -webkit-box;
