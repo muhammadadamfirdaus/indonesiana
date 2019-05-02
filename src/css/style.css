@@ -2031,6 +2031,10 @@ footer {
     .modal.sign {
       width: 40%;
       height: 80%; } }
+  @media screen and (max-width: 800px) {
+    .modal.sign {
+      width: 80%;
+      height: 80%; } }
   .modal.sign .content {
     visibility: hidden; }
     .modal.sign .content.active {
@@ -2045,11 +2049,19 @@ footer {
           -ms-flex-direction: column;
               flex-direction: column; }
       .modal.sign .content > .wrapper > ul li {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 0 0px;
-                flex: 1 0 0;
-        margin: 0.5em auto;
-        width: 40%; }
+        margin: 0.5em auto; }
+        @media screen and (min-width: 1440px) {
+          .modal.sign .content > .wrapper > ul li {
+            width: 60%; } }
+        @media screen and (min-width: 801px) and (max-width: 1280px) {
+          .modal.sign .content > .wrapper > ul li {
+            width: 50%; } }
+        @media screen and (min-width: 800px) {
+          .modal.sign .content > .wrapper > ul li {
+            width: 50%; } }
+        @media screen and (max-width: 800px) {
+          .modal.sign .content > .wrapper > ul li {
+            width: 100%; } }
         .modal.sign .content > .wrapper > ul li img {
           width: 100%; }
     .modal.sign .content > .wrapper > section {
@@ -2059,9 +2071,11 @@ footer {
       .modal.sign .content > .wrapper > section .wrapper {
         padding: 0 20%; }
         .modal.sign .content > .wrapper > section .wrapper > * {
-          color: #005b97; }
+          color: #005b97;
+          font-size: 80%; }
         .modal.sign .content > .wrapper > section .wrapper a {
           color: #000;
+          display: inline-block;
           text-underline-position: under; }
     .modal.sign .content > .wrapper > img {
       width: 100%;
@@ -2129,28 +2143,38 @@ footer {
           color: #000;
           font-family: 'arial';
           font-size: 11px; }
-    .modal.sign .content.login-page > * > ul {
-      padding: 0 12em; }
-      .modal.sign .content.login-page > * > ul form.login {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; }
-        .modal.sign .content.login-page > * > ul form.login * {
-          margin-bottom: 1em;
+    @media screen and (min-width: 1440px) {
+      .modal.sign .content.login-page > * > ul {
+        padding: 0 12em; } }
+    @media screen and (min-width: 801px) and (max-width: 1280px) {
+      .modal.sign .content.login-page > * > ul {
+        padding: 0 6em; } }
+    @media screen and (min-width: 800px) {
+      .modal.sign .content.login-page > * > ul {
+        padding: 0 6em; } }
+    @media screen and (max-width: 800px) {
+      .modal.sign .content.login-page > * > ul {
+        padding: 0 2em; } }
+    .modal.sign .content.login-page > * > ul form.login {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .modal.sign .content.login-page > * > ul form.login * {
+        margin-bottom: 1em;
+        border: none;
+        border: 1px solid #000;
+        border-radius: 4px;
+        padding: 1em 0.5em; }
+        .modal.sign .content.login-page > * > ul form.login *[type='submit'] {
+          background: #0998d1;
           border: none;
-          border: 1px solid #000;
-          border-radius: 4px;
-          padding: 1em 0.5em; }
-          .modal.sign .content.login-page > * > ul form.login *[type='submit'] {
-            background: #0998d1;
-            border: none;
-            color: #fff; }
-          .modal.sign .content.login-page > * > ul form.login *:last-child {
-            margin-bottom: 0; }
+          color: #fff; }
+        .modal.sign .content.login-page > * > ul form.login *:last-child {
+          margin-bottom: 0; }
     .modal.sign .content.registration-email > .wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2250,6 +2274,12 @@ footer {
     .modal > .wrapper .title {
       padding: 2em 0 0.75em;
       border: none; }
+      @media screen and (min-width: 800px) {
+        .modal > .wrapper .title {
+          font-size: 120%; } }
+      @media screen and (max-width: 800px) {
+        .modal > .wrapper .title {
+          font-size: 100%; } }
     .modal > .wrapper ul li {
       list-style: none;
       display: block; }

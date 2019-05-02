@@ -2530,7 +2530,7 @@ footer {
   &.sign {
     @media #{$desktopHD}{
       width: 30%;
-      height: 60%
+      height: 60%;
     }
     @media #{$desktop}{
       width: 50%;
@@ -2538,6 +2538,10 @@ footer {
     }
     @media #{$desktopGeneral}{
       width: 40%;
+      height: 80%;
+    }
+    @media #{$mobileGeneral}{
+      width: 80%;
       height: 80%;
     }
     & .content {
@@ -2551,9 +2555,20 @@ footer {
           padding: 0 1em;
           flex-direction: column;
           & li {
-            flex: 1 0 0;
+            // flex: 1 0 0;
             margin: 0.5em auto;
-            width: 40%;
+            @media #{$desktopHD}{
+              width: 60%;
+            }
+            @media #{$desktop}{
+              width: 50%;
+            }
+            @media #{$desktopGeneral}{
+              width: 50%;
+            }
+            @media #{$mobileGeneral}{
+              width: 100%;
+            }
             & img {
               width: 100%;
             }
@@ -2567,9 +2582,11 @@ footer {
             padding: 0 20%;
             & > * {
               color: #005b97;
+              font-size: 80%;
             }
             & a {
               color: #000;
+              display: inline-block;
               text-underline-position: under;
             }
           }
@@ -2645,7 +2662,18 @@ footer {
 
       &.login-page {
         & > * > ul {
-          padding: 0 12em;
+          @media #{$desktopHD}{
+            padding: 0 12em;
+          }
+          @media #{$desktop}{
+            padding: 0 6em;
+          }
+          @media #{$desktopGeneral}{
+            padding: 0 6em;
+          }
+          @media #{$mobileGeneral}{
+            padding: 0 2em;
+          }
           form {
             &.login {
               display: flex;
@@ -2768,6 +2796,12 @@ footer {
     & .title {
       padding: 2em 0 0.75em;
       border: none;
+      @media #{$desktopGeneral}{
+        font-size: 120%;
+      }
+      @media #{$mobileGeneral}{
+        font-size: 100%;
+      }
     }
     & ul {
       & li {
