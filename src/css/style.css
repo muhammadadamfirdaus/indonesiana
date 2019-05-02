@@ -281,7 +281,7 @@ footer {
   header > *,
   main > *,
   footer > * {
-    padding: 0 8%; } }
+    padding: 0 2%; } }
 
 @media screen and (min-width: 1440px) {
   header {
@@ -756,6 +756,7 @@ section {
           padding: 0; } }
       @media screen and (min-width: 800px) {
         #detail main.profile > .wrapper > *:nth-child(1) > .wrapper {
+          margin-top: 2em;
           padding-right: 2em; } }
       @media screen and (max-width: 800px) {
         #detail main.profile > .wrapper > *:nth-child(1) > .wrapper {
@@ -1750,9 +1751,6 @@ footer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
@@ -1783,8 +1781,13 @@ footer {
         #detail .profile > * > div:nth-child(1) a {
           margin: 0 auto; } }
   #detail .profile > * > div:nth-child(2) {
-    width: 80%;
     margin-bottom: 1em; }
+    @media screen and (min-width: 1440px) {
+      #detail .profile > * > div:nth-child(2) {
+        width: 60%; } }
+    @media screen and (min-width: 800px) {
+      #detail .profile > * > div:nth-child(2) {
+        width: 50%; } }
     @media screen and (max-width: 800px) {
       #detail .profile > * > div:nth-child(2) {
         width: 100%; } }
@@ -1811,7 +1814,13 @@ footer {
         #detail .profile > * > div:nth-child(2) span {
           font-size: 70%; } }
   #detail .profile > * > div:nth-child(3) {
-    text-align: right; }
+    text-align: left; }
+    @media screen and (min-width: 1440px) {
+      #detail .profile > * > div:nth-child(3) {
+        width: 30%; } }
+    @media screen and (min-width: 800px) {
+      #detail .profile > * > div:nth-child(3) {
+        width: 30%; } }
     @media screen and (max-width: 800px) {
       #detail .profile > * > div:nth-child(3) {
         width: 100%; } }
@@ -1829,8 +1838,11 @@ footer {
     left: 20%; } }
 
 .recommendation > .wrapper {
-  margin: 1em 0 0;
+  margin: 2em 0 0;
   background: #fff; }
+  @media screen and (min-width: 800px) {
+    .recommendation > .wrapper {
+      padding: 0 2em 2em; } }
   @media screen and (max-width: 800px) {
     .recommendation > .wrapper {
       padding: 0 1em; } }

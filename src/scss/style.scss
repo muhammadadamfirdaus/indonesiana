@@ -351,7 +351,7 @@ footer > * {
     padding: 0 16%;
   }
   @media #{$desktopGeneral}{
-    padding: 0 8%;
+    padding: 0 2%;
   }
 }
 
@@ -958,6 +958,7 @@ section {
             padding: 0;
           }
           @media #{$desktopGeneral}{
+            margin-top: 2em;
             padding-right: 2em;
           }
           @media #{$mobileGeneral}{
@@ -2175,7 +2176,6 @@ footer {
     & > .wrapper {
       @media #{$desktopGeneral}{
         display: flex;
-        align-items: center;
         justify-content: flex-start;
       }  
       @media #{$mobileGeneral}{
@@ -2184,7 +2184,6 @@ footer {
     }
 
     .user {
-
       & a {
         width: 64px;
         height: 64px;
@@ -2221,8 +2220,13 @@ footer {
       }
     }
     & > * > div:nth-child(2) {
-      width: 80%;
       margin-bottom: 1em;
+      @media #{$desktopHD}{
+        width: 60%;
+      }
+      @media #{$desktopGeneral}{
+        width: 50%;
+      }
       @media #{$mobileGeneral}{
         width: 100%;
       }
@@ -2255,7 +2259,13 @@ footer {
       }
     }
     & > * > div:nth-child(3) {
-      text-align: right;
+      text-align: left;
+      @media #{$desktopHD}{
+        width: 30%;
+      }
+      @media #{$desktopGeneral}{
+        width: 30%;
+      }
       @media #{$mobileGeneral}{
         width: 100%;
       }
@@ -2282,9 +2292,11 @@ footer {
 
 .recommendation {
   & > .wrapper {
-    margin: 1em 0 0;
-    // padding: 0 1em 2em;
+    margin: 2em 0 0;
     background: #fff;
+    @media #{$desktopGeneral}{
+      padding: 0 2em 2em;
+    }
     @media #{$mobileGeneral}{
       padding: 0 1em;
     }
