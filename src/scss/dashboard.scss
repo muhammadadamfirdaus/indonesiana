@@ -2512,11 +2512,28 @@ input#tags {
           }
           & > .wrapper {
             display: flex;
+            flex-direction: column;
             position: relative;
             width: 100%;
             height: 100%;
             @media #{$desktopGeneral}{
               background: #eee;
+            }
+
+            & nav.filter {
+              margin-top: 4em;
+              & > .wrapper {
+                padding: 0 1em;
+                & form {
+                  display: flex;
+                  & > *:nth-child(1) {
+                    width: 100%;
+                  }
+                  & input::placeholder {
+                    color: #979797;
+                  }
+                }
+              }
             }
             & img {
               // @include centerImage(true)
@@ -2530,7 +2547,7 @@ input#tags {
           & .preview {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             background: #f7f7f7;
             height: 300px;
             overflow: hidden;
@@ -2545,7 +2562,7 @@ input#tags {
           & .meta-image {
             height: 100%;
             & > .wrapper {
-              padding: 0 2em;
+              padding: 0 2em 4em;
               & label {
                 cursor: pointer;
                 display: flex;

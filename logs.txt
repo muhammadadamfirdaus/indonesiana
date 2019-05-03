@@ -1,0 +1,5 @@
+- [front-page] fix padding view because toolbar *
+- [dashboard-modal] flex end for gallery preview meta and add some padding bottom to the meta image.
+- [dashboard-media] fix modal upload area when user click upload button.
+- [dashboard-create-post] create search filter for media gallery.
+- [dashboard-list-article] fix nav.filter search issue (same above).

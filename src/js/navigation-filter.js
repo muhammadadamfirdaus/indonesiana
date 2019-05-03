@@ -68,10 +68,11 @@ function filterListArticle(header, list){
   jQuery.expr[':'].Contains = function(a, i, m) {
     return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
   };
-  var listArticleForm = $('form#filter-article');
-  var listArticleInput = $('form#filter-article input.filter');
+  // var listArticleForm = $('form#filter');
+  var listArticleInput = $('form#filter input');
 
-  listArticleForm.append(listArticleInput).appendTo(header);
+  // listArticleForm.before(listArticleInput).appendTo(header);
+  console.log(header);
   var defaultPlaceholder = ('Cari berdasarkan judul');
   listArticleInput.val(defaultPlaceholder);
   listArticleInput.on('change', function(){

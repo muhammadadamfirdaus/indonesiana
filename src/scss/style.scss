@@ -342,8 +342,6 @@ $mobile5inch: 'screen and (max-width: 375px)';
   }
 }
 
-
-.toolbar > *,
 header > *,
 main > *,
 footer > * {
@@ -351,9 +349,10 @@ footer > * {
     padding: 0 16%;
   }
   @media #{$desktopGeneral}{
-    padding: 0 2%;
+    padding: 0 8%;
   }
 }
+
 
 // header
 header {
@@ -2439,6 +2438,10 @@ footer {
       background-position: -52px -472px;
     }
   }
+}
+
+.toolbar > * {
+  padding: 0 2%;
 }
 
 .toolbar {

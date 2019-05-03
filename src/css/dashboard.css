@@ -1883,12 +1883,32 @@ input#tags {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     width: 100%;
     height: 100%; }
     @media screen and (min-width: 800px) {
       .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper {
         background: #eee; } }
+    .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter {
+      margin-top: 4em; }
+      .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter > .wrapper {
+        padding: 0 1em; }
+        .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter > .wrapper form {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter > .wrapper form > *:nth-child(1) {
+            width: 100%; }
+          .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter > .wrapper form input::-webkit-input-placeholder {
+            color: #979797; }
+          .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter > .wrapper form input::-ms-input-placeholder {
+            color: #979797; }
+          .modal.media.create-post > .wrapper > * > *:nth-child(1) > .wrapper nav.filter > .wrapper form input::placeholder {
+            color: #979797; }
   @media screen and (max-width: 800px) {
     .modal.media.create-post > .wrapper > * > *:nth-child(2) {
       height: 60%; } }
@@ -1899,9 +1919,9 @@ input#tags {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     background: #f7f7f7;
     height: 300px;
     overflow: hidden; }
@@ -1914,7 +1934,7 @@ input#tags {
   .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image {
     height: 100%; }
     .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper {
-      padding: 0 2em; }
+      padding: 0 2em 4em; }
       .modal.media.create-post > .wrapper > * > *:nth-child(2) .meta-image > .wrapper label {
         cursor: pointer;
         display: -webkit-box;

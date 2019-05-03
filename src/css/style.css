@@ -270,18 +270,16 @@ footer {
     display: inline-block; }
 
 @media screen and (min-width: 1440px) {
-  .toolbar > *,
   header > *,
   main > *,
   footer > * {
     padding: 0 16%; } }
 
 @media screen and (min-width: 800px) {
-  .toolbar > *,
   header > *,
   main > *,
   footer > * {
-    padding: 0 2%; } }
+    padding: 0 8%; } }
 
 @media screen and (min-width: 1440px) {
   header {
@@ -1939,6 +1937,9 @@ footer {
     background-image: url(../images/sprites.png);
     background-repeat: no-repeat;
     background-position: -52px -472px; }
+
+.toolbar > * {
+  padding: 0 2%; }
 
 .toolbar {
   height: 48px; }

@@ -120,6 +120,16 @@
           Upload
         </a>
         <nav class="filter">
+          <div class="wrapper">
+            <form method="GET" action="" class="search search-title">
+              <input type="text" placeholder="Ketik media yang ingin dicari">
+              <button type="submit" class="button default black">
+                Cari
+              </button>
+            </form>
+          </div>
+        </nav>
+        <!-- <nav class="filter">
           <div class="wrapper clearfix">
             <div class="col w-50">
               <li>
@@ -140,14 +150,12 @@
                 <h5>
                   Urutkan Berdasarkan
                 </h5>
-                <!-- <a href="#" class="button ascending">A ke Z</a>
-                <a href="#" class="button descending">Z ke A</a> -->
                 <a href="#" class="button default tooltip newest" title="Urutkan artikel dari yang terbaru.">Terbaru</a>
                 <a href="#" class="button default tooltip oldest" title="Urutkan artikel dari yang terlama.">Terlama</a>
               </div>
             </div>
           </div>
-        </nav>
+        </nav> -->
         <ul id="list" class="list">
           <li data-status="1" data-title="Teknologi di Era Disrupsi dan Masa Depan Manusia" data-time="Sat, 12 Aug 2018 20:58:39 GMT">
             <div class="wrapper clearfix">
@@ -653,10 +661,30 @@
       </div>
     </div>
   </div>
-  <div class="modal media upload">
+  <div class="modal media create-post view-grid">
+    <nav class="tabs">
+      <div class="wrapper">
+        <ul class="breadcrumbs">
+          <li data-tab="tab-1">
+            <h2 class="title">
+              <a>Upload</a>
+            </h2>
+          </li>
+        </ul>
+        <!-- <div class="swiper-button-next swiper-button-black"></div>
+        <div class="swiper-button-prev swiper-button-black"></div> -->
+        <a href="#" class="button icon close"></a>
+      </div>
+    </nav>
     <div class="wrapper">
       <div class="upload-area">
-        HELLO WORLD
+        <div class="w-60">
+          <div id="upload" class="cover upload">
+            <a>
+              Upload Gambar
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
