@@ -3,23 +3,23 @@ function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
 
-function get(url){
-  return new Promise(function(resolve, reject){
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onload = function(){
-      if(xhr.status == 200){
-        resolve(JSON.parse(xhr.response));
-      } else {
-        reject(xhr.statusText);
-      }
-    }
-    xhr.onerror = function(){
-      reject(xhr.statusText);
-    }
-    xhr.send();
-  });
-}
+// function get(url){
+//   return new Promise(function(resolve, reject){
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("GET", url, true);
+//     xhr.onload = function(){
+//       if(xhr.status == 200){
+//         resolve(JSON.parse(xhr.response));
+//       } else {
+//         reject(xhr.statusText);
+//       }
+//     }
+//     xhr.onerror = function(){
+//       reject(xhr.statusText);
+//     }
+//     xhr.send();
+//   });
+// }
 // accordion
 let accordion = $('.accordion');
 let accordionButton = accordion.find('.toggle');
@@ -46,8 +46,8 @@ listActionButton.on('mouseenter', function(){
 // customize
 var buttonRecommendation = $('a.button.recommendation');
 var buttonPeople = $('a.button.people');
-var recommendationPeople = get("ajax/recommendation-people.json");
-var recommendationTopics = get("ajax/recommendation-topics.json");
+// var recommendationPeople = get("ajax/recommendation-people.json");
+// var recommendationTopics = get("ajax/recommendation-topics.json");
 
 if($('#recommendation').length){
   $(window).on('load', function(){
@@ -159,7 +159,8 @@ const createPost = document.querySelector('.create-post');
 const mediaGallery = document.querySelector('.gallery');
 
 var callback;
-if(mediaGallery){
+var searchImages = window.location.href.indexOf('?src=');
+if(mediaGallery || searchImages){
   var buttonUpload = '.upload';
   var modalUpload = '.create-post';
   modal(buttonUpload, modalUpload);
@@ -643,6 +644,25 @@ $('.tabs li').on('click', function(e){
   $(this).addClass('current');
   $("#"+tab_id).addClass('current');
   history.pushState(null, null, "#"+tab_id);
+});
+tinymce.init({
+  selector: '#create-post',
+  toolbar: 'file edit insert view format table tools help customPhotoButton',
+  setup: function(editor){
+    editor.ui.registry.addButton('customPhotoButton', {
+      text: 'Foto',
+      onAction: function(){
+        console.log('hit');
+        var buttonUpload = '.upload';
+        var modalUpload = '.create-post';
+        modal(buttonUpload, modalUpload);
+        // editor.insertContent('&nbsp;<strong>It\'s my button!</strong>&nbsp;');
+      }
+    });
+  //   editor.on('ExecCommand',function(buttonUpload, modalupload){
+  //     modal(buttonUpload, modalup);     
+  //  })
+  }
 });
 // toolbar
 const toolbarProfileExpand = document.querySelector('.profile-expand');

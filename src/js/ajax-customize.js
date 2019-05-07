@@ -2,8 +2,8 @@
 // customize
 var buttonRecommendation = $('a.button.recommendation');
 var buttonPeople = $('a.button.people');
-var recommendationPeople = get("ajax/recommendation-people.json");
-var recommendationTopics = get("ajax/recommendation-topics.json");
+// var recommendationPeople = get("ajax/recommendation-people.json");
+// var recommendationTopics = get("ajax/recommendation-topics.json");
 
 if($('#recommendation').length){
   $(window).on('load', function(){

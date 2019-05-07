@@ -72,6 +72,7 @@ gulp.task('concat-dashboard', function(){
     'src/js/sidebarMenu.js',
     'src/js/swiper-init.js',
     'src/js/tab.js',
+    'src/js/tinymce.js',
     'src/js/toolbar.js',
     'src/js/tooltip.js'
   ])

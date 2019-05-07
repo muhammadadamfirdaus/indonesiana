@@ -3,7 +3,8 @@ const createPost = document.querySelector('.create-post');
 const mediaGallery = document.querySelector('.gallery');
 
 var callback;
-if(mediaGallery){
+var searchImages = window.location.href.indexOf('?src=');
+if(mediaGallery || searchImages){
   var buttonUpload = '.upload';
   var modalUpload = '.create-post';
   modal(buttonUpload, modalUpload);
