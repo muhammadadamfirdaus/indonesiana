@@ -1,14 +1,19 @@
-
 const createPost = document.querySelector('.create-post');
 const mediaGallery = document.querySelector('.gallery');
 
 var callback;
 var searchImages = window.location.href.indexOf('?src=');
-if(mediaGallery || searchImages){
+
+if(searchImages > -1){
+   console.log("hi");
+   var modalcreatepost = document.querySelector('.modal.media.create-post');
+   modalcreatepost.classList.add('active');
+}
+
+if(mediaGallery){
   var buttonUpload = '.upload';
   var modalUpload = '.create-post';
   modal(buttonUpload, modalUpload);
-
   var listThumbnail = '.thumbnail';
   var modalGallery = '.gallery';
   modal(listThumbnail, modalGallery);
