@@ -2,7 +2,7 @@ const createPost = document.querySelector('.create-post');
 const mediaGallery = document.querySelector('.gallery');
 
 var callback;
-var searchImages = window.location.href.indexOf('?src=');
+var searchImages = window.location.href.indexOf('?');
 
 if(searchImages > -1){
    console.log("hi");
