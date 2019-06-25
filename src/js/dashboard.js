@@ -3,6 +3,10 @@ function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
 
+// responsive
+const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+console.log('screen width: ', screenWidth);
+
 // function get(url){
 //   return new Promise(function(resolve, reject){
 //     var xhr = new XMLHttpRequest();
@@ -159,6 +163,9 @@ const mediaGallery = document.querySelector('.gallery');
 
 var callback;
 var searchImages = window.location.href.indexOf('?');
+var searchURL = window.location.search;
+searchURL = searchURL.replace("?", ''); // remove the ?
+alert(searchURL); //alerts ProjectID=462 is your case
 
 if(searchImages > -1){
    console.log("hi");
@@ -656,20 +663,20 @@ tinymce.init({
   setup: function(editor){
 
     // popup modal media on photo button
-    editor.ui.registry.addButton('customPhotoButton', {
-      text: 'Foto',
-      onAction: function(){
-        var modal = document.querySelector('.modal.create-post');
-        if(modal.classList.contains('active')){
-          modal.classList.remove('active');
-        } else {
-          modal.classList.add('active');
-          if(callback){
-            callback("active");
-          }
-        }
-      }
-    });
+    // editor.ui.registry.addButton('customPhotoButton', {
+    //   text: 'Foto',
+    //   onAction: function(){
+    //     var modal = document.querySelector('.modal.create-post');
+    //     if(modal.classList.contains('active')){
+    //       modal.classList.remove('active');
+    //     } else {
+    //       modal.classList.add('active');
+    //       if(callback){
+    //         callback("active");
+    //       }
+    //     }
+    //   }
+    // });
   }
 });
 // toolbar

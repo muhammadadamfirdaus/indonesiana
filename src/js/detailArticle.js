@@ -21,6 +21,21 @@ if($('#detail').length){
     });
   });
 
+  // caption on mobile
+  if(screenWidth < 800){
+    let captionDetail = document.querySelector('.caption');
+    let figcaptionDetail = document.querySelector('article .image');
+    captionDetail.addEventListener('click', function(e){
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      if(figcaptionDetail.classList.contains('active')){
+        figcaptionDetail.classList.remove('active');
+      } else {
+        figcaptionDetail.classList.add('active');
+      }
+    });
+  }
+
   // comment
   var comment = $('#comment');
   var commentBox = $('#comment textarea');

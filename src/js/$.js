@@ -3,6 +3,10 @@ function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
 
+// responsive
+const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+console.log('screen width: ', screenWidth);
+
 // function get(url){
 //   return new Promise(function(resolve, reject){
 //     var xhr = new XMLHttpRequest();

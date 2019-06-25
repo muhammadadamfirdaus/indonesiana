@@ -215,7 +215,7 @@ $mobile5inch: 'screen and (max-width: 375px)';
   background-position: 2px 2px;
   display: inline-block;
   width: 32px;
-  height: 25px;
+  height: 28px;
   overflow: hidden;
 }
 
@@ -410,7 +410,8 @@ header {
         display: flex;
         height: 40px;
         & > li {
-          display: inline-block;
+          display: flex;
+          align-items: center;
           list-style: none;
           @media #{$desktopGeneral}{
             margin: 0 10px;
@@ -512,6 +513,112 @@ header {
 
     & .swiper-menu.swiper-button-next {
       right: 0;
+    }
+  }
+
+  .search-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    z-index: -1;
+    &.active {
+      background: #fff;
+      box-shadow: 0 2px 25px 0 #ccc;
+      color: #fff;
+      opacity: 1;
+      z-index: 9;
+    }
+    @media #{$desktopHD}{
+      height: 90px;
+    }
+    @media #{$desktopGeneral}{
+      height: 90px;
+    }
+    @media #{$desktop}{
+      height: 90px;
+    }
+    @media #{$mobileGeneral}{
+      height: 64px;
+    }
+    @media #{$mobile5inch}{
+      height: 64px;
+    }
+
+    & > .wrapper {
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      & a.close {
+        background: #da0202;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 100%;
+        line-height: 100%;
+        text-decoration: none;
+        position: absolute;
+        @media #{$desktopHD}{
+          right: 8em;
+        }
+        @media #{$desktopGeneral}{
+          right: 8em;
+        }
+        @media #{$desktop}{
+          right: 8em;
+        }
+        @media #{$mobileGeneral}{
+          right: 1em;
+        }
+      }
+
+      & form {
+        display: flex;
+        align-items: center;
+        & > input[type='text'] {
+          border: 0;
+          @media #{$desktopHD}{
+            font-size: 150%;
+            padding: 0.5em 1em;
+          }
+          @media #{$desktopGeneral}{
+            font-size: 150%;
+            padding: 0.5em 1em;
+          }
+          @media #{$desktop}{
+            font-size: 150%;
+            padding: 0.5em 1em;
+          }
+          @media #{$mobileGeneral}{
+            font-size: 100%;
+          }
+        }
+        & > input[type='button'] {
+          appearance: none;
+          background-color: #fff;
+          background-image: url(../images/sprites.png);
+          background-repeat: no-repeat;
+          background-position: 2px 2px;
+          display: inline-block;
+          width: 32px;
+          height: 28px;
+          overflow: hidden;
+          border: 0;
+          color: #000;
+          cursor: pointer;
+          font-size: 150%;
+          margin-left: 0.5em;
+        }
+      }
     }
   }
 
@@ -908,6 +1015,7 @@ section {
 // detail
 #detail {
   .image {
+    height: 100%; 
     overflow: hidden;
     margin-bottom: 0;
     @media #{$mobile7inch}{
@@ -920,11 +1028,52 @@ section {
       height: 200px;
     }
 
+    figure {
+      position: relative;
+      height: 100%;
+      & figcaption {
+        position: relative;
+        bottom: 0;
+        background: #fff;
+        margin: 0;
+        @media #{$mobileGeneral}{
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        & > .wrapper {
+          @media #{$desktopGeneral}{
+            padding: 2em 26%;
+          }
+          @media #{$mobileGeneral}{
+            padding: 1em 1.5em;
+          }
+          & p {
+            color: #777777;
+            @media #{$desktopGeneral}{
+              font-size: 80%;
+              line-height: 1.6em;
+            }
+            @media #{$mobileGeneral}{
+              font-size: 80%;
+              line-height: 1.2em;
+            }
+          }
+        }
+      }
+    }
     & img {
       @include centerImage(false);
       @media #{$mobileGeneral}{
         @include centerImage(true);
         width: auto;
+      }
+    }
+
+    &.active {
+      height: 100%;
+      & figcaption {
+        opacity: 1;
+        transition: opacity 0.3s ease;
       }
     }
   }
@@ -1388,14 +1537,39 @@ article {
   & > a:nth-child(1) img {
     width: 100%;
   }
+
+  & .caption {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    @media #{$desktopGeneral}{
+      display: none;
+    }
+    &::before {
+      content: 'i';
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #d8d8d8;
+      color: #d8d8d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   
   & .text {
     margin: 0 auto;
     & > .wrapper {
-      margin: 2em 0;
       position: relative;
       @media #{$desktopHD}{
         margin: 2em 0;
+      }
+      @media #{$desktop}{
+        margin: 2em 0;
+      }
+      @media #{$mobileGeneral}{
+        margin: 1em 0 2em;
       }
       @media #{$mobile7inch}{
         padding: 1.5em 3em;
@@ -2287,7 +2461,6 @@ footer {
     }
   }
 }
-
 
 .recommendation {
   & > .wrapper {

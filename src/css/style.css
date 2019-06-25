@@ -148,7 +148,7 @@ footer {
   background-position: 2px 2px;
   display: inline-block;
   width: 32px;
-  height: 25px;
+  height: 28px;
   overflow: hidden; }
 
 .button.default {
@@ -346,7 +346,12 @@ header > .wrapper {
       display: flex;
       height: 40px; }
       header > .wrapper > .col:nth-child(2) > nav > li {
-        display: inline-block;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         list-style: none; }
         @media screen and (min-width: 800px) {
           header > .wrapper > .col:nth-child(2) > nav > li {
@@ -431,6 +436,119 @@ header > .wrapper {
     left: 0; }
   header .swiper-menu.swiper-button-next {
     right: 0; } }
+
+header .search-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  opacity: 0;
+  z-index: -1; }
+  header .search-container.active {
+    background: #fff;
+    -webkit-box-shadow: 0 2px 25px 0 #ccc;
+            box-shadow: 0 2px 25px 0 #ccc;
+    color: #fff;
+    opacity: 1;
+    z-index: 9; }
+  @media screen and (min-width: 1440px) {
+    header .search-container {
+      height: 90px; } }
+  @media screen and (min-width: 800px) {
+    header .search-container {
+      height: 90px; } }
+  @media screen and (min-width: 801px) and (max-width: 1280px) {
+    header .search-container {
+      height: 90px; } }
+  @media screen and (max-width: 800px) {
+    header .search-container {
+      height: 64px; } }
+  @media screen and (max-width: 375px) {
+    header .search-container {
+      height: 64px; } }
+  header .search-container > .wrapper {
+    padding: 0 8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%; }
+    header .search-container > .wrapper a.close {
+      background: #da0202;
+      border-radius: 50%;
+      color: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 32px;
+      height: 32px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 100%;
+      line-height: 100%;
+      text-decoration: none;
+      position: absolute; }
+      @media screen and (min-width: 1440px) {
+        header .search-container > .wrapper a.close {
+          right: 8em; } }
+      @media screen and (min-width: 800px) {
+        header .search-container > .wrapper a.close {
+          right: 8em; } }
+      @media screen and (min-width: 801px) and (max-width: 1280px) {
+        header .search-container > .wrapper a.close {
+          right: 8em; } }
+      @media screen and (max-width: 800px) {
+        header .search-container > .wrapper a.close {
+          right: 1em; } }
+    header .search-container > .wrapper form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      header .search-container > .wrapper form > input[type='text'] {
+        border: 0; }
+        @media screen and (min-width: 1440px) {
+          header .search-container > .wrapper form > input[type='text'] {
+            font-size: 150%;
+            padding: 0.5em 1em; } }
+        @media screen and (min-width: 800px) {
+          header .search-container > .wrapper form > input[type='text'] {
+            font-size: 150%;
+            padding: 0.5em 1em; } }
+        @media screen and (min-width: 801px) and (max-width: 1280px) {
+          header .search-container > .wrapper form > input[type='text'] {
+            font-size: 150%;
+            padding: 0.5em 1em; } }
+        @media screen and (max-width: 800px) {
+          header .search-container > .wrapper form > input[type='text'] {
+            font-size: 100%; } }
+      header .search-container > .wrapper form > input[type='button'] {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background-color: #fff;
+        background-image: url(../images/sprites.png);
+        background-repeat: no-repeat;
+        background-position: 2px 2px;
+        display: inline-block;
+        width: 32px;
+        height: 28px;
+        overflow: hidden;
+        border: 0;
+        color: #000;
+        cursor: pointer;
+        font-size: 150%;
+        margin-left: 0.5em; }
 
 @media screen and (min-width: 800px) {
   main {
@@ -701,6 +819,7 @@ section {
     width: 100%; }
 
 #detail .image {
+  height: 100%;
   overflow: hidden;
   margin-bottom: 0; }
   @media screen and (min-width: 600px) and (max-width: 800px) {
@@ -712,6 +831,35 @@ section {
   @media screen and (max-width: 375px) {
     #detail .image {
       height: 200px; } }
+  #detail .image figure {
+    position: relative;
+    height: 100%; }
+    #detail .image figure figcaption {
+      position: relative;
+      bottom: 0;
+      background: #fff;
+      margin: 0; }
+      @media screen and (max-width: 800px) {
+        #detail .image figure figcaption {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; } }
+      @media screen and (min-width: 800px) {
+        #detail .image figure figcaption > .wrapper {
+          padding: 2em 26%; } }
+      @media screen and (max-width: 800px) {
+        #detail .image figure figcaption > .wrapper {
+          padding: 1em 1.5em; } }
+      #detail .image figure figcaption > .wrapper p {
+        color: #777777; }
+        @media screen and (min-width: 800px) {
+          #detail .image figure figcaption > .wrapper p {
+            font-size: 80%;
+            line-height: 1.6em; } }
+        @media screen and (max-width: 800px) {
+          #detail .image figure figcaption > .wrapper p {
+            font-size: 80%;
+            line-height: 1.2em; } }
   #detail .image img {
     width: 100%; }
     @media screen and (max-width: 800px) {
@@ -726,6 +874,12 @@ section {
         right: -9999px;
         margin: auto;
         width: auto; } }
+  #detail .image.active {
+    height: 100%; }
+    #detail .image.active figcaption {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
 
 #detail main.profile {
   margin-top: 0;
@@ -1086,14 +1240,47 @@ main.category .tags {
 article > a:nth-child(1) img {
   width: 100%; }
 
+article .caption {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  @media screen and (min-width: 800px) {
+    article .caption {
+      display: none; } }
+  article .caption::before {
+    content: 'i';
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #d8d8d8;
+    color: #d8d8d8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
 article .text {
   margin: 0 auto; }
   article .text > .wrapper {
-    margin: 2em 0;
     position: relative; }
     @media screen and (min-width: 1440px) {
       article .text > .wrapper {
         margin: 2em 0; } }
+    @media screen and (min-width: 801px) and (max-width: 1280px) {
+      article .text > .wrapper {
+        margin: 2em 0; } }
+    @media screen and (max-width: 800px) {
+      article .text > .wrapper {
+        margin: 1em 0 2em; } }
     @media screen and (min-width: 600px) and (max-width: 800px) {
       article .text > .wrapper {
         padding: 1.5em 3em; } }

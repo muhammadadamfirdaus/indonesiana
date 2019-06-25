@@ -95,6 +95,7 @@ gulp.task('concat-front', function(){
 
     'src/js/detailArticle.js',
     'src/js/menu.js',
+    'src/js/search.js',
     'src/js/userFollow.js',
     'src/js/userLogin.js'
   ])

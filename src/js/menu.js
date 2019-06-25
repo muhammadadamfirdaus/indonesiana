@@ -34,9 +34,6 @@ menuMobile.addEventListener('click', () => {
 });
 // end menu mobile
 
-// responsive
-const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-console.log('screen width: ', screenWidth);
 
 // submenu
 // const submenu = document.querySelectorAll('.menu .sub');

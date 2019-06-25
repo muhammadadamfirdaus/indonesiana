@@ -3,6 +3,10 @@ function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
 
+// responsive
+const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+console.log('screen width: ', screenWidth);
+
 // function get(url){
 //   return new Promise(function(resolve, reject){
 //     var xhr = new XMLHttpRequest();
@@ -315,6 +319,21 @@ if($('#detail').length){
     });
   });
 
+  // caption on mobile
+  if(screenWidth < 800){
+    let captionDetail = document.querySelector('.caption');
+    let figcaptionDetail = document.querySelector('article .image');
+    captionDetail.addEventListener('click', function(e){
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      if(figcaptionDetail.classList.contains('active')){
+        figcaptionDetail.classList.remove('active');
+      } else {
+        figcaptionDetail.classList.add('active');
+      }
+    });
+  }
+
   // comment
   var comment = $('#comment');
   var commentBox = $('#comment textarea');
@@ -374,9 +393,6 @@ menuMobile.addEventListener('click', () => {
 });
 // end menu mobile
 
-// responsive
-const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-console.log('screen width: ', screenWidth);
 
 // submenu
 // const submenu = document.querySelectorAll('.menu .sub');
@@ -408,6 +424,31 @@ let resizeTimeout;
 //     console.log('mobile');
 //   }
 // });
+// search
+let search = document.querySelector('.search');
+
+if(search){
+  console.log(search);
+
+  let buttonSearch = document.querySelector('.button-search');
+  let searchContainer = document.querySelector('.search-container');
+
+  buttonSearch.addEventListener('click', function(e){
+    if(searchContainer.classList.contains == 'active'){
+      searchContainer.classList.remove('active');
+    } else {
+      searchContainer.classList.add('active');
+    }
+  });
+    
+  let closeButtonSearch = document.querySelector('.search-container .close.button');
+  closeButtonSearch.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    searchContainer.classList.remove('active'); 
+  });
+}
+
 $(document).on('click', '.button.network', function(e){
   // e.preventDefault();
   if( $(this).data('follow') == 'follow' ) {

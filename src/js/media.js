@@ -3,6 +3,9 @@ const mediaGallery = document.querySelector('.gallery');
 
 var callback;
 var searchImages = window.location.href.indexOf('?');
+var searchURL = window.location.search;
+searchURL = searchURL.replace("?", ''); // remove the ?
+alert(searchURL); //alerts ProjectID=462 is your case
 
 if(searchImages > -1){
    console.log("hi");
